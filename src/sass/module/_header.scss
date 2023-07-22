@@ -1,0 +1,163 @@
+@use "global" as *;
+
+/* header */
+.header-layout {
+  position: fixed;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.header {
+  height: rem(90);
+  background: rgba(13, 41, 54, 0.68);
+  border-bottom: 2px solid $white;
+}
+
+.header__inner.inner {
+  padding-right: rem(15);
+  @include mq(md) {
+    padding-right: 0;
+    max-width: rem(1250);
+  }
+}
+
+.header__inner {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  position: relative;
+  height: inherit;
+  align-items: center;
+  z-index: 9999;
+}
+
+.header__logo a {
+  display: block;
+  max-width: rem(130);
+  width: 100%;
+  height: inherit;
+}
+
+.header__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header__nav {
+  height: inherit;
+}
+
+.header__nav-items {
+  display: none;
+  @include mq(md) {
+    display: flex;
+    height: inherit;
+  }
+}
+
+.header__nav-item {
+  height: inherit;
+}
+
+// クリック領域の確保
+.header__nav-item a {
+  padding: 0 rem(27.5);
+  height: inherit;
+  display: flex;
+  align-items: center;
+  font-family: $second-font-family;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+
+.header__hamburger {
+  display: block;
+  position: relative;
+  z-index: 999;
+  padding: rem(5);
+  width: rem(40);
+  height: inherit;
+  cursor: pointer;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.header__hamburger span {
+  position: relative;
+  display: block;
+  width: rem(25);
+  height: rem(2);
+  background-color: $white;
+  transition: 0.5s;
+}
+
+.header__hamburger.is-open span {
+  background-color: $white;
+}
+
+.header__hamburger span:nth-of-type(1) {
+  top: rem(-8);
+}
+
+.header__hamburger span:nth-of-type(2) {
+  top: 0;
+}
+
+.header__hamburger span:nth-of-type(3) {
+  top: rem(8);
+}
+
+.header__hamburger.is-open span:nth-of-type(1) {
+  top: rem(2);
+  transform: rotate(45deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-of-type(3) {
+  top: rem(-2);
+  transform: rotate(-45deg);
+}
+
+.header__drawer {
+  padding: rem(187) 0;
+  display: none;
+  position: absolute;
+  z-index: 900;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: $green;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.header__drawer::-webkit-scrollbar {
+  display: none;
+}
+
+.header__drawer-item a {
+  padding: rem(25) 0;
+  display: block;
+  font-size: rem(16);
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: $white;
+  text-align: center;
+  text-transform: capitalize;
+}
