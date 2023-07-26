@@ -1,0 +1,82 @@
+@use "global" as *;
+
+.common-btn {
+  color: $white;
+  margin-top: rem(200);
+  max-width: rem(202);
+  width: 100%;
+  background-color: $green;
+  text-align: center;
+  position: relative;
+  border: rem(1) solid $green;
+}
+
+/*影の設定*/
+.common-btn:before {
+  content: "";
+  /*絶対配置で影の位置を決める*/
+  position: absolute;
+  z-index: -1;
+  top: rem(4);
+  left: rem(4);
+  /*影の形状*/
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: rem(1) solid $green;
+  background-color: $white;
+}
+
+.common-btn a {
+  font-size: rem(14);
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  padding: rem(16) rem(40);
+  //   アニメーション時に文字が潜り込まないように設置
+  position: relative;
+  z-index: 1;
+}
+
+.common-btn__asset {
+  display: flex;
+  align-items: center;
+}
+
+.common-btn__img {
+  width: rem(40);
+  margin-left: rem(8);
+}
+
+.common-btn__img--after {
+  display: none;
+}
+
+// ホバー時のアニメーション
+
+.common-btn::after {
+  background-color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.common-btn a:hover {
+  color: $green;
+  .common-btn__img--before {
+    display: none;
+  }
+  .common-btn__img--after {
+    display: block;
+  }
+}
+
+.common-btn:hover::after {
+  transform: scale(1, 1);
+}

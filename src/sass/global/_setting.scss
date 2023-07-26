@@ -6,15 +6,15 @@ $inner: 1080px;
 // ※キュンパス幅ではなくインナーの幅を指す
 
 // 余白
-$padding-pc: 25px;
-$padding-sp: 20px;
+$padding-pc: 20px;
+$padding-sp: 15px;
 
 ////////////////////
 // フォント設定
 ////////////////////
 
 $base-font-family: "Gotu";
-$second-font-family: "Noto Sans JP" ,"sans-serif";
+$second-font-family: "Noto Sans JP", "sans-serif";
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
@@ -31,7 +31,7 @@ $bold: 700;
 ////////////////////
 
 //色指定（共通性のあるものは出来る限り指定すると良い）
-$black: #111;
+$black: #0d2936;
 $white: #fff;
 $green: #408f95;
 $green-bg: #ddf0f1;

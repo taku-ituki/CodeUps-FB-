@@ -1,0 +1,25 @@
+@use "global" as *;
+
+.section-title__item {
+  text-align: center;
+}
+
+.section-title__item {
+  font-size: rem(32);
+  color: $black;
+  text-transform: capitalize;
+  @include mq(md) {
+    font-size: rem(40);
+  }
+}
+
+.section-title__item::first-letter {
+  color: $green;
+}
+
+.section-title__item span {
+  display: block;
+  font-size: rem(12);
+  color: $green;
+  font-family: $second-font-family;
+}

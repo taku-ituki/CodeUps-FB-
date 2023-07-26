@@ -1,1 +1,53 @@
-@use 'global' as *;
+@use "global" as *;
+footer {
+  background-color: $green;
+}
+
+// ナビゲーションの切り替え
+.footer__nav-pc {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.footer__nav-sp {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+// 各種ロゴ
+.footer__logo-wrapper {
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+    gap: rem(32);
+  }
+}
+.footer__logo {
+  width: rem(120);
+  height: rem(45);
+  @include mq(md) {
+    width: rem(200);
+    height: rem(75);
+  }
+}
+
+.footer__sns {
+  display: flex;
+}
+
+.footer__sns a {
+  display: block;
+  padding: rem(8);
+}
+
+.footer__sns img {
+  width: rem(24);
+  height: rem(24);
+  @include mq(md) {
+    width: rem(32);
+    height: rem(32);
+  }
+}
