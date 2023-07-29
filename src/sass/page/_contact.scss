@@ -1,0 +1,119 @@
+@use "global" as *;
+.contact__inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+.inner.contact__inner {
+  padding: 0 rem(30);
+  @include mq(md) {
+    padding: 0 $padding-pc;
+  }
+}
+
+.contact__lists {
+  @include mq(md) {
+    padding: rem(80) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: rem(1180);
+    width: 100%;
+    box-shadow: rem(4) rem(4) rem(10) rem(0) rgba(0, 0, 0, 0.25);
+  }
+}
+
+.contact-logo {
+  position: relative;
+}
+
+.contact-logo img {
+  width: rem(174);
+  margin: auto;
+  @include mq(md) {
+    width: rem(200);
+  }
+}
+
+.contact-logo::after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: rem(-4);
+  left: 0;
+  /*線の形状*/
+  width: 100%;
+  height: rem(1);
+  background: $green;
+}
+
+.contact__address-block {
+  margin-top: rem(14);
+  @include mq(md) {
+    display: flex;
+    margin-top: rem(24);
+  }
+}
+
+.contact__list {
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+.contact__list--left {
+  @include mq(md) {
+    padding-right: rem(80);
+    border-right: rem(1) solid $green;
+  }
+}
+
+.contact__list--right {
+  @include mq(md) {
+    padding-left: rem(80);
+    padding-right: rem(30);
+  }
+}
+
+.contact__address-item {
+  font-family: $second-font-family;
+  text-align: center;
+  @include mq(md) {
+    text-align: left;
+  }
+}
+
+.contact__text {
+  font-size: rem(14);
+  color: $green;
+  margin-top: rem(8);
+  text-align: center;
+  font-family: $second-font-family;
+}
+
+.contact__google {
+  margin-top: rem(16);
+  @include mq(md) {
+    max-width: rem(273);
+    width: 100%;
+    margin-top: rem(0);
+    margin-left: rem(20);
+  }
+}
+
+.contact__google iframe {
+  aspect-ratio: 295/160;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include mq(md) {
+    aspect-ratio: 273/148;
+  }
+}
+
+.contact__address-item.contact__address-item--tel {
+  font-size: rem(14);
+}
+
+.contact__address-item.contact__address-item--time {
+  font-size: rem(15);
+}

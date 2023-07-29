@@ -1,0 +1,69 @@
+@use "global" as *;
+.top-campaign__inner {
+  position: relative;
+  @include mq(md) {
+  }
+}
+.top-campaign__swiper {
+  margin-top: rem(24);
+  margin-right: calc(50% - 50vw);
+  padding-bottom: rem(5);
+  overflow: hidden;
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev.top-campaign-swiper-button-prev,
+.swiper-button-next.top-campaign-swiper-button-next {
+  height: 0;
+  width: 0;
+  @include mq(md) {
+    height: rem(80);
+    width: rem(80);
+    position: absolute;
+    top: 6%;
+  }
+}
+
+.swiper-button-prev.top-campaign-swiper-button-prev {
+  left: 78%;
+}
+
+.swiper-button-next.top-campaign-swiper-button-next {
+  right: 1%;
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev.top-campaign-swiper-button-prev:after,
+.swiper-button-next.top-campaign-swiper-button-next:after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: rem(80);
+  margin: auto;
+  width: rem(80);
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev.top-campaign-swiper-button-prev:after {
+  background-image: url("./../images/common/campaign-swiper-btn-prev.png");
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next.top-campaign-swiper-button-next:after {
+  background-image: url("./../images/common/campaign-swiper-btn-next.png");
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+
+.top-campaign__btn {
+  margin-top: rem(40);
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(md) {
+    margin-top: rem(80);
+  }
+}

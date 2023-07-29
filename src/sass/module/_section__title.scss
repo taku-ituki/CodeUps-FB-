@@ -1,5 +1,10 @@
 @use "global" as *;
 
+.section-title {
+  text-align: center;
+  font-weight: normal;
+}
+
 .section-title__item {
   text-align: center;
 }
@@ -22,4 +27,11 @@
   font-size: rem(12);
   color: $green;
   font-family: $second-font-family;
+}
+
+// Contact
+.section-title__item.section-title__item--contact {
+  font-weight: normal;
+  line-height: 1;
+  font-size: rem(80);
 }
