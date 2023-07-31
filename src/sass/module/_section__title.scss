@@ -35,3 +35,16 @@
   line-height: 1;
   font-size: rem(80);
 }
+
+// blog
+.section-title__item.section-title__item--top-blog {
+  color: $white;
+}
+
+.section-title__item.section-title__item--top-blog::first-letter {
+  color: $white;
+}
+
+.section-title__item.section-title__item--top-blog span {
+  color: $white;
+}

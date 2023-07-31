@@ -1,0 +1,132 @@
+@use "global" as *;
+.about {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+// 画像配置
+.about::after {
+  @include mq(md) {
+    content: "";
+    background: url("./../images/common/top-about-coral-img.png") center center / cover no-repeat;
+    /*絶対配置で線の位置を決める*/
+    display: block;
+    position: absolute;
+    top: 88%;
+    right: 6%;
+    /*線の形状*/
+    max-width: rem(194);
+    width: 100%;
+    height: rem(181);
+    z-index: 1;
+  }
+}
+
+.about_inner {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+.about__img-sp {
+  position: relative;
+  margin-top: rem(35);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.about__img-left {
+  width: 37.1014492754%;
+  aspect-ratio: 128/194;
+  position: absolute;
+  z-index: 2;
+  top: -10%;
+  left: 0;
+  @include mq(md) {
+    z-index: 0;
+  }
+}
+
+.about__img-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__img-right {
+  width: 81.1594202899%;
+  aspect-ratio: 281/186;
+  margin-left: auto;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.about__img-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__text-en {
+  font-size: rem(40);
+  color: $green;
+  line-height: 1;
+  margin-top: rem(40);
+  @include mq(md) {
+    color: $white;
+    font-size: rem(80);
+    width: 52.380952381%;
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.about__text-ja {
+  @include mq(md) {
+    color: $white;
+    width: 47.619047619%;
+    padding-left: 4.54545454545%;
+  }
+}
+
+.about__text-block {
+  margin-top: rem(16);
+  @include mq(md) {
+    width: 81.4814814815%;
+    display: flex;
+    padding-top: rem(120);
+    padding-right: rem(41);
+    padding-bottom: rem(220);
+    margin-top: rem(120);
+    margin-left: auto;
+    background: url("./../images/common/top-about-right-sp.jpg") center center / cover no-repeat;
+  }
+}
+
+.about__text {
+  font-family: $second-font-family;
+  line-height: 1.5;
+}
+
+.about__coral-img {
+  display: none;
+  @include mq(md) {
+    display: block;
+    max-width: rem(194);
+    width: 100%;
+    aspect-ratio: 194/181;
+    position: absolute;
+    top: 88%;
+    left: 89.5%;
+    z-index: 1;
+  }
+}
+
+.about__coral-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

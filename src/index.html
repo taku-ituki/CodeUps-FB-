@@ -32,6 +32,7 @@
     />
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./assets/js/jquery.inview-master/jquery.inview.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
@@ -211,21 +212,18 @@
           <span class="fv__title--sub">into the ocean</span>
         </h2>
       </section>
-      <div class="inner">
-        <a href="common.html" class="test">変更のテスト</a>
-      </div>
 
       <!-- Campaign -->
-      <section class="top-campaign top-camapgn-layout">
+      <section class="campaign campaign-layout">
         <!-- セクションタイトル -->
-        <div class="top-campaign__inner inner">
-          <div class="section-title">
+        <div class="campaign__inner inner">
+          <div class="campaign__title section-title">
             <h2 class="section-title__item">Campaign<span>キャンペーン</span></h2>
           </div>
-          <div class="swiper top-campaign__swiper js-top-campaign-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide top-campaign__swiper-slide">
-                <div class="campaign-card">
+          <div class="campaign__swiper swiper js-campaign-swiper">
+            <div class="campaign__swiper-wrapper swiper-wrapper">
+              <div class="campaign__swiper-slide swiper-slide">
+                <div class="campaign__card campaign-card">
                   <a href="#">
                     <div class="campaign-card__img">
                       <img src="./assets/images/common/campaign-card1.jpg" alt="campaign-card-fish" />
@@ -244,8 +242,8 @@
                   </a>
                 </div>
               </div>
-              <div class="swiper-slide top-campaign__swiper-slide">
-                <div class="campaign-card">
+              <div class="campaign__swiper-slide swiper-slide">
+                <div class="campaign__card campaign-card">
                   <a href="#">
                     <div class="campaign-card__img">
                       <img src="./assets/images/common/campaign-card-boat.jpg" alt="campaign-card-boat" />
@@ -264,8 +262,8 @@
                   </a>
                 </div>
               </div>
-              <div class="swiper-slide top-campaign__swiper-slide">
-                <div class="campaign-card">
+              <div class="campaign__swiper-slide swiper-slide">
+                <div class="campaign__card campaign-card">
                   <a href="#">
                     <div class="campaign-card__img">
                       <img src="./assets/images/common/campaign-card-jellyfish.jpg" alt="campaign-card-jellyfish" />
@@ -284,8 +282,8 @@
                   </a>
                 </div>
               </div>
-              <div class="swiper-slide top-campaign__swiper-slide">
-                <div class="campaign-card">
+              <div class="campaign__swiper-slide swiper-slide">
+                <div class="campaign__card campaign-card">
                   <a href="#">
                     <div class="campaign-card__img">
                       <img src="./assets/images/common/campaign-card-diving.jpg" alt="campaign-card-diving" />
@@ -307,10 +305,10 @@
             </div>
           </div>
           <!-- ナビゲーションボタンの div 要素（省略可能） -->
-          <div class="swiper-button-prev top-campaign-swiper-button-prev"></div>
-          <div class="swiper-button-next top-campaign-swiper-button-next"></div>
+          <div class="swiper-button-prev campaign__swiper-button-prev"></div>
+          <div class="swiper-button-next campaign__swiper-button-next"></div>
           <!-- common　ボタン -->
-          <div class="top-campaign__btn common-btn">
+          <div class="campaign__btn common-btn">
             <a href="#">
               <div class="common-btn__asset">
                 <div class="common-btn__text">view more</div>
@@ -328,43 +326,323 @@
         </div>
       </section>
       <!-- About us -->
-      <section class="top-about top-about-layout">
-        <div class="top-about_inner inner">
+      <section class="about about-layout">
+        <div class="about__inner inner">
           <!-- セクションタイトル -->
           <div class="section-title">
             <h2 class="section-title__item">about us<span>私たちについて</span></h2>
           </div>
-          <div class="top-about__img-sp">
-            <div class="top-about__img-left"><img src="./assets/images/common/top-about-left-sp.jpg" alt="top-about-left" /></div>
-            <div class="top-about__img-right"><img src="./assets/images/common/top-about-right-sp.jpg" alt="top-about-right" /></div>
+          <div class="about__img-sp">
+            <div class="about__img-left"><img src="./assets/images/common/top-about-left-sp.jpg" alt="top-about-left" /></div>
+            <div class="about__img-right"><img src="./assets/images/common/top-about-right-sp.jpg" alt="top-about-right" /></div>
           </div>
-          <p class="top-about__text-en">dive into<br />the Ocean</p>
-          <div class="top-about__text-block">
-            <p class="top-about__text">
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-            </p>
-            <!-- common　ボタン -->
-            <div class="common-btn common-btn-layout">
-              <a href="#">
-                <div class="common-btn__asset">
-                  <div class="common-btn__text">view more</div>
-                  <div class="common-btn__img-wrapper">
-                    <div class="common-btn__img common-btn__img--before">
-                      <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
-                    </div>
-                    <div class="common-btn__img common-btn__img--after">
-                      <img src="./assets/images/common/common-btn-img--after.png" alt="after" />
+          <div class="about__text-block">
+            <p class="about__text-en">Dive into<br />the Ocean</p>
+            <div class="about__text-ja">
+              <p class="about__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+              </p>
+              <!-- common　ボタン -->
+              <div class="common-btn common-btn-layout">
+                <a href="#">
+                  <div class="common-btn__asset">
+                    <div class="common-btn__text">view more</div>
+                    <div class="common-btn__img-wrapper">
+                      <div class="common-btn__img common-btn__img--before">
+                        <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
+                      </div>
+                      <div class="common-btn__img common-btn__img--after">
+                        <img src="./assets/images/common/common-btn-img--after.png" alt="after" />
+                      </div>
                     </div>
                   </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
+      <!-- information -->
+      <section class="information information-layout">
+        <div class="information__inner inner">
+          <!-- セクションタイトル -->
+          <div class="section-title">
+            <h2 class="section-title__item">information<span>ダイビング情報</span></h2>
+          </div>
+          <div class="information__item-block">
+            <div class="information__img js-color">
+              <img src="./assets/images/common/top-information-img.jpg" alt="top-information-ocean" />
+            </div>
+            <div class="information__text-block">
+              <div class="information__text-title">ライセンス講習</div>
+              <p class="information__text">
+                当店はダイビングライセンス（Cカード）世界最大の教育機関PADIの「正規店」として店舗登録されています。<br />
+                正規登録店として、安心安全に初めての方でも安心安全にライセンス取得をサポート致します。
+              </p>
+              <!-- common　ボタン -->
+              <div class="common-btn common-btn-layout">
+                <a href="#">
+                  <div class="common-btn__asset">
+                    <div class="common-btn__text">view more</div>
+                    <div class="common-btn__img-wrapper">
+                      <div class="common-btn__img common-btn__img--before">
+                        <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
+                      </div>
+                      <div class="common-btn__img common-btn__img--after">
+                        <img src="./assets/images/common/common-btn-img--after.png" alt="after" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ブログ -->
+      <section class="blog">
+        <div class="blog__inner">
+          <div class="blog__title section-title">
+            <h2 class="section-title__item section-title__item--top-blog">blog<span>ブログ</span></h2>
+          </div>
+          <div class="blog__cards">
+            <div class="blog__card blog-card">
+              <div class="blog-card__img">
+                <img src="./assets/images/common/blog-card-coral.jpg" alt="blog-card-coral" />
+              </div>
+              <div class="blog-card__title-block">
+                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                <div class="blog-card__title">ライセンス講習</div>
+              </div>
+              <p class="blog-card__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+              </p>
+            </div>
+            <div class="blog__card blog-card">
+              <div class="blog-card__img">
+                <img src="./assets/images/common/blog-card-turtle.jpg" alt="blog-card-coral" />
+              </div>
+              <div class="blog-card__title-block">
+                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                <div class="blog-card__title">ウミガメと泳ぐ</div>
+              </div>
+              <p class="blog-card__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+              </p>
+            </div>
+            <div class="blog__card blog-card">
+              <div class="blog-card__img">
+                <img src="./assets/images/common/blog-card-clownfish.jpg" alt="blog-card-coral" />
+              </div>
+              <div class="blog-card__title-block">
+                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                <div class="blog-card__title">カクレクマノミ</div>
+              </div>
+              <p class="blog-card__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+              </p>
+            </div>
+          </div>
+          <!-- common　ボタン -->
+          <div class="common-btn common-btn-layout">
+            <a href="#">
+              <div class="common-btn__asset">
+                <div class="common-btn__text">view more</div>
+                <div class="common-btn__img-wrapper">
+                  <div class="common-btn__img common-btn__img--before">
+                    <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
+                  </div>
+                  <div class="common-btn__img common-btn__img--after">
+                    <img src="./assets/images/common/common-btn-img--after.png" alt="after" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Voice -->
+      <section class="voice voice-layout">
+        <div class="voice__inner inner">
+          <!-- セクションタイトル -->
+          <div class="voice__title section-title">
+            <h2 class="section-title__item">voice<span>お客様の声</span></h2>
+          </div>
+          <div class="voice__cards">
+            <div class="voice__card">
+              <a href="#">
+                <div class="voice__card-top">
+                  <div class="voice__card-headline">
+                    <div class="voice__card-sub">
+                      <div class="voice__card-age">20代(女性)</div>
+                      <div class="voice__card-sub-title">ライセンス講習</div>
+                    </div>
+                    <div class="voice__card-main-title">ここにタイトルが入ります。ここにタイトル</div>
+                  </div>
+                  <div class="voice__card-img js-color">
+                    <img src="./assets/images/common/top-voice-woman.jpg" alt="top-voice-women" />
+                  </div>
+                </div>
+                <p class="voice__card-bottom">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+              </a>
+            </div>
+            <div class="voice__card">
+              <a href="#">
+                <div class="voice__card-top">
+                  <div class="voice__card-headline">
+                    <div class="voice__card-sub">
+                      <div class="voice__card-age">20代(男性)</div>
+                      <div class="voice__card-sub-title">ファンダイビング</div>
+                    </div>
+                    <div class="voice__card-main-title">ここにタイトルが入ります。ここにタイトル</div>
+                  </div>
+                  <div class="voice__card-img js-color">
+                    <img src="./assets/images/common/top-voice-men.jpg" alt="top-voice-women" />
+                  </div>
+                </div>
+                <p class="voice__card-bottom">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。
+                </p>
+              </a>
+            </div>
+          </div>
+          <!-- common　ボタン -->
+          <div class="common-btn common-btn-layout">
+            <a href="#">
+              <div class="common-btn__asset">
+                <div class="common-btn__text">view more</div>
+                <div class="common-btn__img-wrapper">
+                  <div class="common-btn__img common-btn__img--before">
+                    <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
+                  </div>
+                  <div class="common-btn__img common-btn__img--after">
+                    <img src="./assets/images/common/common-btn-img--after.png" alt="after" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- price -->
+      <section class="price price-layout">
+        <div class="price__inner inner">
+          <!-- セクションタイトル -->
+          <div class="price__title section-title">
+            <h2 class="section-title__item">Price<span>料金一覧</span></h2>
+          </div>
+          <div class="price__contents">
+            <div class="price__content-sp">
+              <img src="./assets/images/common/top-price-sp.jpg" alt="top-price-turtle" />
+            </div>
+            <div class="price__table-lists">
+              <div class="price__table-list">
+                <div class="price__list-title">ライセンス講習</div>
+                <table>
+                  <tr>
+                    <td class="price__list-menu">オープンウォーターダイバーコース</td>
+                    <td class="price__list-price">¥50,000</td>
+                  </tr>
+                  <tr>
+                    <td class="price__list-menu">アドバンスドオープンウォーターコース</td>
+                    <td class="price__list-price">¥60,000</td>
+                  </tr>
+                  <tr>
+                    <td class="price__list-menu">レスキュー＋EFRコース</td>
+                    <td class="price__list-price">¥70,000</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="price__table-list">
+                <div class="price__list-title">体験ダイビング</div>
+                <table>
+                  <tr>
+                    <td class="price__list-menu">ビーチ体験ダイビング(半日)</td>
+                    <td class="price__list-price">¥7,000</td>
+                  </tr>
+                  <tr>
+                    <td class="price__list-menu">ビーチ体験ダイビング(1日)</td>
+                    <td class="price__list-price">¥14,000</td>
+                  </tr>
+                  <tr>
+                    <td class="price__list-menu">ボート体験ダイビング(半日)</td>
+                    <td class="price__list-price">¥10,000</td>
+                  </tr>
+                  <tr>
+                    <td class="price__list-menu">ボート体験ダイビング(1日)</td>
+                    <td class="price__list-price">¥18,000</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="price__table-list">
+                <div class="price__list-title">ファンダイビング</div>
+                <table>
+                  <tr>
+                    <td class="price__list-menu">ビーチダイビング(2ダイブ)</td>
+                    <td class="price__list-price">¥14,000</td>
+                  </tr>
+                  <tr>
+                    <td class="price__list-menu">ボートダイビング(2ダイブ)</td>
+                    <td class="price__list-price">¥18,000</td>
+                  </tr>
+                  <tr>
+                    <td class="price__list-menu">スペシャルダイビング(2ダイブ)</td>
+                    <td class="price__list-price">¥24,000</td>
+                  </tr>
+                  <tr>
+                    <td class="price__list-menu">ナイトダイビング(1ダイブ)</td>
+                    <td class="price__list-price">¥10,000</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="price__table-list">
+                <div class="price__list-title">スペシャルダイビング</div>
+                <table>
+                  <tr>
+                    <td class="price__list-menu">貸切ダイビング(2ダイブ)</td>
+                    <td class="price__list-price">¥24,000</td>
+                  </tr>
+                  <tr>
+                    <td class="price__list-menu">1日ダイビング(3ダイブ)</td>
+                    <td class="price__list-price">¥32,000</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="price__content-pc js-color">
+              <img src="./assets/images/common/top-price-pc.jpg" alt="top-price-coral" />
+            </div>
+          </div>
+          <!-- common　ボタン -->
+          <div class="common-btn common-btn-layout">
+            <a href="#">
+              <div class="common-btn__asset">
+                <div class="common-btn__text">view more</div>
+                <div class="common-btn__img-wrapper">
+                  <div class="common-btn__img common-btn__img--before">
+                    <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
+                  </div>
+                  <div class="common-btn__img common-btn__img--after">
+                    <img src="./assets/images/common/common-btn-img--after.png" alt="after" />
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
       <!-- contact -->
-      <section class="contact">
+      <section class="contact contact-layout">
         <div class="contact__inner inner">
           <ul class="contact__lists">
             <li class="contact__list contact__list--left">

@@ -1,0 +1,133 @@
+@use "global" as *;
+
+.price {
+  background-color: $green-bg;
+  padding: rem(80) 0;
+  @include mq(md) {
+    padding: rem(100) 0;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// 画像配置
+.price::after {
+  @include mq(md) {
+    content: "";
+    background: url("./../images/common/top-price-fish.png") center center / cover no-repeat;
+    /*絶対配置で線の位置を決める*/
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: 8%;
+    /*線の形状*/
+    max-width: rem(437);
+    width: 100%;
+    max-height: rem(200);
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+.price__contents {
+  font-family: $second-font-family;
+  color: $black;
+  @include mq(md) {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(40);
+  }
+}
+
+.price__content-sp {
+  max-width: rem(345);
+  width: 100%;
+  aspect-ratio: 345/227;
+  margin-top: rem(24);
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.price__content-sp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price__table-lists {
+  @include mq(md) {
+    max-width: rem(492);
+    width: 100%;
+  }
+}
+
+.price__table-list {
+  font-size: rem(14);
+  line-height: 1.5;
+  margin-top: rem(40);
+  @include mq(md) {
+    font-size: rem(16);
+  }
+}
+
+.price__list-title {
+  font-weight: 700;
+  line-height: 1.5;
+  border-bottom: rem(1) solid $green;
+}
+
+.price__list-menu {
+  width: rem(260);
+  @include mq(md) {
+    width: rem(350);
+  }
+}
+
+.price__list-price {
+  width: rem(85);
+  text-align: right;
+  @include mq(md) {
+    width: rem(150);
+  }
+}
+
+.price__table-list tr {
+  margin-top: rem(8);
+}
+
+.price__content-pc {
+  display: none;
+  @include mq(md) {
+    position: relative;
+    display: block;
+    max-width: rem(492);
+    width: 100%;
+    aspect-ratio: 492/746;
+    margin: rem(30) rem(0) rem(13) rem(93);
+  }
+}
+
+.price__content-pc img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// アニメーション
+
+div.price__content-pc div.color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #408f95;
+}
+div.price__content-pc img {
+  display: block;
+  width: 100%;
+}

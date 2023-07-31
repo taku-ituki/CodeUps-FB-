@@ -1,0 +1,71 @@
+@use "global" as *;
+
+.blog {
+  overflow: hidden;
+  position: relative;
+}
+
+// 画像配置
+.blog::after {
+  @include mq(md) {
+    content: "";
+    background: url("./../images/common/blog-bg-fish.png") center center / cover no-repeat;
+    /*絶対配置で線の位置を決める*/
+    display: block;
+    position: absolute;
+    top: 3%;
+    left: 7%;
+    /*線の形状*/
+    max-width: rem(437);
+    width: 100%;
+    height: rem(200);
+    z-index: 1;
+  }
+}
+
+.blog__inner {
+  max-width: rem(642);
+  width: 100%;
+  padding: 0 rem(21);
+  margin: 0 auto;
+  @include mq(md) {
+    max-width: rem(1120);
+    width: 100%;
+    padding: 0 rem(20);
+  }
+}
+
+.blog__title {
+  @include mq(md) {
+    padding-top: rem(100);
+    padding-bottom: rem(334);
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    background: url("./../images/common/top-blog-pc.jpg") center center / cover no-repeat;
+  }
+}
+
+.blog__cards {
+  margin-top: rem(24);
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(40);
+    margin-top: rem(-255);
+  }
+}
+
+.blog__card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog__card:not(:first-child) {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(0);
+  }
+}
+
