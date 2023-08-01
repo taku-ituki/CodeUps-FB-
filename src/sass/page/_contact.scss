@@ -3,6 +3,20 @@
 .contact {
   @include mq(md) {
     position: relative;
+    padding-bottom: rem(10);
+  }
+}
+
+.contact__inner {
+  max-width: rem(680);
+  width: 100%;
+  padding: 0 rem(40);
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(md) {
+    max-width: rem(1120);
+    padding-left: $padding-pc;
+    padding-right: $padding-pc;
   }
 }
 
@@ -68,7 +82,7 @@
 }
 
 .contact__address-block {
-  margin-top: rem(14);
+  margin-top: rem(20);
   @include mq(md) {
     display: flex;
     margin-top: rem(24);
@@ -98,6 +112,7 @@
 .contact__address-item {
   font-family: $second-font-family;
   text-align: center;
+  margin-top: rem(4);
   @include mq(md) {
     text-align: left;
   }
@@ -131,10 +146,6 @@
   }
 }
 
-.contact__address-item.contact__address-item--tel {
-  font-size: rem(14);
-}
-
-.contact__address-item.contact__address-item--time {
-  font-size: rem(15);
+.contact__btn {
+  margin-top: rem(37);
 }

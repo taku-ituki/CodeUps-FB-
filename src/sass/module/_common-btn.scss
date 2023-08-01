@@ -31,7 +31,7 @@
   display: block;
   text-align: center;
   cursor: pointer;
-  padding: rem(16) rem(40);
+  padding: rem(16) rem(38);
   //   アニメーション時に文字が潜り込まないように設置
   position: relative;
   z-index: 1;
@@ -40,6 +40,14 @@
 .common-btn__asset {
   display: flex;
   align-items: center;
+}
+
+.common-btn__text {
+  text-transform: capitalize;
+}
+
+.common-btn__text span {
+  text-transform: lowercase;
 }
 
 .common-btn__img {

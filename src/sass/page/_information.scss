@@ -2,7 +2,9 @@
 
 .information {
   background-color: $green-bg;
-  padding: rem(80) 0;
+  padding: rem(75) 0 rem(85);
+  position: relative;
+  z-index: 0;
   @include mq(md) {
     padding: rem(100) 0;
   }
@@ -16,10 +18,13 @@
 }
 
 .information__img {
+  position: relative;
   max-width: rem(345);
   width: 100%;
   aspect-ratio: 345/227;
-  margin-top: rem(24);
+  margin-top: rem(28);
+  margin-left: auto;
+  margin-right: auto;
   @include mq(md) {
     max-width: rem(540);
     aspect-ratio: 540/356;
@@ -54,16 +59,15 @@
 }
 
 .information__text {
-  padding-top: rem(8);
+  font-family: $second-font-family;
+  padding-top: rem(5);
   border-top: rem(1) solid $green;
 }
 
 // アニメーション
 
 div.information__img {
-  position: relative;
-  width: 80%;
-  margin: rem(30) auto rem(30);
+  width: 100%;
 }
 div.information__img div.color {
   position: absolute;
@@ -77,4 +81,8 @@ div.information__img div.color {
 div.information__img img {
   display: block;
   width: 100%;
+}
+
+.information__btn {
+  margin-top: rem(40);
 }

@@ -1,6 +1,7 @@
 @use "global" as *;
 footer {
   background-color: $green;
+  padding-bottom: rem(80);
 }
 
 // ナビゲーションの切り替え
@@ -19,6 +20,7 @@ footer {
 
 // 各種ロゴ
 .footer__logo-wrapper {
+  padding-top: rem(50);
   @include mq(md) {
     display: flex;
     align-items: center;
@@ -38,9 +40,16 @@ footer {
   display: flex;
 }
 
+.footer__facebook a {
+  padding: rem(13) rem(8) rem(13) rem(0);
+}
+
+.footer__instagram a {
+  padding: rem(13) rem(0) rem(13) rem(8);
+}
+
 .footer__sns a {
   display: block;
-  padding: rem(8);
 }
 
 .footer__sns img {
@@ -50,4 +59,11 @@ footer {
     width: rem(32);
     height: rem(32);
   }
+}
+
+.footer__copy-right {
+  color: $white;
+  font-size: rem(12);
+  padding: 0 rem(14);
+  margin-top: rem(34);
 }

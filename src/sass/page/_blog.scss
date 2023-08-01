@@ -4,6 +4,21 @@
   overflow: hidden;
   position: relative;
 }
+.blog__inner {
+  max-width: rem(642);
+  width: 100%;
+  padding: 0 rem(21) rem(10);
+  margin: 0 auto;
+  @include mq(md) {
+    max-width: rem(1120);
+    width: 100%;
+    padding: 0 rem(20);
+  }
+}
+
+.blog__title {
+  text-transform: none;
+}
 
 // 画像配置
 .blog::after {
@@ -23,18 +38,6 @@
   }
 }
 
-.blog__inner {
-  max-width: rem(642);
-  width: 100%;
-  padding: 0 rem(21);
-  margin: 0 auto;
-  @include mq(md) {
-    max-width: rem(1120);
-    width: 100%;
-    padding: 0 rem(20);
-  }
-}
-
 .blog__title {
   @include mq(md) {
     padding-top: rem(100);
@@ -46,7 +49,7 @@
 }
 
 .blog__cards {
-  margin-top: rem(24);
+  margin-top: rem(27);
   margin-left: auto;
   margin-right: auto;
   @include mq(md) {
@@ -69,3 +72,8 @@
   }
 }
 
+.blog__btn {
+  margin-top: rem(40);
+  @include mq(md) {
+  }
+}

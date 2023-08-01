@@ -42,7 +42,7 @@
 }
 
 .voice__cards {
-  margin-top: rem(40);
+  margin-top: rem(45);
   @include mq(md) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -53,7 +53,7 @@
 
 .voice__card {
   font-family: $second-font-family;
-  padding: rem(16) rem(16) rem(24);
+  padding: rem(15) rem(16) rem(24);
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
   background-color: $white;
   transition: 0.3s;
@@ -68,7 +68,7 @@
 }
 
 .voice__card:not(:first-child) {
-  margin-top: rem(40);
+  margin-top: rem(43);
   @include mq(md) {
     margin-top: rem(0);
   }
@@ -76,6 +76,7 @@
 
 .voice__card-top {
   display: flex;
+  gap: rem(13);
 }
 
 .voice__card-headline {
@@ -99,7 +100,7 @@
 .voice__card-main-title {
   font-weight: 500;
   color: $black;
-  padding: rem(8) 0 rem(4);
+  padding-top: rem(4);
   border-bottom: rem(1) solid $green;
   @include mq(md) {
     font-size: rem(24);
@@ -109,7 +110,7 @@
 .voice__card-sub-title {
   font-size: rem(12);
   color: $green;
-  padding: rem(4) rem(12);
+  padding: rem(4) rem(11);
   border: rem(1) solid $green;
   display: inline-block;
   @include mq(md) {
@@ -120,8 +121,7 @@
 .voice__card-img {
   position: relative;
   max-width: rem(151);
-  width: 80%;
-  margin: rem(30) rem(0) rem(13) rem(30);
+  width: 100%;
   aspect-ratio: 151/117;
   @include mq(md) {
     max-width: rem(180);
@@ -155,4 +155,11 @@ div.voice__card-img div.color {
 div.voice__card-img img {
   display: block;
   width: 100%;
+}
+
+.voice__btn {
+  margin-top: rem(42);
+  @include mq(md) {
+    margin-top: rem(140);
+  }
 }

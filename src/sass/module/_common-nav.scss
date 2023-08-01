@@ -1,0 +1,57 @@
+@use "global" as *;
+
+// common
+.common-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.common-nav__flex {
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.common-nav__item {
+  margin-top: rem(5);
+  padding-left: rem(21);
+}
+
+.common-nav__item a {
+  font-family: $second-font-family;
+  font-size: rem(16);
+  padding: rem(9) 0 rem(10) 0;
+  display: block;
+  line-height: 1.125;
+  letter-spacing: 0.05em;
+  color: $white;
+  text-align: center;
+  text-transform: capitalize;
+  text-align: left;
+  position: relative;
+}
+
+.common-nav__item--head {
+  font-weight: $bold;
+  position: relative;
+  margin-top: rem(20);
+}
+
+// ヒトデの配置
+.common-nav__item--head::before {
+  content: "";
+  position: absolute;
+  width: rem(18);
+  height: rem(18);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-image: url(./../images/common/starfish.png);
+  background-size: cover;
+}
+
+// footer調整
+.common-nav__flex.common-nav__flex--right {
+  margin-left: rem(10);
+}

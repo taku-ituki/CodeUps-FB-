@@ -31,7 +31,7 @@
 
 .about__img-sp {
   position: relative;
-  margin-top: rem(35);
+  margin-top: rem(52);
   @include mq(md) {
     margin-top: rem(40);
   }
@@ -42,7 +42,7 @@
   aspect-ratio: 128/194;
   position: absolute;
   z-index: 2;
-  top: -10%;
+  top: -14%;
   left: 0;
   @include mq(md) {
     z-index: 0;
@@ -85,6 +85,7 @@
 }
 
 .about__text-ja {
+  margin-top: rem(20);
   @include mq(md) {
     color: $white;
     width: 47.619047619%;
@@ -129,4 +130,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.about__btn {
+  margin-top: rem(38);
+  @include mq(md) {
+    margin-top: rem(80);
+  }
 }
