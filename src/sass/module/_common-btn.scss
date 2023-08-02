@@ -15,7 +15,7 @@
   content: "";
   /*絶対配置で影の位置を決める*/
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: rem(4);
   left: rem(4);
   /*影の形状*/
@@ -23,7 +23,6 @@
   height: 100%;
   border-radius: 0;
   border: rem(1) solid $green;
-  background-color: $white;
 }
 
 .common-btn a {

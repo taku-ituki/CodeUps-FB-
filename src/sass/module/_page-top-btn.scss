@@ -6,9 +6,10 @@
   width: rem(48);
   height: rem(48);
   cursor: pointer;
+  background-color: $white;
+  border-radius: 50%;
   @include mq(md) {
     width: rem(80);
     height: rem(80);
   }
 }
-
