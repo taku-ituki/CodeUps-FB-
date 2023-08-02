@@ -14,8 +14,8 @@
     /*絶対配置で線の位置を決める*/
     display: block;
     position: absolute;
-    top: -20%;
-    left: 7%;
+    top: -15.7%;
+    left: -5.4%;
     /*線の形状*/
     max-width: rem(301);
     width: 100%;
@@ -31,8 +31,8 @@
     /*絶対配置で線の位置を決める*/
     display: block;
     position: absolute;
-    top: 86%;
-    right: 2%;
+    top: 85.5%;
+    right: 1.8%;
     /*線の形状*/
     max-width: rem(71);
     width: 100%;
@@ -77,24 +77,24 @@
 .voice__card-top {
   display: flex;
   gap: rem(13);
-}
-
-.voice__card-headline {
-  @include mq(md) {
-    margin-top: rem(30);
-  }
+  align-items: flex-end;
 }
 
 .voice__card-sub {
   @include mq(md) {
     display: flex;
     justify-content: space-between;
+    padding-right: rem(4);
   }
 }
 
 .voice__card-age {
   font-size: rem(12);
   color: $black;
+  line-height: 1;
+  @include mq(md) {
+    padding-top: rem(20);
+  }
 }
 
 .voice__card-main-title {
@@ -104,6 +104,7 @@
   border-bottom: rem(1) solid $green;
   @include mq(md) {
     font-size: rem(24);
+    padding-bottom: rem(5);
   }
 }
 
@@ -114,7 +115,7 @@
   border: rem(1) solid $green;
   display: inline-block;
   @include mq(md) {
-    padding: rem(6) rem(16);
+    padding: rem(6) rem(15) rem(8);
   }
 }
 
@@ -139,6 +140,9 @@
   color: #000;
   margin-top: rem(15);
   line-height: 1.5;
+  @include mq(md) {
+    margin-top: rem(40);
+  }
 }
 
 // アニメーション
@@ -160,6 +164,6 @@ div.voice__card-img img {
 .voice__btn {
   margin-top: rem(42);
   @include mq(md) {
-    margin-top: rem(140);
+    margin-top: rem(80);
   }
 }

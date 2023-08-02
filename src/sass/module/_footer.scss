@@ -4,6 +4,12 @@ footer {
   padding-bottom: rem(80);
 }
 
+.footer__list-wrapper {
+  @include mq(md) {
+    margin-top: rem(-10);
+  }
+}
+
 // ナビゲーションの切り替え
 .footer__nav-pc {
   display: none;
@@ -24,7 +30,8 @@ footer {
   @include mq(md) {
     display: flex;
     align-items: center;
-    gap: rem(32);
+    gap: rem(40);
+    padding-top: rem(80);
   }
 }
 .footer__logo {
@@ -38,6 +45,9 @@ footer {
 
 .footer__sns {
   display: flex;
+  @include mq(md) {
+    margin-top: rem(25);
+  }
 }
 
 .footer__facebook a {
@@ -63,7 +73,14 @@ footer {
 
 .footer__copy-right {
   color: $white;
+  display: block;
   font-size: rem(12);
   padding: 0 rem(14);
   margin-top: rem(34);
+  text-align: center;
+  @include mq(md) {
+    font-size: rem(11.25);
+    padding: 0;
+    margin-top: rem(24);
+  }
 }

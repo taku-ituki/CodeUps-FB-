@@ -6,7 +6,7 @@
   padding: rem(80) 0;
   z-index: -1;
   @include mq(md) {
-    padding: rem(100) 0;
+    padding: rem(92) 0 rem(102);
     position: relative;
     z-index: 1;
   }
@@ -20,8 +20,8 @@
     /*絶対配置で線の位置を決める*/
     display: block;
     position: absolute;
-    top: 80%;
-    left: 8%;
+    top: 78.2%;
+    left: 7%;
     /*線の形状*/
     max-width: rem(437);
     width: 100%;
@@ -37,7 +37,8 @@
   @include mq(md) {
     display: flex;
     justify-content: center;
-    margin-top: rem(40);
+    align-items: flex-start;
+    margin-top: rem(7);
   }
 }
 
@@ -64,6 +65,7 @@
   @include mq(md) {
     max-width: rem(492);
     width: 100%;
+    margin-top: rem(0);
   }
 }
 
@@ -74,6 +76,7 @@
 .price__table-list:first-child {
   margin-top: rem(40);
   @include mq(md) {
+    margin-top: rem(30);
   }
 }
 
@@ -92,7 +95,7 @@
 }
 
 .price__table {
-  border-spacing: 0 rem(9);
+  border-spacing: 0 rem(7);
 }
 
 .price__table-row {
@@ -156,4 +159,7 @@ div.price__content-pc img {
 
 .price__btn {
   margin-top: rem(31);
+  @include mq(md) {
+    margin-top: rem(68);
+  }
 }

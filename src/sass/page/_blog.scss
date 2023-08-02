@@ -16,12 +16,9 @@
   }
 }
 
-.blog__title {
-  text-transform: none;
-}
-
 // 画像配置
 .blog::after {
+  text-transform: none;
   @include mq(md) {
     content: "";
     background: url("./../images/common/blog-bg-fish.png") center center / cover no-repeat;
@@ -40,7 +37,7 @@
 
 .blog__title {
   @include mq(md) {
-    padding-top: rem(100);
+    padding-top: rem(88);
     padding-bottom: rem(334);
     width: 100vw;
     margin: 0 calc(50% - 50vw);
@@ -75,5 +72,6 @@
 .blog__btn {
   margin-top: rem(40);
   @include mq(md) {
+    margin-top: rem(81);
   }
 }

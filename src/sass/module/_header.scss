@@ -12,8 +12,8 @@
 .header {
   height: rem(80);
   background: rgba(13, 41, 54, 0.68);
-  border-bottom: rem(2) solid $white;
   @include mq(md) {
+    width: 100%;
     height: rem(90);
   }
 }
@@ -99,6 +99,7 @@
   font-family: $second-font-family;
   margin-top: rem(9);
   position: relative;
+  white-space: nowrap;
 }
 
 // ホバー時の下線

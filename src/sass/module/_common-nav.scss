@@ -18,6 +18,12 @@
   padding-left: rem(21);
 }
 
+.common-nav__item br {
+  @include mq(md) {
+    display: none;
+  }
+}
+
 .common-nav__item a {
   font-family: $second-font-family;
   font-size: rem(16);
@@ -54,4 +60,10 @@
 // footer調整
 .common-nav__flex.common-nav__flex--right {
   margin-left: rem(10);
+}
+
+.common-nav__flex-list--footer:not(:first-child) {
+  @include mq(md) {
+    padding-left: rem(13);
+  }
 }

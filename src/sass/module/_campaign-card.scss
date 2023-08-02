@@ -30,6 +30,9 @@
 .campaign-card__text-wrapper {
   padding: rem(16) rem(15);
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
+  @include mq(md) {
+    padding: rem(24) rem(15) rem(25);
+  }
 }
 
 .campaign-card__text-block {
@@ -44,7 +47,7 @@
   padding: rem(8) rem(12);
   border: rem(1) solid $green;
   @include mq(md) {
-    padding: rem(6) rem(16);
+    padding: rem(6) rem(16) rem(11);
   }
 }
 
@@ -52,6 +55,9 @@
   color: $black;
   font-weight: 500;
   margin-top: rem(5);
+  @include mq(md) {
+    margin-top: rem(6);
+  }
 }
 
 .campaign-card__text {

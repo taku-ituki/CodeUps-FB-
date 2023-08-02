@@ -190,18 +190,18 @@
       <!-- メインビュー -->
       <section class="fv fv-layout js-fv">
         <div class="fv__inner">
-          <div class="swiper-container fv__swiper js-fv-swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide fv__swiper-slide fv__swiper-slide--turtle">
+          <div class="fv__swiper swiper-container js-fv-swiper">
+            <div class="fv__swiper__wrapper swiper-wrapper">
+              <div class="fv__swiper-slide swiper-slide fv__swiper-slide--turtle">
                 <div></div>
               </div>
-              <div class="swiper-slide fv__swiper-slide fv__swiper-slide--diving">
+              <div class="fv__swiper-slide swiper-slide fv__swiper-slide--diving">
                 <div></div>
               </div>
-              <div class="swiper-slide fv__swiper-slide fv__swiper-slide--boat">
+              <div class="fv__swiper-slide swiper-slide fv__swiper-slide--boat">
                 <div></div>
               </div>
-              <div class="swiper-slide fv__swiper-slide fv__swiper-slide--beach">
+              <div class="fv__swiper-slide swiper-slide fv__swiper-slide--beach">
                 <div></div>
               </div>
             </div>
@@ -305,8 +305,8 @@
             </div>
           </div>
           <!-- ナビゲーションボタンの div 要素（省略可能） -->
-          <div class="swiper-button-prev campaign__swiper-button-prev"></div>
-          <div class="swiper-button-next campaign__swiper-button-next"></div>
+          <div class="campaign__swiper-button-prev swiper-button-prev"></div>
+          <div class="campaign__swiper-button-next swiper-button-next"></div>
           <!-- common　ボタン -->
           <div class="campaign__btn common-btn common-btn-layout">
             <a href="#">
@@ -329,7 +329,7 @@
       <section class="about about-layout">
         <div class="about__inner inner">
           <!-- セクションタイトル -->
-          <div class="section-title">
+          <div class="bout__title section-title">
             <h2 class="section-title__item">about us<span>私たちについて</span></h2>
           </div>
           <div class="about__img-sp">
@@ -341,7 +341,7 @@
             <div class="about__text-ja">
               <p class="about__text">
                 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
               </p>
               <!-- common　ボタン -->
               <div class="about__btn common-btn common-btn-layout">
@@ -408,43 +408,49 @@
           </div>
           <div class="blog__cards">
             <div class="blog__card blog-card">
-              <div class="blog-card__img">
-                <img src="./assets/images/common/blog-card-coral.jpg" alt="blog-card-coral" />
-              </div>
-              <div class="blog-card__title-block">
-                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                <div class="blog-card__title">ライセンス講習</div>
-              </div>
-              <p class="blog-card__text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-              </p>
+              <a href="#">
+                <div class="blog-card__img">
+                  <img src="./assets/images/common/blog-card-coral.jpg" alt="blog-card-coral" />
+                </div>
+                <div class="blog-card__title-block">
+                  <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                  <div class="blog-card__title">ライセンス講習</div>
+                </div>
+                <p class="blog-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </a>
             </div>
             <div class="blog__card blog-card">
-              <div class="blog-card__img">
-                <img src="./assets/images/common/blog-card-turtle.jpg" alt="blog-card-coral" />
-              </div>
-              <div class="blog-card__title-block">
-                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                <div class="blog-card__title">ウミガメと泳ぐ</div>
-              </div>
-              <p class="blog-card__text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-              </p>
+              <a href="#">
+                <div class="blog-card__img">
+                  <img src="./assets/images/common/blog-card-turtle.jpg" alt="blog-card-coral" />
+                </div>
+                <div class="blog-card__title-block">
+                  <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                  <div class="blog-card__title">ウミガメと泳ぐ</div>
+                </div>
+                <p class="blog-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </a>
             </div>
             <div class="blog__card blog-card">
-              <div class="blog-card__img">
-                <img src="./assets/images/common/blog-card-clownfish.jpg" alt="blog-card-coral" />
-              </div>
-              <div class="blog-card__title-block">
-                <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
-                <div class="blog-card__title">カクレクマノミ</div>
-              </div>
-              <p class="blog-card__text">
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
-                ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-              </p>
+              <a href="#">
+                <div class="blog-card__img">
+                  <img src="./assets/images/common/blog-card-clownfish.jpg" alt="blog-card-coral" />
+                </div>
+                <div class="blog-card__title-block">
+                  <time class="blog-card__date" datetime="2023-11-17">2023.11/17</time>
+                  <div class="blog-card__title">カクレクマノミ</div>
+                </div>
+                <p class="blog-card__text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+              </a>
             </div>
           </div>
           <!-- common　ボタン -->
@@ -494,6 +500,7 @@
                 </p>
               </a>
             </div>
+
             <div class="voice__card">
               <a href="#">
                 <div class="voice__card-top">
@@ -717,7 +724,7 @@
         <nav class="footer__list-wrapper common-nav">
           <div class="common-nav__flex">
             <!-- 左側 -->
-            <ul class="common-nav__flex-list">
+            <ul class="common-nav__flex-list common-nav__flex-list--footer">
               <!-- キャンペーン -->
               <li class="common-nav__item common-nav__item--head">
                 <a href="#">キャンペーン</a>
@@ -738,7 +745,7 @@
                 </div>
               </li>
             </ul>
-            <ul class="common-nav__flex-list">
+            <ul class="common-nav__flex-list common-nav__flex-list--footer">
               <!-- ダイビング情報 -->
               <li class="common-nav__item common-nav__item--head">
                 <a href="#">ダイビング情報</a>
@@ -762,7 +769,7 @@
           </div>
           <!-- 右側 -->
           <div class="common-nav__flex common-nav__flex--right">
-            <ul class="common-nav__flex-list">
+            <ul class="common-nav__flex-list common-nav__flex-list--footer">
               <!-- お客様の声 -->
               <li class="common-nav__item common-nav__item--head">
                 <a href="#">お客様の声</a>
@@ -781,7 +788,7 @@
                 <a href="#">ファンダイビング</a>
               </li>
             </ul>
-            <ul class="common-nav__flex-list">
+            <ul class="common-nav__flex-list common-nav__flex-list--footer">
               <!-- よくある質問 -->
               <li class="common-nav__item common-nav__item--head">
                 <a href="#">よくある質問</a>
@@ -806,7 +813,7 @@
           </div>
         </nav>
       </div>
-      <div class="footer__copy-right">Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</div>
+      <small class="footer__copy-right">Copyright &copy; 2021 - 2023 CodeUps LLC. All Rights Reserved.</small>
     </footer>
     <!-- トップページボタン -->
     <div class="page-top-btn page-top-btn-layout js-page-top-btn">

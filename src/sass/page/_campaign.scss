@@ -14,7 +14,7 @@
   padding-bottom: rem(5);
   overflow: hidden;
   @include mq(md) {
-    margin-top: rem(40);
+    margin-top: rem(38);
   }
 }
 
@@ -27,16 +27,16 @@
     height: rem(80);
     width: rem(80);
     position: absolute;
-    top: 6%;
+    top: 4.5%;
   }
 }
 
 .swiper-button-prev.campaign__swiper-button-prev {
-  left: 78%;
+  left: 77%;
 }
 
 .swiper-button-next.campaign__swiper-button-next {
-  right: 1%;
+  right: 2%;
 }
 
 /* 前へ次への矢印カスタマイズ */
@@ -66,6 +66,6 @@
 .campaign__btn {
   margin-top: rem(33);
   @include mq(md) {
-    margin-top: rem(80);
+    margin-top: rem(75);
   }
 }

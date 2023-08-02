@@ -13,8 +13,8 @@
     /*絶対配置で線の位置を決める*/
     display: block;
     position: absolute;
-    top: 88%;
-    right: 6%;
+    top: 88.5%;
+    right: 5.8%;
     /*線の形状*/
     max-width: rem(194);
     width: 100%;
@@ -81,6 +81,8 @@
     width: 52.380952381%;
     position: relative;
     z-index: 3;
+    line-height: 1.25;
+    margin-top: rem(22);
   }
 }
 
@@ -89,7 +91,6 @@
   @include mq(md) {
     color: $white;
     width: 47.619047619%;
-    padding-left: 4.54545454545%;
   }
 }
 
@@ -98,7 +99,7 @@
   @include mq(md) {
     width: 81.4814814815%;
     display: flex;
-    padding-top: rem(120);
+    padding-top: rem(100);
     padding-right: rem(41);
     padding-bottom: rem(220);
     margin-top: rem(120);
@@ -133,8 +134,8 @@
 }
 
 .about__btn {
-  margin-top: rem(38);
+  margin-top: rem(30);
   @include mq(md) {
-    margin-top: rem(80);
+    margin-top: rem(40);
   }
 }
