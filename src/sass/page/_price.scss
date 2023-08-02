@@ -81,8 +81,9 @@
 }
 
 .price__table-list:not(:first-child) {
-  margin-top: rem(31);
+  margin-top: rem(39);
   @include mq(md) {
+    margin-top: rem(31);
   }
 }
 
@@ -158,7 +159,7 @@ div.price__content-pc img {
 }
 
 .price__btn {
-  margin-top: rem(31);
+  margin-top: rem(40);
   @include mq(md) {
     margin-top: rem(68);
   }
