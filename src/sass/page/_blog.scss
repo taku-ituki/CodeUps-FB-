@@ -5,17 +5,17 @@
   position: relative;
   padding-bottom: rem(10);
 }
-.blog__inner {
-  max-width: rem(642);
-  width: 100%;
-  padding: 0 rem(21) rem(10);
-  margin: 0 auto;
-  @include mq(md) {
-    max-width: rem(1120);
-    width: 100%;
-    padding: 0 rem(20);
-  }
-}
+// .blog__inner {
+//   max-width: rem(642);
+//   width: 100%;
+//   padding: 0 rem(21) rem(10);
+//   margin: 0 auto;
+//   @include mq(md) {
+//     max-width: rem(1120);
+//     width: 100%;
+//     padding: 0 rem(20);
+//   }
+// }
 
 // 画像配置
 .blog::after {

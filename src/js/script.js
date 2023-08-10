@@ -51,7 +51,7 @@ jQuery(function ($) {
   };
   new Swiper(".js-fv-swiper", swipeOption);
 
-  // campaign swiper
+  // キャンペーンセクションのスワイパー
   let mySwiper = new Swiper(".js-campaign-swiper", {
     // 以下にオプションを設定
     loop: true, //最後に達したら先頭に戻る
@@ -87,6 +87,10 @@ jQuery(function ($) {
         spaceBetween: 40,
       },
     },
+  });
+
+  window.addEventListener("load", () => {
+    matchHeight(".js-campaign-card");
   });
 
   // 画像アニメーション
@@ -126,5 +130,27 @@ jQuery(function ($) {
       500
     );
     return false;
+  });
+
+  // トップページボタン：最初非表示→スクロールしたら表示
+  $(function () {
+    // 変数にクラスを入れる
+    var btn = $(".js-page-top-btn");
+
+    //スクロールしてページトップから100に達したらボタンを表示
+    $(window).on("load scroll", function () {
+      if ($(this).scrollTop() > 100) {
+        btn.addClass("active");
+      } else {
+        btn.removeClass("active");
+      }
+    });
+
+    //スクロールしてトップへ戻る
+    btn.on("click", function () {
+      $("body,html").animate({
+        scrollTop: 0,
+      });
+    });
   });
 });

@@ -18,6 +18,14 @@
   }
 }
 
+// campaign-swiperカードの高さを揃える（テキストの増減に対応）
+.campaign__swiper-slide.swiper-slide {
+  height: auto;
+}
+.campaign__card.campaign-card {
+  height: 100%;
+}
+
 /* 前へ次への矢印カスタマイズ */
 .swiper-button-prev.campaign__swiper-button-prev,
 .swiper-button-next.campaign__swiper-button-next {
@@ -69,3 +77,4 @@
     margin-top: rem(75);
   }
 }
+

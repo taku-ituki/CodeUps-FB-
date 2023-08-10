@@ -36,6 +36,12 @@
   text-transform: capitalize;
   text-align: left;
   position: relative;
+  transition: 0.3s;
+}
+
+.common-nav__item a:hover {
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
 .common-nav__item--head {

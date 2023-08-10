@@ -1,16 +1,32 @@
 @use "global" as *;
 
 .blog-card {
-  max-width: rem(333);
+  max-width: rem(630);
   width: 100%;
   padding: rem(16) rem(16) rem(24) rem(16);
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
   transition: 0.3s;
   background-color: $white;
+  position: relative;
 }
 
-.blog-card:hover {
-  opacity: 0.7;
+// ホバー時に背景を透過させずに半透明にする
+.blog-card::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: 0.3s;
+  opacity: 0;
+  background-color: $white;
+  // 疑似要素を貫通して。aタグをクリックできる↓
+  pointer-events: none;
+}
+
+.blog-card:hover::after {
+  opacity: 0.5;
   transition: 0.3s;
 }
 
