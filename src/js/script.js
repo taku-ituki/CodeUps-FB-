@@ -26,11 +26,13 @@ jQuery(function ($) {
 
   function openDrawer() {
     $(".js-drawer").fadeIn();
+    $(".js-header").addClass("is-open");
     $(".js-hamburger").addClass("is-open");
   }
 
   function closeDrawer() {
     $(".js-drawer").fadeOut();
+    $(".js-header").removeClass("is-open");
     $(".js-hamburger").removeClass("is-open");
   }
 
@@ -55,9 +57,10 @@ jQuery(function ($) {
   let mySwiper = new Swiper(".js-campaign-swiper", {
     // 以下にオプションを設定
     loop: true, //最後に達したら先頭に戻る
-    slidesPerView: 1.25,
+    // slidesPerView: "auto",
+    slidesPerView: "1.25",
     spaceBetween: 24,
-    allowTouchMove: true,
+    freeModeSticky: true,
     //ページネーション表示の設定
     pagination: {
       el: ".swiper-pagination", //ページネーションの要素
@@ -76,21 +79,12 @@ jQuery(function ($) {
       el: ".swiper-scrollbar", //要素の指定
     },
     breakpoints: {
-      // ブレークポイント
-      600: {
+      768: {
         // 画面幅600px以上で適用
-        slidesPerView: 2.5,
-      },
-      1025: {
-        // 画面幅1025px以上で適用
-        slidesPerView: 3.5,
+        slidesPerView: "3.5",
         spaceBetween: 40,
       },
     },
-  });
-
-  window.addEventListener("load", () => {
-    matchHeight(".js-campaign-card");
   });
 
   // 画像アニメーション

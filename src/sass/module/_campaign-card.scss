@@ -1,8 +1,21 @@
 @use "global" as *;
 
 .campaign-card {
+  display: flex;
+  flex-direction: column;
   transition: 0.3s;
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
+  // width: rem(280);
+  @include mq(md) {
+    // width: rem(333);
+  }
+}
+
+.campaign-card a {
+  display: flex;
+  flex-direction: column;
+  // flex-grow: 1;
+  cursor: pointer;
 }
 
 .campaign-card:hover {
@@ -24,14 +37,14 @@
 }
 
 .campaign-card__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  // flex-grow: 1;
   padding: rem(16) rem(15);
-  @include mq(md) {
-    padding: rem(24) rem(15) rem(25);
-  }
-}
-
-.campaign-card__text-block {
   font-family: $second-font-family;
+  @include mq(md) {
+    padding: rem(24) rem(15) rem(8);
+  }
 }
 
 .campaign-card__color-title {
@@ -39,6 +52,7 @@
   color: $green;
   font-size: rem(12);
   line-height: 1;
+  width: fit-content;
   padding: rem(8) rem(12);
   border: rem(1) solid $green;
   @include mq(md) {
@@ -50,6 +64,7 @@
   color: $black;
   font-weight: 500;
   margin-top: rem(5);
+  // flex-grow: 1;
   @include mq(md) {
     margin-top: rem(6);
   }
@@ -72,6 +87,16 @@
   align-items: center;
   justify-content: center;
   margin-top: rem(1);
+}
+
+// カード下部の下揃え　cardのaタグのdisplay：flex、flex-direction:columnとセットで
+.campaign-card__price-wrapper {
+  margin-top: auto;
+  padding: rem(16) rem(15);
+  font-family: $second-font-family;
+  @include mq(md) {
+    padding: 0 rem(15) rem(25);
+  }
 }
 
 .campaign-card__price-before {

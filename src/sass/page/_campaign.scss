@@ -18,11 +18,18 @@
   }
 }
 
-// campaign-swiperカードの高さを揃える（テキストの増減に対応）
-.campaign__swiper-slide.swiper-slide {
+// // campaign-swiperカードの高さを揃える（テキストの増減に対応）
+.campaign__swiper-wrapper {
+  // display: grid;
+  // grid-auto-flow: column;
+  // display: flex;
+}
+
+.swiper-slide {
   height: auto;
 }
-.campaign__card.campaign-card {
+
+.swiper-slide a {
   height: 100%;
 }
 
@@ -77,4 +84,3 @@
     margin-top: rem(75);
   }
 }
-
