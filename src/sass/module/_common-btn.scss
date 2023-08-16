@@ -2,10 +2,15 @@
 
 .common-btn {
   color: $white;
-  max-width: rem(202);
-  width: 100%;
-  background-color: $green;
+  font-size: rem(14);
+  display: inline-block;
   text-align: center;
+  cursor: pointer;
+  padding: rem(16) rem(38);
+  //   アニメーション時に文字が潜り込まないように設置
+  position: relative;
+  z-index: 1;
+  background-color: $green;
   position: relative;
   border: rem(1) solid $green;
 }
@@ -25,22 +30,15 @@
   border: rem(1) solid $green;
 }
 
-.common-btn a {
-  font-size: rem(14);
-  display: block;
-  text-align: center;
-  cursor: pointer;
-  padding: rem(16) rem(38);
-  //   アニメーション時に文字が潜り込まないように設置
-  position: relative;
-  z-index: 1;
-}
-
+// 文字と矢印の横並び
 .common-btn__asset {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
+// view more
 .common-btn__text {
   text-transform: capitalize;
 }
@@ -49,6 +47,7 @@
   text-transform: lowercase;
 }
 
+// 矢印のサイズ
 .common-btn__img {
   width: rem(40);
   margin-left: rem(8);

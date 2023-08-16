@@ -132,7 +132,9 @@
   object-fit: cover;
 }
 
-.about__btn {
+// ボタンの左右中央寄せ
+.about__btn-wrap {
+  text-align: center;
   margin-top: rem(15);
   @include mq(md) {
     margin-top: rem(40);

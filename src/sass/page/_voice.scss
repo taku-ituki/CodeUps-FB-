@@ -162,7 +162,9 @@ div.voice__card-img img {
   width: 100%;
 }
 
-.voice__btn {
+// ボタンの左右中央寄せ
+.voice__btn-wrap {
+  text-align: center;
   margin-top: rem(42);
   @include mq(md) {
     margin-top: rem(80);

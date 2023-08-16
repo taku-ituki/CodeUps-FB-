@@ -86,6 +86,9 @@ div.information__img img {
   width: 100%;
 }
 
-.information__btn {
+// ボタンの左右中央寄せ
+.information__btn-wrap {
+  text-align: center;
   margin-top: rem(40);
 }
+

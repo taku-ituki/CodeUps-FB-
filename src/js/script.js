@@ -60,6 +60,7 @@ jQuery(function ($) {
     // slidesPerView: "auto",
     slidesPerView: "1.25",
     spaceBetween: 24,
+    width: 355,
     freeModeSticky: true,
     //ページネーション表示の設定
     pagination: {
@@ -83,6 +84,7 @@ jQuery(function ($) {
         // 画面幅600px以上で適用
         slidesPerView: "3.5",
         spaceBetween: 40,
+        width: 1265,
       },
     },
   });

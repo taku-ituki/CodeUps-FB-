@@ -157,7 +157,8 @@ div.price__content-pc img {
   width: 100%;
 }
 
-.price__btn {
+.price__btn-wrap {
+  text-align: center;
   margin-top: rem(40);
   @include mq(md) {
     margin-top: rem(68);
