@@ -39,7 +39,7 @@
 .campaign-card__text-wrapper {
   display: flex;
   flex-direction: column;
-  padding: rem(16) rem(15);
+  padding: rem(16) rem(15) 0;
   font-family: $second-font-family;
   @include mq(md) {
     padding: rem(24) rem(15) rem(8);
@@ -90,7 +90,7 @@
 // カード下部の下揃え　cardのaタグのdisplay：flex、flex-direction:columnとセットで
 .campaign-card__price-wrapper {
   margin-top: auto;
-  padding: rem(16) rem(15);
+  padding: 0 rem(15) rem(16);
   font-family: $second-font-family;
   @include mq(md) {
     padding: 0 rem(15) rem(25);

@@ -72,14 +72,13 @@
 }
 
 // ボタンの左右中央寄せ
-.campaign__btn-wrap{
+.campaign__btn-wrap {
   text-align: center;
 }
 
 .campaign__btn {
-  margin-top: rem(33);
+  margin-top: rem(35);
   @include mq(md) {
     margin-top: rem(75);
   }
 }
-

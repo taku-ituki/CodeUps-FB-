@@ -2,7 +2,7 @@
 
 .about__body {
   position: relative;
-  margin-top: rem(52);
+  margin-top: rem(26);
   @include mq(md) {
     margin-top: rem(40);
   }
@@ -84,7 +84,7 @@
 }
 
 .about__text-ja {
-  margin-top: rem(20);
+  margin-top: rem(16);
   @include mq(md) {
     color: $white;
     width: 45.619047619%;
