@@ -1,34 +1,6 @@
 @use "global" as *;
-.about {
-  @include mq(md) {
-    position: relative;
-  }
-}
 
-// 画像配置
-.about::after {
-  @include mq(md) {
-    content: "";
-    background: url("./../images/common/top-about-coral-img.png") center center / cover no-repeat;
-    /*絶対配置で線の位置を決める*/
-    display: block;
-    position: absolute;
-    top: 88.5%;
-    right: 5.8%;
-    /*線の形状*/
-    max-width: rem(194);
-    width: 100%;
-    height: rem(181);
-  }
-}
-
-.about_inner {
-  @include mq(md) {
-    position: relative;
-  }
-}
-
-.about__img-sp {
+.about__body {
   position: relative;
   margin-top: rem(52);
   @include mq(md) {
@@ -36,30 +8,56 @@
   }
 }
 
-.about__img-left {
-  width: 37.1014492754%;
-  aspect-ratio: 128/194;
-  position: absolute;
-  z-index: 2;
-  top: -14%;
-  left: 0;
+// 画像配置
+.about__body::after {
   @include mq(md) {
-    z-index: 0;
+    content: "";
+    background: url("./../images/common/top-about-coral-img.png") center center / cover no-repeat;
+    /*絶対配置で線の位置を決める*/
+    display: block;
+    position: absolute;
+    top: 88.5%;
+    right: calc(50% - (min(48.111vw, rem(637))));
+    /*線の形状*/
+    max-width: rem(194);
+    width: 100%;
+    height: rem(181);
+    z-index: 30;
+  }
+}
+
+.about__img-block {
+  display: flex;
+  position: relative;
+  z-index: 25;
+  @include mq(md) {
+  }
+}
+
+.about__img-left {
+  aspect-ratio: 128/194;
+  position: relative;
+  z-index: 20;
+  @include mq(md) {
+    aspect-ratio: 399/606;
   }
 }
 
 .about__img-left img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
+  @include mq(md) {
+  }
 }
 
 .about__img-right {
-  width: 81.1594202899%;
   aspect-ratio: 281/186;
-  margin-left: auto;
+  position: relative;
+  margin-top: 7.4%;
+  margin-left: -18.55%;
+  z-index: 15;
   @include mq(md) {
-    display: none;
+    aspect-ratio: 880/581;
   }
 }
 
@@ -89,21 +87,17 @@
   margin-top: rem(20);
   @include mq(md) {
     color: $white;
-    width: 47.619047619%;
+    width: 45.619047619%;
   }
 }
 
 .about__text-block {
-  margin-top: rem(16);
-  @include mq(md) {
-    width: 81.4814814815%;
+  @include mq("md") {
+    position: absolute;
+    top: 30.5%;
+    left: 18.518%;
     display: flex;
-    padding-top: rem(100);
-    padding-right: rem(41);
-    padding-bottom: rem(220);
-    margin-top: rem(120);
-    margin-left: auto;
-    background: url("./../images/common/top-about-right-sp.jpg") center center / cover no-repeat;
+    z-index: 30;
   }
 }
 
@@ -122,7 +116,6 @@
     position: absolute;
     top: 88%;
     left: 89.5%;
-    // z-index: 1;
   }
 }
 

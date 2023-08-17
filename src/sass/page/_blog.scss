@@ -1,13 +1,37 @@
 @use "global" as *;
 
 .blog {
-  overflow: hidden;
   position: relative;
   padding-bottom: rem(10);
 }
 
+.blog::before {
+  @include mq("md") {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(500);
+    background-image: url(./../images/common/top-blog-pc.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+  }
+}
+
+.blog__inner {
+  position: relative;
+}
+
+.blog__title {
+  @include mq(md) {
+    padding-top: rem(100);
+  }
+}
+
 // 画像配置
-.blog::after {
+.blog__inner::after {
   text-transform: none;
   @include mq(md) {
     content: "";
@@ -16,22 +40,12 @@
     display: block;
     position: absolute;
     top: 3%;
-    left: 7%;
+    left: calc(50% - (min(48.062vw, rem(625))));
     /*線の形状*/
     max-width: rem(437);
     width: 100%;
     height: rem(200);
-    z-index: 1;
-  }
-}
-
-.blog__title {
-  @include mq(md) {
-    padding-top: rem(88);
-    padding-bottom: rem(334);
-    width: 100vw;
-    margin: 0 calc(50% - 50vw);
-    background: url("./../images/common/top-blog-pc.jpg") center center / cover no-repeat;
+    z-index: 30;
   }
 }
 
@@ -43,7 +57,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: rem(40);
-    margin-top: rem(-255);
+    margin-top: rem(80);
   }
 }
 
