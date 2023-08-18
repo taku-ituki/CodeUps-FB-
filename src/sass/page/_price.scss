@@ -82,7 +82,7 @@
 .price__list:not(:first-child) {
   margin-top: rem(50);
   @include mq(md) {
-    margin-top: rem(31);
+    margin-top: rem(40);
   }
 }
 

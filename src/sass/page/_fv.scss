@@ -34,11 +34,9 @@
   font-weight: normal;
   line-height: 1;
   letter-spacing: 0.54em;
-  padding-left: rem(18);
-  text-indent: 0.04em;
+  text-indent: 0.64em;
   @include mq(md) {
     font-size: rem(80);
-    padding-left: rem(35);
   }
 }
 
@@ -46,13 +44,12 @@
   font-size: rem(20);
   font-weight: normal;
   line-height: 1;
-  padding-left: rem(26);
   margin-top: rem(8);
-  text-indent: -1.46em;
+  text-indent: -0.1em;
   @include mq(md) {
     padding-left: rem(0);
-    padding-right: rem(28);
     margin-top: rem(20);
+    text-indent: 0.3em;
   }
 }
 

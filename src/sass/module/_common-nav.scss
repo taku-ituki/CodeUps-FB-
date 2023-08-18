@@ -65,10 +65,13 @@
 // footer調整
 .common-nav__flex.common-nav__flex--right {
   margin-left: rem(10);
+  @include mq(md) {
+    margin-left: rem(20);
+  }
 }
 
 .common-nav__flex-list--footer:not(:first-child) {
   @include mq(md) {
-    padding-left: rem(13);
+    padding-left: rem(20);
   }
 }

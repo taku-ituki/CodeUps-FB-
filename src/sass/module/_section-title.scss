@@ -60,3 +60,10 @@
     margin-top: rem(0);
   }
 }
+
+// Blog
+.section-title__ja-item.section-title__ja-item--blog {
+  @include mq(md) {
+    color: $white;
+  }
+}
