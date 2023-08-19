@@ -12,17 +12,18 @@
   margin-top: rem(26);
   margin-right: calc(50% - 50vw);
   padding-bottom: rem(5);
+  padding-left: rem(5);
   overflow: hidden;
   @include mq(md) {
     margin-top: rem(38);
   }
 }
 
-.swiper-slide {
+.campaign.swiper-slide {
   height: auto;
 }
 
-.swiper-slide a {
+.campaign.swiper-slide a {
   height: 100%;
 }
 
