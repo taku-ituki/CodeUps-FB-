@@ -1,14 +1,8 @@
 @use "global" as *;
 
 .campaign-card {
-  display: flex;
-  flex-direction: column;
   transition: 0.3s;
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
-  // width: rem(280);
-  @include mq(md) {
-    // width: rem(333);
-  }
 }
 
 // カード内要素の下揃えに必要
@@ -37,8 +31,6 @@
 }
 
 .campaign-card__text-wrapper {
-  display: flex;
-  flex-direction: column;
   padding: rem(16) rem(15) 0;
   font-family: $second-font-family;
   @include mq(md) {
@@ -127,4 +119,31 @@
     font-size: rem(40);
     margin-left: rem(25);
   }
+}
+
+// Campaignセクション
+.campaign-card__add-text-wrapper {
+  padding-left: rem(16);
+  padding-right: rem(16);
+  font-family: $second-font-family;
+  @include mq(md) {
+    padding-left: rem(24);
+    padding-right: rem(24);
+  }
+}
+.campaign-card__add-text {
+}
+
+.campaign-card__add-date {
+  color: $green;
+  text-align: center;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(32);
+  }
+}
+
+.campaign-card__add-form {
+  color: $green;
+  text-align: center;
 }

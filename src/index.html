@@ -20,7 +20,6 @@
     <!-- ファビコン -->
     <link rel="”icon”" href="#" />
     <!-- Swiper -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.3.3/swiper-bundle.min.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!-- css -->
     <link rel="stylesheet" href="./assets/css/style.css" />
@@ -38,11 +37,16 @@
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
+    <!-- ローディング画面 -->
+    <div class="loader">
+      <div class="loader__image loader__image--left"></div>
+      <div class="loader__image loader__image--right"></div>
+    </div>
     <!-- header -->
     <header class="header header-layout js-header">
       <div class="header__inner">
         <h1 class="header__logo">
-          <a href="#">
+          <a href="index.html">
             <img src="./assets/images/common/CodeUps.svg" alt="CodeUps" />
           </a>
         </h1>
@@ -50,7 +54,7 @@
         <nav class="header__nav">
           <ul class="header__nav-items">
             <li class="header__nav-item">
-              <a href="#"
+              <a href="campaign.html"
                 ><div class="header__nav-text">campaign<span>キャンペーン</span></div></a
               >
             </li>
@@ -100,13 +104,13 @@
         <!-- SPナビゲーション -->
         <div class="header__drawer js-drawer">
           <nav class="header__drawer-wrapper common-nav">
-            <!-- <div class="header__drawer-addclass"> -->
+          
             <div class="common-nav__flex">
               <!-- 左側 -->
               <ul class="common-nav__flex-list">
                 <!-- キャンペーン -->
                 <li class="common-nav__item common-nav__item--head">
-                  <a href="#">キャンペーン</a>
+                  <a href="campaign.html">キャンペーン</a>
                 </li>
                 <li class="common-nav__item">
                   <a href="#">ライセンス取得</a>
@@ -184,7 +188,6 @@
                 </li>
               </ul>
             </div>
-            <!-- </div> -->
           </nav>
         </div>
       </div>
@@ -305,7 +308,7 @@
           <div class="campaign__swiper-button-next swiper-button-next"></div>
           <!-- common　ボタン -->
           <div class="campaign__btn-wrap">
-            <a class="campaign__btn common-btn" href="#">
+            <a class="campaign__btn common-btn" href="campaign.html">
               <div class="common-btn__asset">
                 <div class="common-btn__text">view <span>more</span></div>
                 <div class="common-btn__img-wrapper">
@@ -705,7 +708,7 @@
             <ul class="common-nav__flex-list common-nav__flex-list--footer">
               <!-- キャンペーン -->
               <li class="common-nav__item common-nav__item--head">
-                <a href="#">キャンペーン</a>
+                <a href="campaign.html">キャンペーン</a>
               </li>
               <li class="common-nav__item">
                 <a href="#">ライセンス取得</a>
