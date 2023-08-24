@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.breadcrumbs-blog-layout {
+  margin-top: rem(9);
+}
+
+.breadcrumbs__inner {
+  display: flex;
+  gap: rem(8);
+}
+
+.breadcrumbs__inner--campaign {
+}
+
+.breadcrumbs__top {
+}
+
+.breadcrumbs__top a {
+  font-family: $second-font-family;
+  font-size: rem(14);
+}
+
+.breadcrumbs__arrow {
+}
+
+.breadcrumbs__page-title {
+}
+
+.breadcrumbs__page-title {
+  font-family: $second-font-family;
+  font-size: rem(14);
+}

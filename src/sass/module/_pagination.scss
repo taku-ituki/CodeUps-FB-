@@ -1,0 +1,79 @@
+@use "global" as *;
+
+// ページネーション
+.pagination__inner {
+  max-width: rem(444);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pagination__inner img {
+  width: rem(38);
+  height: rem(38);
+}
+
+.pagination__list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+// .info__pagination li {
+//   font-size: rem(16);
+//   letter-spacing: rem(2);
+// }
+
+// .info__pagination li a {
+//   display: inline-block;
+// }
+
+.pagination a {
+  font-family: $third-font-family;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(10) rem(12);
+  border: rem(1) solid $green;
+  border-radius: 1px;
+  color: $green;
+  line-height: 1;
+  transition: 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #fff;
+  color: #333333;
+  transition: 0.3s;
+}
+
+.pagination a:not(:hover) {
+  text-decoration: none;
+}
+
+.pagination__next {
+  margin-left: rem(16);
+  @include mq(md) {
+    margin-left: rem(40);
+  }
+}
+
+.pagination__number {
+  margin-left: rem(8);
+  @include mq(md) {
+    margin-left: rem(15);
+  }
+}
+
+.pagination__number.pagination__number--current {
+  margin-left: rem(16);
+  @include mq(md) {
+    margin-left: rem(40);
+  }
+}
+
+.pagination__number.pagination__number--current a {
+  background-color: $green;
+  color: $white;
+}

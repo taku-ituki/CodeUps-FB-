@@ -94,14 +94,4 @@
 //   }
 // }
 
-// Campaignページ
-.campaign__card.campaign__card--page {
-  margin-left: auto;
-  margin-right: auto;
-}
-.campaign__card.campaign__card--page:not(:first-child) {
-  margin-top: rem(40);
-  @include mq(md) {
-    margin-top: rem(0);
-  }
-}
+

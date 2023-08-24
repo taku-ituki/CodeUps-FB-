@@ -132,6 +132,10 @@
   }
 }
 .campaign-card__add-text {
+  font-size: rem(11);
+  @include mq(md) {
+    font-size: rem(16);
+  }
 }
 
 .campaign-card__add-date {
@@ -139,11 +143,39 @@
   text-align: center;
   margin-top: rem(24);
   @include mq(md) {
-    margin-top: rem(32);
+    margin-top: rem(30);
   }
 }
 
 .campaign-card__add-form {
   color: $green;
   text-align: center;
+}
+
+.campaign-card__title.campaign-card__title--page {
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(24);
+  }
+}
+
+// campaignページカード内余白調整
+.campaign-card__text-wrapper.campaign-card__text-wrapper--page {
+  padding-left: rem(24);
+  padding-right: rem(24);
+  padding-bottom: rem(4);
+}
+
+.campaign-card__price-wrapper.campaign-card__price-wrapper--page {
+  padding-left: rem(24);
+  padding-right: rem(24);
+  padding-bottom: rem(8);
+}
+
+.campaign-card__price-after.campaign-card__price-after--page {
+  margin-left: rem(40);
+}
+
+.campaign-card__text.campaign-card__text--page {
+  padding-top: rem(23);
 }

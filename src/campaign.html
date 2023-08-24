@@ -40,11 +40,11 @@
     <!-- header -->
     <header class="header header-layout js-header">
       <div class="header__inner">
-        <h1 class="header__logo">
+        <div class="header__logo">
           <a href="index.html">
             <img src="./assets/images/common/CodeUps.svg" alt="CodeUps" />
           </a>
-        </h1>
+        </div>
         <!-- PCナビゲーション -->
         <nav class="header__nav">
           <ul class="header__nav-items">
@@ -189,44 +189,61 @@
     </header>
     <main>
       <!-- メインビュー -->
-      <section class="fv fv-layout js-fv">
-        <div class="fv__inner"></div>
-        <h2 class="fv__title">
-          <span class="fv__title--main">Campaign</span>
-        </h2>
+      <section class="sub-fv sub-fv-layout">
+        <div class="sub-fv__inner sub-fv__inner--campaign"></div>
+        <h1 class="sub-fv__title">
+          <span>Campaign</span>
+        </h1>
       </section>
+      <!-- パンくずリスト -->
+      <div class="breadcrumbs breadcrumbs-blog-layout">
+        <div class="breadcrumbs__inner inner breadcrumbs__inner--campaign">
+          <p class="breadcrumbs__top"><a href="index.html">TOP</a></p>
+          <div class="breadcrumbs__arrow">></div>
+          <p class="breadcrumbs__page-title">キャンペーン</p>
+        </div>
+      </div>
       <!-- Campaign -->
       <section class="page-campaign page-campaign-layout">
         <div class="page-campaign__inner inner">
+          <!-- カテゴリー -->
+          <div class="page-campaign__category category">
+            <ul class="category__list">
+              <li class="category__menu category__menu--current"><a href="#">ALL</a></li>
+              <li class="category__menu"><a>ライセンス講習</a></li>
+              <li class="category__menu"><a>ファンダイビング</a></li>
+              <li class="category__menu"><a>体験ダイビング</a></li>
+            </ul>
+          </div>
           <div class="page-campaign__cards campaign-cards">
-            <div class="campaign__card campaign-card campaign__card--page">
+            <div class="page-campaign__card campaign-card campaign__card--page">
               <div class="campaign-card__img">
                 <img src="./assets/images/common/campaign-card1.jpg" alt="campaign-card-fish" />
               </div>
-              <div class="campaign-card__text-wrapper">
+              <div class="campaign-card__text-wrapper campaign-card__text-wrapper--page">
                 <div class="campaign-card__color-title">ライセンス講習</div>
-                <h2 class="campaign-card__title">ライセンス取得</h2>
+                <h2 class="campaign-card__title campaign-card__title--page">ライセンス取得</h2>
               </div>
-              <div class="campaign-card__price-wrapper">
-                <div class="campaign-card__text">全部コミコミ(お一人様)</div>
+              <div class="campaign-card__price-wrapper campaign-card__price-wrapper--page">
+                <div class="campaign-card__text campaign-card__text--page">全部コミコミ(お一人様)</div>
                 <div class="campaign-card__price-block">
                   <div class="campaign-card__price-before">¥56,000</div>
-                  <div class="campaign-card__price-after">¥46,000</div>
+                  <div class="campaign-card__price-after campaign-card__price-after--page">¥46,000</div>
                 </div>
               </div>
               <div class="campaign-card__add-text-wrapper">
                 <p class="campaign-card__add-text">
-                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
                 </p>
                 <div class="campaign-card__add-date">2023/6/1-9/30</div>
                 <div class="campaign-card__add-form">ご予約・お問い合わせはコチラ</div>
               </div>
               <!-- common　ボタン -->
-              <div class="campaign__btn-wrap">
-                <a class="campaign__btn common-btn" href="#">
+              <div class="page-campaign__btn-wrap">
+                <a class="page-campaign__btn common-btn" href="#">
                   <div class="common-btn__asset">
-                    <div class="common-btn__text">view <span>more</span></div>
+                    <div class="common-btn__text">contact<span>us</span></div>
                     <div class="common-btn__img-wrapper">
                       <div class="common-btn__img common-btn__img--before">
                         <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
@@ -239,77 +256,147 @@
                 </a>
               </div>
             </div>
-            <div class="campaign__card campaign-card campaign__card--page">
-              <a href="#">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign-card-boat.jpg" alt="campaign-card-boat" />
-                </div>
-                <div class="campaign-card__text-wrapper">
-                  <div class="campaign-card__color-title">体験ダイビング</div>
-                  <h2 class="campaign-card__title">貸切体験ダイビング</h2>
-                </div>
-                <div class="campaign-card__price-wrapper">
-                  <div class="campaign-card__text">全部コミコミ(お一人様)</div>
-                  <div class="campaign-card__price-block">
-                    <div class="campaign-card__price-before">¥24,000</div>
-                    <div class="campaign-card__price-after">¥18,000</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="campaign__card campaign-card campaign__card--page">
-              <a href="#">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign-card-jellyfish.jpg" alt="campaign-card-jellyfish" />
-                </div>
-                <div class="campaign-card__text-wrapper">
-                  <div class="campaign-card__color-title">体験ダイビング</div>
-                  <h2 class="campaign-card__title">ナイトダイビング</h2>
-                </div>
-                <div class="campaign-card__price-wrapper">
-                  <div class="campaign-card__text">全部コミコミ(お一人様)</div>
-                  <div class="campaign-card__price-block">
-                    <div class="campaign-card__price-before">¥10,000</div>
-                    <div class="campaign-card__price-after">¥8,000</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div class="campaign__card campaign-card campaign__card--page">
-              <a href="#">
-                <div class="campaign-card__img">
-                  <img src="./assets/images/common/campaign-card-diving.jpg" alt="campaign-card-diving" />
-                </div>
-                <div class="campaign-card__text-wrapper">
-                  <div class="campaign-card__color-title">ファンダイビング</div>
-                  <h2 class="campaign-card__title">貸切ファンダイビング</h2>
-                </div>
-                <div class="campaign-card__price-wrapper">
-                  <div class="campaign-card__text">全部コミコミ(お一人様)</div>
-                  <div class="campaign-card__price-block">
-                    <div class="campaign-card__price-before">¥20,000</div>
-                    <div class="campaign-card__price-after">¥16,000</div>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <!-- common　ボタン -->
-          <div class="campaign__btn-wrap">
-            <a class="campaign__btn common-btn" href="#">
-              <div class="common-btn__asset">
-                <div class="common-btn__text">view <span>more</span></div>
-                <div class="common-btn__img-wrapper">
-                  <div class="common-btn__img common-btn__img--before">
-                    <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
-                  </div>
-                  <div class="common-btn__img common-btn__img--after">
-                    <img src="./assets/images/common/common-btn-img--after.png" alt="after" />
-                  </div>
+            <div class="page-campaign__card campaign-card campaign__card--page">
+              <div class="campaign-card__img">
+                <img src="./assets/images/common/campaign-card-boat.jpg" alt="campaign-card-boat" />
+              </div>
+              <div class="campaign-card__text-wrapper campaign-card__text-wrapper--page">
+                <div class="campaign-card__color-title">体験ダイビング</div>
+                <h2 class="campaign-card__title campaign-card__title--page">貸切体験ダイビング</h2>
+              </div>
+              <div class="campaign-card__price-wrapper campaign-card__price-wrapper--page">
+                <div class="campaign-card__text campaign-card__text--page">全部コミコミ(お一人様)</div>
+                <div class="campaign-card__price-block">
+                  <div class="campaign-card__price-before">¥24,000</div>
+                  <div class="campaign-card__price-after campaign-card__price-after--page">¥18,000</div>
                 </div>
               </div>
-            </a>
+              <div class="campaign-card__add-text-wrapper">
+                <p class="campaign-card__add-text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+                <div class="campaign-card__add-date">2023/6/1-9/30</div>
+                <div class="campaign-card__add-form">ご予約・お問い合わせはコチラ</div>
+              </div>
+              <!-- common　ボタン -->
+              <div class="page-campaign__btn-wrap">
+                <a class="page-campaign__btn common-btn" href="#">
+                  <div class="common-btn__asset">
+                    <div class="common-btn__text">contact<span>us</span></div>
+                    <div class="common-btn__img-wrapper">
+                      <div class="common-btn__img common-btn__img--before">
+                        <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
+                      </div>
+                      <div class="common-btn__img common-btn__img--after">
+                        <img src="./assets/images/common/common-btn-img--after.png" alt="after" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="page-campaign__card campaign-card campaign__card--page">
+              <div class="campaign-card__img">
+                <img src="./assets/images/common/campaign-card-jellyfish.jpg" alt="campaign-card-jellyfish" />
+              </div>
+              <div class="campaign-card__text-wrapper campaign-card__text-wrapper--page">
+                <div class="campaign-card__color-title">体験ダイビング</div>
+                <h2 class="campaign-card__title campaign-card__title--page">ナイトダイビング</h2>
+              </div>
+              <div class="campaign-card__price-wrapper campaign-card__price-wrapper--page">
+                <div class="campaign-card__text campaign-card__text--page">全部コミコミ(お一人様)</div>
+                <div class="campaign-card__price-block">
+                  <div class="campaign-card__price-before">¥10,000</div>
+                  <div class="campaign-card__price-after campaign-card__price-after--page">¥8,000</div>
+                </div>
+              </div>
+              <div class="campaign-card__add-text-wrapper">
+                <p class="campaign-card__add-text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+                <div class="campaign-card__add-date">2023/6/1-9/30</div>
+                <div class="campaign-card__add-form">ご予約・お問い合わせはコチラ</div>
+              </div>
+              <!-- common　ボタン -->
+              <div class="page-campaign__btn-wrap">
+                <a class="page-campaign__btn common-btn" href="#">
+                  <div class="common-btn__asset">
+                    <div class="common-btn__text">contact<span>us</span></div>
+                    <div class="common-btn__img-wrapper">
+                      <div class="common-btn__img common-btn__img--before">
+                        <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
+                      </div>
+                      <div class="common-btn__img common-btn__img--after">
+                        <img src="./assets/images/common/common-btn-img--after.png" alt="after" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="page-campaign__card campaign-card campaign__card--page">
+              <div class="campaign-card__img">
+                <img src="./assets/images/common/campaign-card-diving.jpg" alt="campaign-card-diving" />
+              </div>
+              <div class="campaign-card__text-wrapper campaign-card__text-wrapper--page">
+                <div class="campaign-card__color-title">ファンダイビング</div>
+                <h2 class="campaign-card__title campaign-card__title--page">貸切ファンダイビング</h2>
+              </div>
+              <div class="campaign-card__price-wrapper campaign-card__price-wrapper--page">
+                <div class="campaign-card__text campaign-card__text--page">全部コミコミ(お一人様)</div>
+                <div class="campaign-card__price-block">
+                  <div class="campaign-card__price-before">¥20,000</div>
+                  <div class="campaign-card__price-after campaign-card__price-after--page">¥16,000</div>
+                </div>
+              </div>
+              <div class="campaign-card__add-text-wrapper">
+                <p class="campaign-card__add-text">
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />
+                  ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
+                </p>
+                <div class="campaign-card__add-date">2023/6/1-9/30</div>
+                <div class="campaign-card__add-form">ご予約・お問い合わせはコチラ</div>
+              </div>
+              <!-- common　ボタン -->
+              <div class="page-campaign__btn-wrap">
+                <a class="page-campaign__btn common-btn" href="#">
+                  <div class="common-btn__asset">
+                    <div class="common-btn__text">contact<span>us</span></div>
+                    <div class="common-btn__img-wrapper">
+                      <div class="common-btn__img common-btn__img--before">
+                        <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
+                      </div>
+                      <div class="common-btn__img common-btn__img--after">
+                        <img src="./assets/images/common/common-btn-img--after.png" alt="after" />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ページネーション -->
+          <div class="page-campaign__pagination pagination">
+            <div class="pagination__inner">
+              <ul class="pagination__list">
+                <li class="pagination__prev">
+                  <img src="./assets/images/common/pagination-prev.png" alt="prev-arrow" />
+                </li>
+                <li class="pagination__number pagination__number--current">
+                  <a href="#">1</a>
+                </li>
+                <li class="pagination__number"><a href="#">2</a></li>
+                <li class="pagination__number"><a href="#">3</a></li>
+                <li class="pagination__number"><a href="#">4</a></li>
+                <li class="pagination__number"><a href="#">5</a></li>
+                <li class="pagination__number"><a href="#">6</a></li>
+                <li class="pagination__next">
+                  <img src="./assets/images/common/pagination-next.png" alt="prev-arrow" />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
@@ -348,7 +435,7 @@
               <div class="contact__btn-wrap">
                 <a class="contact__btn common-btn common-btn-layout" href="#">
                   <div class="common-btn__asset">
-                    <div class="common-btn__text">Contact <span>us</span></div>
+                    <div class="common-btn__text">contact<span>us</span></div>
                     <div class="common-btn__img-wrapper">
                       <div class="common-btn__img common-btn__img--before">
                         <img src="./assets/images/common/common-btn-img--before.png" alt="before" />
