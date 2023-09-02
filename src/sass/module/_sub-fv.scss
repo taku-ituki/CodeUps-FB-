@@ -10,6 +10,7 @@
   }
 }
 
+// Campaignセクション
 .sub-fv__inner--campaign {
   background-image: url("./../images/common/page-campaign-sp.jpg");
   background-size: cover;
@@ -18,6 +19,30 @@
   height: inherit;
   @include mq(md) {
     background-image: url("./../images/common/page-campaign-img-sp.jpg");
+  }
+}
+
+// About us セクション
+.sub-fv__inner--about {
+  background-image: url("./../images/common/about-mv-sp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: inherit;
+  @include mq(md) {
+    background-image: url("./../images/common/about-img-mv-pc.jpg");
+  }
+}
+
+// Information
+.sub-fv__inner--info {
+  background-image: url("./../images/common/amv-information-sp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: inherit;
+  @include mq(md) {
+    background-image: url("./../images/common/mv-information-pc.jpg");
   }
 }
 
@@ -45,4 +70,8 @@
     top: 59%;
     left: 49.5%;
   }
+}
+
+.sub-fv__title span {
+  text-transform: uppercase;
 }

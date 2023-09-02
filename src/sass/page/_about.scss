@@ -134,3 +134,88 @@
     margin-top: rem(40);
   }
 }
+
+// About　usページ
+.about__text-block.about__text-block--page {
+  display: flex;
+  flex-direction: column;
+  margin-top: rem(20);
+  align-items: center;
+  @include mq("md") {
+    position: absolute;
+    flex-direction: initial;
+    top: 30.5%;
+    left: 18.518%;
+    z-index: 30;
+  }
+}
+
+// シーサーの画像
+.about__img-left.about__img-left-page {
+  display: none;
+  @include mq(md) {
+    display: block;
+    position: relative;
+    z-index: 20;
+    aspect-ratio: 399/606;
+  }
+}
+
+// 魚の画像
+.about__img-right.about__img-right-page {
+  aspect-ratio: 345/228;
+  margin-top: rem(0);
+  margin-left: rem(0);
+  @include mq(md) {
+    position: relative;
+    margin-top: 7.4%;
+    margin-left: -18.55%;
+    z-index: 15;
+    aspect-ratio: 880/581;
+  }
+}
+
+.about__text-en.about__text-en--page {
+  position: absolute;
+  color: $white;
+  top: 10%;
+  left: 6%;
+  margin-top: rem(0);
+  z-index: 50;
+  @include mq(md) {
+    font-size: rem(80);
+    position: relative;
+    z-index: 3;
+    line-height: 1.25;
+    top: 0%;
+    left: 0%;
+  }
+}
+
+.about__text-ja.about__text-ja--page {
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+// 画像配置
+.about-page-layout::before {
+  content: "";
+  background: url("./../images/common/about-us-fish-bg.png") center center / cover no-repeat;
+  /*絶対配置で線の位置を決める*/
+  display: block;
+  position: absolute;
+  top: 13%;
+  left: 4%;
+  /*線の形状*/
+  max-width: rem(120);
+  width: 100%;
+  height: rem(55);
+  z-index: 50;
+  @include mq(md) {
+    max-width: rem(300);
+    height: rem(138);
+    top: -3.3%;
+    left: 7%;
+  }
+}

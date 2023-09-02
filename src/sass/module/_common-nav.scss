@@ -43,14 +43,14 @@
   transition: 0.3s;
 }
 
-.common-nav__item--head {
+.common-nav__item.common-nav__item--head {
   font-weight: $bold;
   position: relative;
   margin-top: rem(20);
 }
 
 // ヒトデの配置
-.common-nav__item--head::before {
+.common-nav__item.common-nav__item--head::before {
   content: "";
   position: absolute;
   width: rem(18);
@@ -70,7 +70,7 @@
   }
 }
 
-.common-nav__flex-list--footer:not(:first-child) {
+.common-nav__flex-list.common-nav__flex-list--footer:not(:first-child) {
   @include mq(md) {
     padding-left: rem(20);
   }
