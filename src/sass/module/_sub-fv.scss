@@ -39,7 +39,7 @@
   font-size: rem(40);
   text-align: center;
   line-height: 1;
-  letter-spacing: rem(2);
+  text-indent: 0.1em;
   @include mq(md) {
     font-size: rem(80);
     top: 59%;
