@@ -158,6 +158,29 @@ jQuery(function ($) {
     });
   });
 
+  // Aboutモーダル
+
+  // JavaScriptの部分
+  let scrollPos;
+
+  $(".js-photo").click(function () {
+    scrollPos = $(window).scrollTop();
+    $(".js-overlay").html($(this).prop("outerHTML"));
+    $(".js-overlay").fadeIn(200);
+    $(".js-header, .js-page-top").hide();
+    $("html").addClass("is-fixed");
+    return false;
+  });
+
+  $(".js-overlay").click(function () {
+    $(".js-overlay").fadeOut(200, function () {
+      $(".js-header, .js-page-top").fadeIn();
+      $("html").removeClass("is-fixed");
+      $(window).scrollTop(scrollPos);
+    });
+    return false;
+  });
+
   // informationページ　タブ切り替え
   $(function () {
     $(".js-info-content__tab").on("click", function () {

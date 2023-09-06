@@ -199,7 +199,7 @@
         </div>
       </div>
       <!-- About us -->
-      <section class="about about-page-layout">
+      <section class="about about-layout-page">
         <div class="about__inner inner">
           <div class="about__body">
             <div class="about__img-block">
@@ -222,62 +222,40 @@
       <section class="gallery gallery-layout">
         <div class="gallery__inner inner">
           <!-- セクションタイトル -->
-          <div class="gallery __title section-title">
+          <div class="gallery__title section-title">
             <h2 class="section-title__en">gallery</h2>
             <p class="section-title__ja">フォト</p>
           </div>
-          <!-- <div class="galley__image-wrap">
-            <div class="galley__image-group-top">
-              <div class="galley__image-item galley__image-item--long">
+          <div class="gallery__image-wrap">
+            <div class="gallery__modal js-overlay"></div>
+            <div class="gallery__items">
+              <div class="gallery__item js-photo">
                 <img src="./assets/images/common/about-img-coral.jpg" alt="coral" />
               </div>
-              <div class="galley__image-item galley__image-item--wide">
+              <div class="gallery__item js-photo">
                 <img src="./assets/images/common/about-img-boat.jpg" alt="boat" />
               </div>
-              <div class="galley__image-item galley__image-item--wide">
+              <div class="gallery__item js-photo">
                 <img src="./assets/images/common/about-img-fish.jpg" alt="fish" />
               </div>
-            </div>
-            <div class="galley__image-group-bottom">
-              <div class="galley__image-item galley__image-item--wide">
+              <div class="gallery__item js-photo">
                 <img src="./assets/images/common/about-img2-fish.jpg" alt="coral" />
               </div>
-              <div class="galley__image-item galley__image-item--wide">
+              <div class="gallery__item js-photo">
                 <img src="./assets/images/common/about-img2-fish2.jpg" alt="fish" />
               </div>
-              <div class="galley__image-item galley__image-item--long">
+              <div class="gallery__item js-photo">
                 <img src="./assets/images/common/about-img2-fish&coral.jpg" alt="coral&fish" />
               </div>
-            </div>
-          </div> -->
-          <div class="galley__image-wrap">
-            <div class="galley__image-item galley__image-item--long">
-              <img src="./assets/images/common/about-img-coral.jpg" alt="coral" />
-            </div>
-            <div class="galley__image-item galley__image-item--wide">
-              <img src="./assets/images/common/about-img-boat.jpg" alt="boat" />
-            </div>
-            <div class="galley__image-item galley__image-item--wide">
-              <img src="./assets/images/common/about-img-fish.jpg" alt="fish" />
-            </div>
-
-            <div class="galley__image-item galley__image-item--wide">
-              <img src="./assets/images/common/about-img2-fish.jpg" alt="coral" />
-            </div>
-            <div class="galley__image-item galley__image-item--wide">
-              <img src="./assets/images/common/about-img2-fish2.jpg" alt="fish" />
-            </div>
-            <div class="galley__image-item galley__image-item--long">
-              <img src="./assets/images/common/about-img2-fish&coral.jpg" alt="coral&fish" />
             </div>
           </div>
         </div>
       </section>
       <!-- contact -->
-      <section class="contact contact-layout">
+      <section class="contact contact-layout-page">
         <div class="contact__inner">
           <ul class="contact__lists">
-            <li class="contact__list contact__list--left">
+            <li class="contact__list-left">
               <h2 class="contact-logo">
                 <img src="./assets/images/common/CodeUps-contact.svg" alt="CodeUps" />
               </h2>
@@ -299,16 +277,16 @@
                 </div>
               </div>
             </li>
-            <li class="contact__list contact__list--right">
+            <li class="contact__list-right">
               <div class="section-title">
-                <h2 class="section-title__item section-title__item--contact">contact</h2>
-                <p class="section-title__ja-item">お問い合わせ</p>
+                <h2 class="section-title__en section-title__en--contact">contact</h2>
+                <p class="section-title__ja">お問い合わせ</p>
               </div>
               <div class="contact__text">ご予約・お問い合わせはコチラ</div>
               <div class="contact__btn-wrap">
                 <a class="contact__btn common-btn common-btn-layout" href="#">
                   <div class="common-btn__asset">
-                    <div class="common-btn__text">contact<span>us</span></div>
+                    <div class="common-btn__text">contact <span>us</span></div>
                     <div class="common-btn__img-wrapper">
                       <div class="common-btn__img common-btn__img--before">
                         <img src="./assets/images/common/common-btn-img--before.png" alt="before" />

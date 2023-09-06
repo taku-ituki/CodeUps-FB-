@@ -1,8 +1,37 @@
 @use "global" as *;
 
 .about-layout {
+  position: relative;
   margin-top: rem(70);
   @include mq(md) {
     margin-top: rem(125);
   }
+}
+
+// 魚の画像配置
+.about-layout::before {
+  content: "";
+  background: url("./../images/common/about-us-fish-bg.png") center center / cover no-repeat;
+  /*絶対配置で線の位置を決める*/
+  display: block;
+  position: absolute;
+  top: 13%;
+  left: 4%;
+  /*線の形状*/
+  max-width: rem(120);
+  width: 100%;
+  height: rem(55);
+  z-index: 50;
+  @include mq(md) {
+    max-width: rem(300);
+    height: rem(138);
+    top: -3.3%;
+    left: 7%;
+    z-index: -1;
+  }
+}
+
+//About usページのサンゴの画像を消す
+.about-layout-page-layout .about__body::after {
+  display: none;
 }

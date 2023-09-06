@@ -1,6 +1,4 @@
 @use "global" as *;
-.info-content {
-}
 
 .info-content-layout {
   position: relative;
@@ -86,11 +84,6 @@
 .info-content__tab.info-content__tab--fun::before {
   left: 5%;
 }
-
-// 体験ダイビング　クジラ位置調整
-// .info-content__tab.info-content__tab--experience::before {
-//   left: 9%;
-// }
 
 .info-content__tab br {
   @include mq(md) {

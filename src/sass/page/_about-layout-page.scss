@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.about-layout-page {
+  position: relative;
+  margin-top: rem(47);
+  @include mq(md) {
+    margin-top: rem(145);
+  }
+}

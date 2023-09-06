@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.gallery-layout {
+  margin-top: rem(32);
+  @include mq(md) {
+    position: relative;
+    margin-top: rem(110);
+  }
+}

@@ -26,6 +26,10 @@
   }
 }
 
+.about-layout-page .about__body::after {
+  display: none;
+}
+
 .about__img-block {
   display: flex;
   position: relative;
@@ -135,23 +139,13 @@
   }
 }
 
+
+
+
 // About　usページ
-.about__text-block.about__text-block--page {
-  display: flex;
-  flex-direction: column;
-  margin-top: rem(20);
-  align-items: center;
-  @include mq("md") {
-    position: absolute;
-    flex-direction: initial;
-    top: 30.5%;
-    left: 18.518%;
-    z-index: 30;
-  }
-}
 
 // シーサーの画像
-.about__img-left.about__img-left-page {
+.about-layout-page .about__img-left {
   display: none;
   @include mq(md) {
     display: block;
@@ -162,7 +156,7 @@
 }
 
 // 魚の画像
-.about__img-right.about__img-right-page {
+.about-layout-page .about__img-right {
   aspect-ratio: 345/228;
   margin-top: rem(0);
   margin-left: rem(0);
@@ -175,11 +169,27 @@
   }
 }
 
-.about__text-en.about__text-en--page {
+.about__text-ja.about__text-ja--page {
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.about-layout-page .about__body::after {
+  display: none;
+}
+
+.about-layout-page .about__text {
+  @include mq(md) {
+    margin-top: rem(49);
+  }
+}
+
+.about-layout-page .about__text-en {
   position: absolute;
   color: $white;
-  top: 10%;
-  left: 6%;
+  top: 6%;
+  left: 7%;
   margin-top: rem(0);
   z-index: 50;
   @include mq(md) {
@@ -192,31 +202,28 @@
   }
 }
 
-.about__text-ja.about__text-ja--page {
-  @include mq(md) {
-    margin-top: rem(40);
-  }
+.about-layout-page .about__text-ja {
+  margin-top: rem(40);
 }
 
 // 画像配置
-.about-page-layout::before {
+.about-layout-page::before {
   content: "";
-  background: url("./../images/common/about-us-fish-bg.png") center center / cover no-repeat;
+  background: url("./../images/common/top-voice-fish.png") center center / cover no-repeat;
   /*絶対配置で線の位置を決める*/
   display: block;
   position: absolute;
-  top: 13%;
-  left: 4%;
+  top: -5.5%;
+  left: calc(50% - (min(46vw, rem(620))));
   /*線の形状*/
   max-width: rem(120);
   width: 100%;
   height: rem(55);
-  z-index: 50;
+  z-index: -1;
   @include mq(md) {
     max-width: rem(300);
     height: rem(138);
     top: -3.3%;
     left: 7%;
-    z-index: -1;
   }
 }
