@@ -101,17 +101,18 @@
   }
 }
 
-.contact__list {
+.contact__list-left {
   @include mq(md) {
     text-align: left;
-  }
-}
-
-.contact__list--left {
-  @include mq(md) {
     padding-right: rem(87);
     border-right: rem(1) solid $green;
     padding-top: rem(10);
+  }
+}
+
+.contact__list-right {
+  @include mq(md) {
+    text-align: left;
   }
 }
 

@@ -4,13 +4,9 @@
   text-align: center;
 }
 
-
-.section-title__item {
+.section-title__en {
   text-align: center;
   font-weight: normal;
-}
-
-.section-title__item {
   font-size: rem(32);
   color: $black;
   @include mq(md) {
@@ -18,12 +14,12 @@
   }
 }
 
-.section-title__item::first-letter {
+.section-title__en::first-letter {
   color: $green;
   text-transform: uppercase;
 }
 
-.section-title__ja-item {
+.section-title__ja {
   display: block;
   font-size: rem(12);
   color: $green;
@@ -31,26 +27,26 @@
 }
 
 // blog
-.section-title__item.section-title__item--blog {
+.section-title__en.section-title__en--blog {
   @include mq(md) {
     color: $white;
   }
 }
 
-.section-title__item.section-title__item--blog::first-letter {
+.section-title__en.section-title__en--blog::first-letter {
   @include mq(md) {
     color: $white;
   }
 }
 
-.section-title__item.section-title__item--blog span {
+.section-title__en.section-title__en--blog span {
   @include mq(md) {
     color: $white;
   }
 }
 
 // Contact
-.section-title__item.section-title__item--contact {
+.section-title__en.section-title__en--contact {
   font-weight: normal;
   line-height: 1;
   font-size: rem(80);
@@ -63,7 +59,7 @@
 }
 
 // Blog
-.section-title__ja-item.section-title__ja-item--blog {
+.section-title__ja.section-title__ja-blog {
   @include mq(md) {
     color: $white;
   }

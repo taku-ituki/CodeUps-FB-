@@ -1,10 +1,10 @@
 @use "global" as *;
-
-.fv__inner {
+.fv {
   width: 100%;
   height: 100vh;
-  min-height: rem(500);
   grid-row: main;
+  min-height: rem(500);
+  box-sizing: border-box;
 }
 
 .fv span {
@@ -55,38 +55,20 @@
 
 // ファーストビューのスワイパー
 
-.swiper-container {
+.fv__swiper.swiper {
   overflow: hidden;
   width: 100%;
   height: 100%;
 }
-.swiper-wrapper,
-.swiper-slide > div {
-  width: 100%;
-  height: 100%;
+.fv__swiper .swiper-slide {
+  aspect-ratio: 375/667;
+  @include mq(md) {
+    aspect-ratio: 1440/768;
+  }
 }
 
-.swiper-slide.fv__swiper-slide--turtle > div {
-  background: url("./../images/common/fv-turtle-sp.jpg") center center / cover no-repeat;
-  @include mq(md) {
-    background: url("./../images/common/fv-turtle-pc.jpg") center center / cover no-repeat;
-  }
-}
-.swiper-slide.fv__swiper-slide--diving > div {
-  background: url("./../images/common/fv-diving-sp.jpg") center center / cover no-repeat;
-  @include mq(md) {
-    background: url("./../images/common/fv-diving-pc.jpg") center center / cover no-repeat;
-  }
-}
-.swiper-slide.fv__swiper-slide--boat > div {
-  background: url("./../images/common/fv-boat-sp.jpg") center center / cover no-repeat;
-  @include mq(md) {
-    background: url("./../images/common/fv-boat-pc.jpg") center center / cover no-repeat;
-  }
-}
-.swiper-slide.fv__swiper-slide--beach > div {
-  background: url("./../images/common/fv-beach-sp.jpg") center center / cover no-repeat;
-  @include mq(md) {
-    background: url("./../images/common/fv-beach-pc.jpg") center center / cover no-repeat;
-  }
+.fv__swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

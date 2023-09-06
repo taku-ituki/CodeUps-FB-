@@ -47,12 +47,12 @@
 }
 
 .blog__cards {
+  width: 96.5%;
   margin-top: rem(27);
   margin-left: auto;
   margin-right: auto;
-  padding-left: rem(6);
-  padding-right: rem(6);
   @include mq(md) {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: rem(40);
@@ -80,5 +80,3 @@
     margin-top: rem(81);
   }
 }
-
-

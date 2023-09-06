@@ -1,7 +1,11 @@
 @use "global" as *;
 footer {
   background-color: $green;
+  padding-top: rem(50);
   padding-bottom: rem(80);
+  @include mq(md) {
+    padding-top: rem(80);
+  }
 }
 
 .footer__list-wrapper {
@@ -26,12 +30,10 @@ footer {
 
 // 各種ロゴ
 .footer__logo-wrapper {
-  padding-top: rem(50);
   @include mq(md) {
     display: flex;
     align-items: center;
     gap: rem(40);
-    padding-top: rem(80);
   }
 }
 .footer__logo {

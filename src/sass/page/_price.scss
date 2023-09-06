@@ -35,9 +35,16 @@
   color: $black;
   @include mq(md) {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: flex-start;
     margin-top: rem(7);
+  }
+}
+
+.price__img-block {
+  @include mq(md) {
+    margin: rem(30) rem(0) rem(13) rem(93);
   }
 }
 
@@ -128,7 +135,6 @@
     max-width: rem(492);
     width: 100%;
     aspect-ratio: 492/746;
-    margin: rem(30) rem(0) rem(13) rem(93);
   }
 }
 

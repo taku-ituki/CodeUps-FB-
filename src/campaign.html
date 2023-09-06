@@ -6,7 +6,7 @@
     <meta name="format-detection" content="telephone=no" />
     <meta name="robots" content="noindex" />
     <!-- meta情報 -->
-    <title>CodeUps</title>
+    <title>CodeUps-Campaign</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="robots" content="noindex" />
@@ -26,10 +26,7 @@
     <!-- google フォント -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Lato&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet" />
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="./assets/js/jquery.inview-master/jquery.inview.min.js"></script>
@@ -49,44 +46,44 @@
         <nav class="header__nav">
           <ul class="header__nav-items">
             <li class="header__nav-item">
-              <a href="#"
-                ><div class="header__nav-text">campaign<span>キャンペーン</span></div></a
-              >
+              <a href="campaign.html">
+                <div class="header__nav-text">campaign<span>キャンペーン</span></div>
+              </a>
             </li>
             <li class="header__nav-item">
-              <a href="aboutus.html"
-                ><div class="header__nav-text">about us<span>私たちについて</span></div></a
-              >
+              <a href="aboutus.html">
+                <div class="header__nav-text">about us<span>私たちについて</span></div>
+              </a>
             </li>
             <li class="header__nav-item">
-              <a href="information.html"
-                ><div class="header__nav-text">information<span>ダイビング情報</span></div></a
-              >
+              <a href="information.html">
+                <div class="header__nav-text">information<span>ダイビング情報</span></div>
+              </a>
             </li>
             <li class="header__nav-item">
-              <a href="#"
-                ><div class="header__nav-text">blog<span>ブログ</span></div></a
-              >
+              <a href="blog.html">
+                <div class="header__nav-text">blog<span>ブログ</span></div>
+              </a>
             </li>
             <li class="header__nav-item">
-              <a href="#"
-                ><div class="header__nav-text">voice<span>お客様の声</span></div></a
-              >
+              <a href="#">
+                <div class="header__nav-text">voice<span>お客様の声</span></div>
+              </a>
             </li>
             <li class="header__nav-item">
-              <a href="#"
-                ><div class="header__nav-text">price<span>料金一覧</span></div></a
-              >
+              <a href="#">
+                <div class="header__nav-text">price<span>料金一覧</span></div>
+              </a>
             </li>
             <li class="header__nav-item">
-              <a href="#"
-                ><div class="header__nav-text">FAQ<span>よくある質問</span></div></a
-              >
+              <a href="#">
+                <div class="header__nav-text">FAQ<span>よくある質問</span></div>
+              </a>
             </li>
             <li class="header__nav-item">
-              <a href="#"
-                ><div class="header__nav-text">contact<span>お問い合わせ</span></div></a
-              >
+              <a href="#">
+                <div class="header__nav-text">contact<span>お問い合わせ</span></div>
+              </a>
             </li>
           </ul>
           <!-- ハンバーガーボタン -->
@@ -137,7 +134,7 @@
                 </li>
                 <!--ブログ -->
                 <li class="common-nav__item common-nav__item--head">
-                  <a href="#">ブログ</a>
+                  <a href="blog.html">ブログ</a>
                 </li>
               </ul>
             </div>
@@ -195,12 +192,13 @@
       </section>
       <!-- パンくずリスト -->
       <div class="breadcrumbs breadcrumbs-blog-layout">
-        <div class="breadcrumbs__inner inner breadcrumbs__inner--campaign">
-          <p class="breadcrumbs__top"><a href="index.html">TOP</a></p>
-          <div class="breadcrumbs__arrow">></div>
-          <p class="breadcrumbs__page-title">キャンペーン</p>
+        <div class="breadcrumbs__inner inner">
+          <span class="breadcrumbs__top"><a href="index.html">TOP</a></span>
+          >
+          <span class="breadcrumbs__page-title">キャンペーン</span>
         </div>
       </div>
+
       <!-- Campaign -->
       <section class="page-campaign page-campaign-layout">
         <div class="page-campaign__inner inner">
@@ -375,26 +373,15 @@
               </div>
             </div>
           </div>
-          <!-- ページネーション -->
-          <div class="page-campaign__pagination pagination">
-            <div class="pagination__inner">
-              <ul class="pagination__list">
-                <li class="pagination__prev">
-                  <img src="./assets/images/common/pagination-prev.png" alt="prev-arrow" />
-                </li>
-                <li class="pagination__number pagination__number--current">
-                  <a href="#">1</a>
-                </li>
-                <li class="pagination__number"><a href="#">2</a></li>
-                <li class="pagination__number"><a href="#">3</a></li>
-                <li class="pagination__number"><a href="#">4</a></li>
-                <li class="pagination__number"><a href="#">5</a></li>
-                <li class="pagination__number"><a href="#">6</a></li>
-                <li class="pagination__next">
-                  <img src="./assets/images/common/pagination-next.png" alt="prev-arrow" />
-                </li>
-              </ul>
-            </div>
+          <div class="wp-pagenavi wp-pagenavi-layout">
+            <a class="previouspostslink" rel="prev" href="#"> <img src="./assets/images/common/pagination-prev.png" alt="prev-arrow" /></a>
+            <span class="current">1</span>
+            <a class="page smaller" href="#">2</a>
+            <a class="page smaller" href="#">3</a>
+            <a class="page larger" href="#">4</a>
+            <a class="page larger" href="#">5</a>
+            <a class="page larger" href="#">6</a>
+            <a class="nextpostslink" rel="next" href="#"> <img src="./assets/images/common/pagination-next.png" alt="prev-arrow" /></a>
           </div>
         </div>
       </section>
@@ -513,7 +500,7 @@
               <!--ブログ -->
               <li class="common-nav__items common-nav__items--blog">
                 <div class="common-nav__item common-nav__item--head">
-                  <a href="#">ブログ</a>
+                  <a href="blog.html">ブログ</a>
                 </div>
               </li>
             </ul>

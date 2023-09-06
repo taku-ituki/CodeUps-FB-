@@ -51,7 +51,11 @@ jQuery(function ($) {
     speed: 1000, // 2秒かけ次の画像へ移動させる設定
     allowTouchMove: false, // マウスでのスワイプを禁止する設定
   };
-  new Swiper(".js-fv-swiper", swipeOption);
+  // フォント読み込み完了後にコードを実行
+  document.fonts.ready.then(function () {
+    // ここにSwiperの初期化コードを挿入
+    new Swiper(".js-fv-swiper", swipeOption);
+  });
 
   // キャンペーンセクションのスワイパー
   let mySwiper = new Swiper(".js-campaign-swiper", {
@@ -62,6 +66,10 @@ jQuery(function ($) {
     spaceBetween: 24,
     width: 355,
     freeModeSticky: true,
+    autoplay: {
+      delay: 4000, // 秒後に次の画像にいくようにする設定
+      disableOnInteraction: false, // ユーザーが操作後、自動再生を再開する設定
+    },
     //ページネーション表示の設定
     pagination: {
       el: ".swiper-pagination", //ページネーションの要素
@@ -147,6 +155,18 @@ jQuery(function ($) {
       $("body,html").animate({
         scrollTop: 0,
       });
+    });
+  });
+
+  // informationページ　タブ切り替え
+  $(function () {
+    $(".js-info-content__tab").on("click", function () {
+      $(".info-content__tab, .info-content__card").removeClass("active");
+
+      $(this).addClass("active");
+
+      var index = $(".js-info-content__tab").index(this);
+      $(".js-info-content__card").eq(index).addClass("active");
     });
   });
 });

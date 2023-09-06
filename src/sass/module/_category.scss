@@ -19,19 +19,24 @@
 
 .category__menu {
   font-family: $second-font-family;
-  max-width: rem(162);
-  width: 100%;
   border: rem(1) solid $green;
   text-align: center;
+  @include mq(md) {
+    max-width: rem(165);
+    width: 100%;
+  }
 }
 
-.category__menu.category__menu a {
-  max-width: rem(162);
+.category__menu a {
   padding: rem(5) 0;
-  width: 100%;
   display: block;
   font-size: rem(14);
   color: $green;
+  cursor: pointer;
+  @include mq(md) {
+    max-width: rem(165);
+    width: 100%;
+  }
 }
 
 .category__menu.category__menu--current {
