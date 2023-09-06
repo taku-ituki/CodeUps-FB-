@@ -3,47 +3,15 @@
 .sub-fv {
   width: 100%;
   height: rem(460);
-  aspect-ratio: 375/460;
   @include mq(md) {
     height: rem(548);
-    aspect-ratio: 1440/548;
   }
 }
 
-// Campaignセクション
-.sub-fv__inner--campaign {
-  background-image: url("./../images/common/page-campaign-sp.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: inherit;
-  @include mq(md) {
-    background-image: url("./../images/common/page-campaign-img-sp.jpg");
-  }
-}
-
-// About us セクション
-.sub-fv__inner--about {
-  background-image: url("./../images/common/about-mv-sp.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: inherit;
-  @include mq(md) {
-    background-image: url("./../images/common/about-img-mv-pc.jpg");
-  }
-}
-
-// Information
-.sub-fv__inner--info {
-  background-image: url("./../images/common/amv-information-sp.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: inherit;
-  @include mq(md) {
-    background-image: url("./../images/common/mv-information-pc.jpg");
-  }
+.sub-fv img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .sub-fv-layout {
