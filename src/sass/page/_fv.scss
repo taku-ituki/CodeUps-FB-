@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+.fv img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
 .fv span {
   display: block;
   text-align: center;
@@ -59,16 +65,4 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
-}
-.fv__swiper .swiper-slide {
-  aspect-ratio: 375/667;
-  @include mq(md) {
-    aspect-ratio: 1440/768;
-  }
-}
-
-.fv__swiper .swiper-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }

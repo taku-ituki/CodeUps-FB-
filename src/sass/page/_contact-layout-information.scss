@@ -1,8 +1,9 @@
 @use "global" as *;
 
-.contact-layout {
+//Informationページ
+.contact-layout-information {
   position: relative;
-  margin-top: rem(84);
+  margin-top: rem(108);
   @include mq(md) {
     margin-top: rem(100);
   }

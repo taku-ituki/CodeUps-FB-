@@ -34,11 +34,6 @@
     <script defer src="./assets/js/script.js"></script>
   </head>
   <body>
-    <!-- ローディング画面 -->
-    <div class="loader">
-      <div class="loader__image loader__image--left"></div>
-      <div class="loader__image loader__image--right"></div>
-    </div>
     <!-- header -->
     <header class="header header-layout js-header">
       <div class="header__inner">
@@ -189,22 +184,39 @@
       </div>
     </header>
     <main>
+      <!-- <section class="sub-fv sub-fv-layout">
+        <picture class="sub-fv__img">
+          <source srcset="./assets/images/common//mv-information-sp.jpg" media="(max-width: 767px)" />
+          <img src="./assets/images/common/mv-information-pc.jpg" alt="diving" />
+        </picture>
+        <h1 class="sub-fv__title"><span>i</span>nformation</h1>
+      </section> -->
       <!-- メインビュー -->
       <section class="fv fv-layout js-fv">
         <div class="fv__inner">
           <div class="fv__swiper swiper js-fv-swiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide fv__swiper-slide--turtle">
-                <img src="./assets/images/common/fv-turtle-pc.jpg" alt="#" />
-              </div>
+              <picture class="swiper-slide fv__swiper-slide--turtle">
+                <source srcset="./assets/images/common//fv-turtle-sp.jpg" media="(max-width: 767px)" />
+                <img src="./assets/images/common/fv-turtle-pc.jpg" alt="turtle" />
+              </picture>
               <div class="swiper-slide fv__swiper-slide--diving">
-                <img src="./assets/images/common/fv-diving-pc.jpg" alt="#" />
+                <picture class="swiper-slide fv__swiper-slide--turtle">
+                  <source srcset="./assets/images/common//fv-diving-sp.jpg" media="(max-width: 767px)" />
+                  <img src="./assets/images/common/fv-diving-pc.jpg" alt="turtle" />
+                </picture>
               </div>
               <div class="swiper-slide fv__swiper-slide--boat">
-                <img src="./assets/images/common/fv-boat-pc.jpg" alt="#" />
+                <picture class="swiper-slide fv__swiper-slide--turtle">
+                  <source srcset="./assets/images/common//fv-boat-sp.jpg" media="(max-width: 767px)" />
+                  <img src="./assets/images/common/fv-boat-pc.jpg" alt="boat" />
+                </picture>
               </div>
               <div class="swiper-slide fv__swiper-slide--beach">
-                <img src="./assets/images/common/fv-beach-pc.jpg" alt="#" />
+                <picture class="swiper-slide fv__swiper-slide--turtle">
+                  <source srcset="./assets/images/common//fv-beach-sp.jpg" media="(max-width: 767px)" />
+                  <img src="./assets/images/common/fv-beach-pc.jpg" alt="beach" />
+                </picture>
               </div>
             </div>
           </div>
@@ -543,15 +555,9 @@
             <p class="section-title__ja">料金一覧</p>
           </div>
           <div class="price__contents">
-            <!-- <div class="price__content-sp">
-              <img src="./assets/images/common/top-price-sp.jpg" alt="top-price-turtle" />
-            </div> -->
             <figure class="price__img-block">
-              <picture class="price__content-sp">
-                <img src="./assets/images/common/top-price-sp.jpg" alt="top-price-turtle" />
-              </picture>
-
-              <picture class="price__content-pc js-color">
+              <picture class="price__content js-color">
+                <source srcset="./assets/images/common//top-price-sp.jpg" media="(max-width: 767px)" />
                 <img src="./assets/images/common/top-price-pc.jpg" alt="top-price-coral" />
               </picture>
             </figure>
@@ -623,7 +629,7 @@
         </div>
       </section>
       <!-- contact -->
-      <section class="contact contact-layout">
+      <section class="contact contact-layout-page">
         <div class="contact__inner">
           <ul class="contact__lists">
             <li class="contact__list-left">

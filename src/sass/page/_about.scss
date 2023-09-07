@@ -139,9 +139,6 @@
   }
 }
 
-
-
-
 // About　usページ
 
 // シーサーの画像
@@ -181,7 +178,7 @@
 
 .about-layout-page .about__text {
   @include mq(md) {
-    margin-top: rem(49);
+    margin-top: rem(10);
   }
 }
 
