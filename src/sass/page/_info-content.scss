@@ -115,6 +115,8 @@
   padding: rem(17) rem(24) rem(24) rem(24);
   border: rem(1) solid $green;
   @include mq(md) {
+    align-items: center;
+    gap: rem(48);
     border: rem(2) solid $green;
     padding-top: rem(15);
   }
@@ -122,10 +124,19 @@
 
 .info-content__card.active {
   display: block;
+  animation-name: fadein;
+  animation-duration: 2s;
   @include mq(md) {
     display: flex;
-    align-items: center;
-    gap: rem(48);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

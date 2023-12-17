@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.thanks {
+  position: relative;
+}
+
+//画像
+.thanks::before {
+  content: "";
+  background: url("./../images/common/top-voice-fish.png") center center / cover no-repeat;
+  /*絶対配置で線の位置を決める*/
+  display: block;
+  position: absolute;
+  top: -10.2%;
+  left: calc(50% - (min(46vw, rem(620))));
+  /*線の形状*/
+  max-width: rem(120);
+  width: 100%;
+  height: rem(55);
+  z-index: -1;
+  @include mq(md) {
+    max-width: rem(300);
+    width: 100%;
+    height: rem(138);
+    top: -48.5%;
+  }
+}
+
+.thanks__inner {
+  font-family: $second-font-family;
+  font-weight: normal;
+}
+
+.thanks__title {
+  max-width: rem(290);
+  width: 100%;
+  font-size: rem(16);
+  font-weight: normal;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thanks__text-wrap {
+  max-width: rem(345);
+  width: 100%;
+  margin-top: rem(35);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  @include mq(md) {
+    max-width: rem(622);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.thanks__inner br {
+  display: none;
+  @include mq(md) {
+    display: block;
+  }
+}
+
+.thanks__inner span {
+  display: block;
+  @include mq(md) {
+    display: inline;
+  }
+}
+
+.thanks__text {
+  text-align: center;
+  margin-top: rem(40);
+}

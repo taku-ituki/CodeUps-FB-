@@ -1,0 +1,127 @@
+@use "global" as *;
+.faq {
+  position: relative;
+}
+
+.faq::before {
+  content: "";
+  background: url("./../images/common/top-voice-fish.png") center center / cover no-repeat;
+  /*絶対配置で線の位置を決める*/
+  display: block;
+  position: absolute;
+  top: -1.2%;
+  left: calc(50% - (min(46vw, rem(620))));
+  /*線の形状*/
+  max-width: rem(120);
+  width: 100%;
+  height: rem(55);
+  z-index: -1;
+  @include mq(md) {
+    max-width: rem(300);
+    width: 100%;
+    height: rem(138);
+    top: -3.5%;
+  }
+}
+
+/*アコーディオン全体*/
+.faq__accordion-area {
+  list-style: none;
+  max-width: rem(700);
+  margin: 0 auto;
+  font-family: $second-font-family;
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+.faq__accordion-area li {
+  border: rem(1) solid $green;
+  margin-top: rem(40);
+  @include mq(md) {
+    border: none;
+    margin-top: rem(43);
+  }
+}
+
+/*アコーディオンタイトル*/
+.faq__accordion-title {
+  position: relative; /*+マークの位置基準とするためrelative指定*/
+  cursor: pointer;
+  font-size: rem(16);
+  font-weight: normal;
+  padding: rem(16);
+  transition: all 0.5s ease;
+  color: $white;
+  background-color: $green;
+  @include mq(md) {
+    padding: rem(24) rem(40);
+  }
+}
+
+// 質問の文章が増えた時のための対応
+.faq__accordion-title-text {
+  max-width: 85%;
+  width: 100%;
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+/*アイコンの＋と×*/
+.faq__accordion-title::before,
+.faq__accordion-title::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: rem(28);
+  height: rem(1);
+  background-color: $white;
+  margin-left: rem(10);
+  /* アニメーション時間とイージング関数を指定 */
+  transition: transform 0.3s ease;
+  @include mq(md) {
+    width: rem(32);
+  }
+}
+.faq__accordion-title::before {
+  top: 48%;
+  left: 84.6%;
+  transform: rotate(0deg);
+  @include mq(md) {
+    top: 48%;
+    left: 88.3%;
+  }
+}
+.faq__accordion-title::after {
+  top: 48%;
+  left: 84.6%;
+  transform: rotate(0deg);
+  @include mq(md) {
+    top: 48%;
+    left: 88.3%;
+  }
+}
+/*　closeというクラスがついたら形状変化　*/
+.faq__accordion-title.close::before {
+  transform: rotate(90deg);
+}
+
+.faq__accordion-title.close::after {
+  transform: rotate(-180deg);
+}
+
+/*アコーディオンで現れるエリア*/
+.faq__accordion-box {
+  /*はじめは表示*/
+  background: $white;
+  padding: rem(19) rem(19);
+  @include mq(md) {
+    padding: rem(37) rem(37) rem(16) rem(45);
+    margin-top: rem(16);
+    border: rem(1) solid $green;
+    @include mq(md) {
+      margin-top: rem(19);
+      padding-bottom: rem(33);
+    }
+  }
+}

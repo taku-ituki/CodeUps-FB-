@@ -1,0 +1,46 @@
+@use "global" as *;
+
+.terms {
+  font-family: $second-font-family;
+  text-align: left;
+}
+
+.terms__inner.inner {
+  @include mq(md) {
+    max-width: rem(800);
+    width: 100%;
+  }
+}
+
+.terms__title {
+  font-size: rem(24);
+}
+
+.terms__items {
+  margin-top: rem(40);
+  font-size: rem(16);
+  line-height: 2;
+}
+
+.terms__item:nth-child(2) {
+  margin-top: rem(40);
+}
+
+.terms__description-numbers {
+  counter-reset: number;
+}
+
+.terms__description-number {
+  padding-left: rem(23);
+  text-indent: rem(-17);
+}
+
+.terms__description-number::before {
+  content: counter(number) ".";
+  counter-increment: number;
+  padding-right: rem(5);
+}
+
+.terms__description-text {
+  text-indent: rem(-5);
+}

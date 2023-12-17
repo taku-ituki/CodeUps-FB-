@@ -11,7 +11,6 @@
   position: relative;
   z-index: 1;
   background-color: $green;
-  position: relative;
   border: rem(1) solid $green;
 }
 
@@ -84,6 +83,41 @@
 
 .common-btn:hover::after {
   transform: scale(1, 1);
+  .common-btn__img--before {
+    display: block;
+  }
+  .common-btn__img--after {
+    display: none;
+  }
 }
 
+// Contactページ
 
+// 404ページ
+.error__btn.common-btn {
+  color: $green;
+  background-color: $white;
+  border: rem(1) solid $white;
+  padding: rem(16) rem(42);
+}
+
+.error__btn.common-btn::before {
+  border: rem(1) solid $white;
+}
+
+.error__btn.common-btn::after {
+  background-color: $green;
+}
+
+.common-btn__text.common-btn__text--error span {
+  text-transform: uppercase;
+  margin-left: rem(5);
+}
+
+.error__btn.common-btn:hover {
+  color: $white;
+}
+
+.common-btn__img.common-btn__img--error {
+  margin-left: rem(15);
+}

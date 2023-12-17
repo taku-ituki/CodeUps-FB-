@@ -1,74 +1,5 @@
 @use "global" as *;
 
-// ページネーション
-// .pagination__inner {
-//   max-width: rem(444);
-//   width: 100%;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
-
-// .pagination__inner img {
-//   width: rem(38);
-//   height: rem(38);
-// }
-
-// .pagination__list {
-//   display: flex;
-//   align-items: center;
-//   list-style-type: none;
-//   padding: 0;
-// }
-
-// .pagination a {
-//   font-family: $third-font-family;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   padding: rem(10) rem(12);
-//   border: rem(1) solid $green;
-//   border-radius: 1px;
-//   color: $green;
-//   line-height: 1;
-//   transition: 0.3s;
-// }
-
-// .pagination a:hover {
-//   background-color: #fff;
-//   color: #333333;
-//   transition: 0.3s;
-// }
-
-// .pagination a:not(:hover) {
-//   text-decoration: none;
-// }
-
-// .pagination__next {
-//   margin-left: rem(16);
-//   @include mq(md) {
-//     margin-left: rem(40);
-//   }
-// }
-
-// .pagination__number {
-//   margin-left: rem(8);
-//   @include mq(md) {
-//     margin-left: rem(15);
-//   }
-// }
-
-// .pagination__number.pagination__number--current {
-//   margin-left: rem(16);
-//   @include mq(md) {
-//     margin-left: rem(40);
-//   }
-// }
-
-// .pagination__number.pagination__number--current a {
-//   background-color: $green;
-//   color: $white;
-// }
-
 .wp-pagenavi {
   display: flex;
   justify-content: center;
@@ -80,6 +11,67 @@
 }
 
 .previouspostslink {
+  position: relative;
+  display: inline-block;
+  padding: rem(18) rem(18);
+  border: rem(1) solid $green;
+  transition: 0.3s;
+}
+
+.previouspostslink::before {
+  content: "";
+  width: rem(10);
+  height: rem(10);
+  border-top: solid rem(1) $green;
+  border-right: solid rem(1) $green;
+  position: absolute;
+  left: rem(15);
+  top: rem(13);
+  transform: rotate(-135deg);
+}
+
+.nextpostslink {
+  position: relative;
+  display: inline-block;
+  padding: rem(18) rem(18);
+  border: rem(1) solid $green;
+  margin-left: rem(16);
+  transition: 0.3s;
+  @include mq(md) {
+    margin-left: rem(40);
+  }
+}
+
+.nextpostslink::before {
+  content: "";
+  width: rem(10);
+  height: rem(10);
+  border-top: solid rem(1) $green;
+  border-right: solid rem(1) $green;
+  position: absolute;
+  left: rem(10);
+  top: rem(12);
+  transform: rotate(45deg);
+}
+
+// ホバー時、矢印の色変更
+.nextpostslink:hover {
+  background-color: $green;
+  transition: 0.3s;
+}
+.nextpostslink:hover::before {
+  transition: inherit;
+  border-color: $white;
+}
+
+.previouspostslink:hover {
+  background-color: $green;
+  transition: 0.3s;
+}
+
+.previouspostslink:hover::before {
+  transition: inherit;
+  border-color: $white;
 }
 
 .page {
@@ -89,7 +81,7 @@
   align-items: center;
   padding: rem(10) rem(12);
   border: rem(1) solid $green;
-  border-radius: 1px;
+  border-radius: rem(1);
   color: $green;
   line-height: 1;
   transition: 0.3s;
@@ -100,7 +92,8 @@
 }
 
 .page:hover {
-  opacity: 0.7;
+  color: $white;
+  background-color: $green;
   transition: 0.3s;
 }
 
@@ -111,19 +104,12 @@
   align-items: center;
   padding: rem(10) rem(12);
   border: rem(1) solid $green;
-  border-radius: 1px;
+  border-radius: rem(1);
   color: $green;
   line-height: 1;
   transition: 0.3s;
   background-color: $green;
   color: $white;
-  margin-left: rem(16);
-  @include mq(md) {
-    margin-left: rem(40);
-  }
-}
-
-.nextpostslink {
   margin-left: rem(16);
   @include mq(md) {
     margin-left: rem(40);

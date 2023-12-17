@@ -17,4 +17,17 @@
 .breadcrumbs__page-title {
   font-family: $second-font-family;
   font-size: rem(14);
+  text-indent: -0.3em;
+}
+
+.breadcrumbs__current-page {
+  font-family: $second-font-family;
+  font-size: rem(14);
+}
+
+// 404
+.breadcrumbs.breadcrumbs-error-layout {
+  color: $white;
+  background-color: $green;
+  padding-top: rem(80);
 }

@@ -3,6 +3,8 @@
 .campaign-card {
   transition: 0.3s;
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
 }
 
 // カード内要素の下揃えに必要
@@ -30,12 +32,21 @@
   object-fit: cover;
 }
 
+// ブログページ　サイドメニューのカード
+.campaign-card__img.campaign-card__img--side-menu {
+  aspect-ratio: 294/188;
+}
+
 .campaign-card__text-wrapper {
   padding: rem(16) rem(15) 0;
   font-family: $second-font-family;
   @include mq(md) {
     padding: rem(24) rem(15) rem(8);
   }
+}
+
+.campaign-card__text-wrapper.campaign-card__text-wrapper--blog {
+  padding-top: rem(8);
 }
 
 .campaign-card__color-title {
@@ -58,6 +69,17 @@
   @include mq(md) {
     margin-top: rem(6);
   }
+}
+
+// ブログページのサイドメニューの装飾
+.campaign-card__text-wrapper.campaign-card__text-wrapper--blog {
+  font-family: $second-font-family;
+  text-align: center;
+}
+
+// ↓これがないとデフォルトのフォントサイズが24pxになってしまう、、、なんで？
+.campaign-card__text-wrapper.campaign-card__text-wrapper--blog .campaign-card__title {
+  font-size: rem(16);
 }
 
 .campaign-card__text {

@@ -1,0 +1,198 @@
+@use "global" as *;
+.blog-detail {
+  position: relative;
+}
+
+// 画像配置
+.blog-detail::before {
+  content: "";
+  background: url("./../images/common/top-voice-fish.png") center center / cover no-repeat;
+  /*絶対配置で線の位置を決める*/
+  display: block;
+  position: absolute;
+  top: -0.8%;
+  left: calc(50% - (min(48.062vw, rem(620))));
+  /*線の形状*/
+  max-width: rem(120);
+  width: 100%;
+  height: rem(55);
+  z-index: -1;
+  @include mq(md) {
+    max-width: rem(300);
+    height: rem(138);
+    top: -2.8%;
+    left: calc(50% - (min(48.062vw, rem(620))));
+  }
+}
+
+.blog-detail__inner {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.blog-detail__main-container {
+  @include mq(md) {
+    width: 64.85%;
+  }
+}
+
+.blog-detail__main-container time {
+  font-size: rem(14);
+}
+
+.blog-detail__main-container h2 {
+  font-family: $second-font-family;
+  font-size: rem(24);
+  font-weight: $medium;
+  border-bottom: rem(1) solid $green;
+  margin-top: rem(8);
+  @include mq(md) {
+    font-size: rem(32);
+    margin-top: 0;
+  }
+}
+
+.blog-detail__card {
+  margin-top: rem(26);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__img {
+  aspect-ratio: 345/231;
+}
+
+.blog-detail__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-detail__main-container p {
+  font-family: $second-font-family;
+  font-size: rem(16);
+  line-height: 1.5;
+  margin-top: rem(24);
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__main-container ul {
+  max-width: rem(318);
+  width: 100%;
+  margin-top: rem(22);
+  @include mq(md) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(676);
+    margin-top: rem(40);
+  }
+}
+
+.blog-detail__main-container li {
+  position: relative;
+  padding-left: rem(25);
+  transition: 0.3s;
+}
+
+.blog-detail__main-container li:hover {
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+// ヒトデ画像
+.blog-detail__main-container li::before {
+  content: "";
+  position: absolute;
+  width: rem(18);
+  height: rem(18);
+  top: 43%;
+  left: -0.3%;
+  transform: translateY(-50%);
+  background-image: url(./../images/common/blog-star-fish.png);
+  background-size: cover;
+  @include mq(md) {
+    left: -2%;
+  }
+}
+
+.blog-detail__pagenavi {
+  max-width: rem(158);
+  width: 100%;
+  margin-top: rem(35);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  @include mq(md) {
+    max-width: rem(186);
+    width: 100%;
+    margin-top: rem(75);
+    padding-right: rem(28);
+  }
+}
+
+.blog-detail__pagenavi-prev {
+  position: relative;
+  display: inline-block;
+  padding: rem(18) rem(18);
+  border: rem(1) solid $green;
+  transition: 0.3s;
+}
+
+.blog-detail__pagenavi-prev::before {
+  content: "";
+  width: rem(10);
+  height: rem(10);
+  border-top: solid rem(1) $green;
+  border-right: solid rem(1) $green;
+  position: absolute;
+  left: rem(15);
+  top: rem(13);
+  transform: rotate(-135deg);
+}
+
+.blog-detail__pagenavi-next {
+  position: relative;
+  display: inline-block;
+  padding: rem(18) rem(18);
+  border: rem(1) solid $green;
+  transition: 0.3s;
+}
+
+.blog-detail__pagenavi-next::before {
+  content: "";
+  width: rem(10);
+  height: rem(10);
+  border-top: solid rem(1) $green;
+  border-right: solid rem(1) $green;
+  position: absolute;
+  left: rem(10);
+  top: rem(12);
+  transform: rotate(45deg);
+}
+
+// ホバー時、矢印の色変更
+.blog-detail__pagenavi-prev:hover {
+  background-color: $green;
+  transition: 0.3s;
+}
+
+.blog-detail__pagenavi-prev:hover::before {
+  transition: inherit;
+  border-color: $white;
+}
+
+.blog-detail__pagenavi-next:hover {
+  background-color: $green;
+  transition: 0.3s;
+}
+
+.blog-detail__pagenavi-next:hover::before {
+  transition: inherit;
+  border-color: $white;
+}

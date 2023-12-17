@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .contact {
+  position: relative;
   @include mq(md) {
     padding: rem(40) 0 rem(10);
   }
@@ -147,7 +148,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  padding-top: rem(7);
   @include mq(md) {
     aspect-ratio: 273/148;
   }

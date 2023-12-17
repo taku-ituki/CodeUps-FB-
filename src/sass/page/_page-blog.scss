@@ -1,0 +1,89 @@
+@use "global" as *;
+
+.page-blog {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+// 画像配置
+.page-blog::before {
+  @include mq(md) {
+  }
+  content: "";
+  background: url("./../images/common/top-voice-fish.png") center center / cover no-repeat;
+  /*絶対配置で線の位置を決める*/
+  display: block;
+  position: absolute;
+  top: -2.5%;
+  left: calc(50% - (min(48.062vw, rem(620))));
+  /*線の形状*/
+  max-width: rem(300);
+  width: 100%;
+  height: rem(138);
+  z-index: -1;
+}
+
+.page-blog__inner {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-blog__main-container {
+  @include mq(md) {
+    width: 67.75%;
+  }
+}
+
+.page-blog__cards {
+  width: 96.5%;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(80) rem(40);
+    margin-left: rem(0);
+    margin-right: rem(0);
+  }
+}
+
+// sideメニューの上の余白
+.page-blog__side-wrap {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(0);
+  }
+}
+
+.page-blog__cards .blog-card:not(:first-child) {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(0);
+  }
+}
+
+// ページナンバー位置調整
+.page-blog__pagenavi .wp-pagenavi {
+  @include mq(md) {
+    padding-right: rem(24);
+  }
+}
+
+.page-blog__pagenavi {
+  max-width: rem(158);
+  width: 100%;
+  margin-top: rem(35);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  @include mq(md) {
+    max-width: rem(186);
+    width: 100%;
+    margin-top: rem(75);
+    padding-right: rem(28);
+  }
+}

@@ -159,37 +159,87 @@ jQuery(function ($) {
   });
 
   // Aboutモーダル
-
   // JavaScriptの部分
-  let scrollPos;
-
-  $(".js-photo").click(function () {
-    scrollPos = $(window).scrollTop();
-    $(".js-overlay").html($(this).prop("outerHTML"));
-    $(".js-overlay").fadeIn(200);
-    $(".js-header, .js-page-top").hide();
-    $("html").addClass("is-fixed");
-    return false;
-  });
-
-  $(".js-overlay").click(function () {
-    $(".js-overlay").fadeOut(200, function () {
-      $(".js-header, .js-page-top").fadeIn();
-      $("html").removeClass("is-fixed");
-      $(window).scrollTop(scrollPos);
+  $(function () {
+    $(".js-modal-open").each(function () {
+      $(this).on("click", function () {
+        var target = $(this).data("target");
+        var modal = document.getElementById(target);
+        $(modal).fadeIn();
+        return false;
+      });
     });
-    return false;
+    $(".js-modal-close").on("click", function () {
+      $(".js-modal").fadeOut();
+      return false;
+    });
   });
 
   // informationページ　タブ切り替え
   $(function () {
     $(".js-info-content__tab").on("click", function () {
       $(".info-content__tab, .info-content__card").removeClass("active");
-
       $(this).addClass("active");
-
       var index = $(".js-info-content__tab").index(this);
       $(".js-info-content__card").eq(index).addClass("active");
+    });
+  });
+
+  // Blogページ　アーカイブセクション　アコーディオン
+  // 第一階層
+  $(function () {
+    // 最初のコンテンツは表示
+    $(".js-accordion-item .js-side-menu__accordion-content").css("display", "block");
+    // 最初の矢印は開いた時の状態に
+    $(".js-accordion-item .js-accordion-title").addClass("open");
+    // タイトルをクリックすると
+    $(".js-accordion-title").on("click", function () {
+      // クリックしたタイトル以外のopenクラスを外す
+      $(".js-accordion-title").not(this).removeClass("open");
+      // クリックしたタイトル以外のcontentを閉じる
+      $(".js-accordion-title").not(this).next().slideUp(300);
+      // クリックしたタイトルにopenクラスを付与
+      $(this).toggleClass("open");
+      // クリックしたタイトルのcontentを開閉
+      $(this).next().slideToggle(300);
+    });
+  });
+  // 第二階層
+  $(function () {
+    // タイトルをクリックすると
+    $(".js-accordion-title-month").on("click", function () {
+      // クリックした次の要素を開閉
+      $(this).next().slideToggle(300);
+      // タイトルにopenクラスを付け外しして矢印の向きを変更
+      $(this).toggleClass("open", 300);
+    });
+  });
+
+  // FAQアコーディオン
+  //アコーディオンをクリックした時の動作
+  $(".js-faq-accordion-title").on("click", function () {
+    //タイトル要素をクリックしたら
+    var findElm = $(this).next(".js-faq-accordion-box"); //直後のアコーディオンを行うエリアを取得し
+    $(findElm).slideToggle(); //アコーディオンの上下動作
+
+    if ($(this).hasClass("close")) {
+      //タイトル要素にクラス名closeがあれば
+      $(this).removeClass("close"); //クラス名を除去し
+    } else {
+      //それ以外は
+      $(this).addClass("close"); //クラス名closeを付与
+    }
+  });
+
+  //ページが読み込まれた際にopenクラスをつけ、openがついていたら開く動作※不必要なら下記全て削除
+  $(window).on("load", function () {
+    $(".js-faq-accordion-area li:first-of-type section").addClass("open"); //accordion-areaのはじめのliにあるsectionにopenクラスを追加
+    $(".open").each(function (index, element) {
+      //openクラスを取得
+      var Title = $(element).children(".js-faq-accordion-title"); //openクラスの子要素のtitleクラスを取得
+      $(Title).addClass("close"); //タイトルにクラス名closeを付与し
+      var Box = $(element).children(".js-faq-accordion-box"); //openクラスの子要素boxクラスを取得
+      $(Box).slideDown(500); //アコーディオンを開く
     });
   });
 });
