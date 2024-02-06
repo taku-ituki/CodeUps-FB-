@@ -89,6 +89,10 @@ footer {
 }
 
 // 404ページ
-.footer.footer-layout-404 {
-  border-top: rem(1) solid $green;
+
+.footer.footer-404 {
+  padding-bottom: rem(190);
+  @include mq(md) {
+    padding-bottom: rem(122);
+  }
 }

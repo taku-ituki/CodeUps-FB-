@@ -38,6 +38,11 @@
   }
 }
 
+.sub-fv__title.sub-fv__title-privacy span {
+  margin-left: rem(10);
+  text-transform: uppercase;
+}
+
 .sub-fv__title-wrapper.sub-fv__title-wrapper--sitemap span {
   margin-left: rem(10);
   text-transform: uppercase;
@@ -46,11 +51,16 @@
   }
 }
 
-.sub-fv__title.sub-fv__title--terms span {
-  margin-left: rem(20);
+.sub-fv__title.sub-fv__title--page-common span {
+  margin-left: rem(8.8);
+  text-indent: -0.1em;
+  @include mq(md) {
+    margin-left: rem(15);
+    text-indent: 0.1em;
+  }
 }
 
-.sub-fv__title.sub-fv__title--terms span:nth-child(2) {
+.sub-fv__title.sub-fv__title--page-common span:nth-child(2) {
   text-transform: uppercase;
 }
 

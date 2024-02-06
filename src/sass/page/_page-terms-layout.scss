@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.page-terms-layout {
+.page-page-common-layout {
   margin-top: rem(46);
   @include mq(md) {
     margin-top: rem(145);

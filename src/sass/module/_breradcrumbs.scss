@@ -26,8 +26,10 @@
 }
 
 // 404
-.breadcrumbs.breadcrumbs-error-layout {
+.breadcrumbs.breadcrumbs-404 {
   color: $white;
-  background-color: $green;
-  padding-top: rem(80);
+  padding-top: rem(87);
+  @include mq(md){
+    padding-top: rem(100);
+  }
 }

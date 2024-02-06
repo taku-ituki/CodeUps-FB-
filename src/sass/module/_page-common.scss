@@ -1,46 +1,46 @@
 @use "global" as *;
 
-.terms {
+.page-common {
   font-family: $second-font-family;
   text-align: left;
 }
 
-.terms__inner.inner {
+.page-common__inner.inner {
   @include mq(md) {
     max-width: rem(800);
     width: 100%;
   }
 }
 
-.terms__title {
+.page-common__title {
   font-size: rem(24);
 }
 
-.terms__items {
+.page-common__items {
   margin-top: rem(40);
   font-size: rem(16);
   line-height: 2;
 }
 
-.terms__item:nth-child(2) {
+.page-common__item:nth-child(2) {
   margin-top: rem(40);
 }
 
-.terms__description-numbers {
+.page-common__description-numbers {
   counter-reset: number;
 }
 
-.terms__description-number {
+.page-common__description-number {
   padding-left: rem(23);
   text-indent: rem(-17);
 }
 
-.terms__description-number::before {
+.page-common__description-number::before {
   content: counter(number) ".";
   counter-increment: number;
   padding-right: rem(5);
 }
 
-.terms__description-text {
+.page-common__description-text {
   text-indent: rem(-5);
 }

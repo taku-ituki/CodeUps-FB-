@@ -29,12 +29,7 @@
   }
 }
 
-.sitemap .common-nav__flex-list.common-nav__flex-list--footer:not(:first-child) {
-  padding-left: 0;
-  @include mq(md) {
-    padding-left: rem(55);
-  }
-}
+
 
 .sitemap .common-nav__flex.common-nav__flex--right {
   margin-left: rem(23);
