@@ -8,6 +8,13 @@
   }
 }
 
+.voice__cards.voice-cards{
+  margin-top: rem(45);
+  @include mq(md) {
+    margin-top: rem(30);
+  }
+}
+
 .page-voice__cards {
   margin-top: rem(45);
   @include mq(md) {

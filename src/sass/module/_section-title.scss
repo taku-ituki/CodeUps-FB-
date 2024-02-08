@@ -2,6 +2,7 @@
 
 .section-title {
   text-align: center;
+  text-transform: capitalize;
 }
 
 .section-title__en {
@@ -15,8 +16,8 @@
 }
 
 .section-title__en::first-letter {
-  color: $green;
   text-transform: uppercase;
+  color: $green;
 }
 
 .section-title__ja {
@@ -26,7 +27,7 @@
   font-family: $second-font-family;
 }
 
-// blog
+// blog ここだけはPC版は白色にする
 .section-title__en.section-title__en--blog {
   @include mq(md) {
     color: $white;
@@ -39,7 +40,13 @@
   }
 }
 
-.section-title__en.section-title__en--blog span {
+.section-title__ja.section-title__ja--blog {
+  @include mq(md) {
+    color: $white;
+  }
+}
+
+.section-title__ja.section-title__ja--blog::first-letter {
   @include mq(md) {
     color: $white;
   }
@@ -58,9 +65,4 @@
   }
 }
 
-// Blog
-.section-title__ja.section-title__ja-blog {
-  @include mq(md) {
-    color: $white;
-  }
-}
+
