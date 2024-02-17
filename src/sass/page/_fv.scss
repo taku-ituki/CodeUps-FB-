@@ -29,8 +29,8 @@
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: $white;
-  @include mq(md) {
-    top: 55.5%;
+  @include mq(md){
+    top: 56%;
   }
 }
 

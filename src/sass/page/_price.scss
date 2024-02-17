@@ -47,7 +47,7 @@
   max-width: rem(630);
   width: 100%;
   aspect-ratio: 345/227;
-  margin-top: rem(27);
+  padding-top: rem(27);
   margin-left: auto;
   margin-right: auto;
   @include mq(md) {
@@ -151,6 +151,6 @@ picture.price__content img {
   text-align: center;
   margin-top: rem(48);
   @include mq(md) {
-    margin-top: rem(68);
+    margin-top: rem(77);
   }
 }

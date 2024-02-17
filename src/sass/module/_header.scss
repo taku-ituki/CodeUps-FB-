@@ -12,11 +12,38 @@
 .header {
   height: rem(80);
   background: rgba(13, 41, 54, 0.68);
+  transition: 0.3s;
   @include mq(md) {
     width: 100%;
     height: rem(90);
   }
 }
+
+
+// ドロワー展開時に、ドロワーだけスクロールできる設定
+.header__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0); /* 透明の背景色 */
+  z-index: 700; /* ドロワーメニューよりも背面に配置 */
+  display: none; /* 最初は非表示にする */
+  transition: 0.3s;
+}
+
+.header.is-open{
+  background-color: $green;
+}
+
+.header.is-open .header__overlay {
+  display: block; /* ドロワーメニューが開いているときに表示する */
+  background-color: $green;
+  transition: 0.3s;
+}
+
+
 
 .header__inner {
   padding-left: rem(14);
@@ -187,7 +214,7 @@
 
 // ドロワーメニュー
 .header__drawer {
-  padding: rem(56) rem(15);
+  padding: rem(10) rem(15) rem(150);
   display: none;
   position: absolute;
   z-index: 800;
@@ -202,12 +229,9 @@
   scrollbar-width: none;
 }
 
+
 .header__drawer::-webkit-scrollbar {
   display: none;
-}
-
-.header.is-open {
-  background-color: $green;
 }
 
 .header__drawer-wrapper {
