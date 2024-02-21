@@ -3,7 +3,6 @@ _gulp/node_modules/
 _gulp/package-lock.json/
 .DS_Store
 dist
-
 index.html/
 .DS_Store
 src
