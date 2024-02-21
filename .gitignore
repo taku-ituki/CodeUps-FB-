@@ -1,6 +1,9 @@
 .vscode/
 _gulp/node_modules/
-src/test.html/
 _gulp/package-lock.json/
 .DS_Store
 dist
+
+index.html/
+.DS_Store
+src
