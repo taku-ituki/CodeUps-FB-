@@ -16,12 +16,6 @@ div.voice-card__img img {
   width: 100%;
 }
 
-.page-voice__cards.voice-cards {
-  margin-top: rem(45);
-  @include mq(md) {
-    margin-top: rem(30);
-  }
-}
 
 .voice-card {
   font-family: $second-font-family;

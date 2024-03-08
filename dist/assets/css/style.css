@@ -3244,10 +3244,6 @@ div.voice-card__img img {
 	width: 100%;
 }
 
-.page-voice__cards.voice-cards {
-	margin-top: 2.8125rem;
-}
-
 .voice-card {
 	background-color: #fff;
 	box-shadow: 0.125rem 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.25);
@@ -4792,10 +4788,6 @@ footer {
 .sub-fv__title.sub-fv__title--page-common span {
 	margin-left: 0.9375rem;
 	text-indent: 0.1em;
-}
-
-.page-voice__cards.voice-cards {
-	margin-top: 1.875rem;
 }
 
 .voice-card {
