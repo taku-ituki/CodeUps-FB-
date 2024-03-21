@@ -46,7 +46,7 @@
   }
 }
 
-.blog-cards.blog__cards {
+.blog__cards {
   margin-top: rem(27);
   @include mq(md) {
     grid-template-columns: repeat(3, 1fr);
@@ -56,12 +56,12 @@
   }
 }
 
-.blog__card {
+.blog-cards__card {
   margin-left: auto;
   margin-right: auto;
 }
 
-.blog__card:not(:first-child) {
+.blog-cards__card:not(:first-child) {
   margin-top: rem(40);
   @include mq(md) {
     margin-top: rem(0);

@@ -254,7 +254,7 @@ textarea {
 .page-contact__inner dd {
   display: flex;
   flex-direction: column;
-  
+
   margin-top: rem(17);
   @include mq(md) {
     margin-top: 0;
@@ -338,49 +338,9 @@ textarea {
   }
 }
 
-.page-contact__btn.common-btn {
-  padding-left: rem(54);
-  padding-right: rem(40);
-  padding-top: rem(15);
-  padding-bottom: rem(11);
-}
-
-.page-contact__btn .common-btn__asset {
-  gap: rem(8);
-  padding-right: rem(15);
-  @include mq(md) {
-    align-items: center;
-  }
-}
-
-.page-contact__btn .common-btn__img {
-  margin-left: 0;
-  // margin-right: rem(16);
-  padding-bottom: rem(10);
-}
-
 .page-contact__form-submit {
   margin-top: rem(60);
   text-align: center;
-}
-
-.common-btn__text.common-btn__text-submit {
-  color: $white;
-  line-height: 1.5714;
-  padding-left: 0;
-}
-
-.page-contact__btn.common-btn:hover {
-  .common-btn__text.common-btn__text-submit {
-    color: $green;
-  }
-}
-
-.page-contact__btn.common-btn:before {
-  left: rem(2);
-  top: rem(4);
-  width: 102%;
-  height: 105%;
 }
 
 textarea {
@@ -392,11 +352,6 @@ textarea {
 
   /* widthを100%にしておくことで、レスポンシブ対応ができます。 */
   width: 100%;
-}
-
-input.common-btn__text {
-  display: flex;
-  align-items: center;
 }
 
 // エラー時（⇩WordPressでエラー時に切り替え）

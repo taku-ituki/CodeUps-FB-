@@ -458,16 +458,16 @@ a {
 	text-transform: none;
 }
 
-.blog-cards.blog__cards {
+.blog__cards {
 	margin-top: 1.6875rem;
 }
 
-.blog__card {
+.blog-cards__card {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.blog__card:not(:first-child) {
+.blog-cards__card:not(:first-child) {
 	margin-top: 2.5rem;
 }
 
@@ -1435,54 +1435,15 @@ textarea {
 	text-align: center;
 }
 
-.page-contact__btn.common-btn {
-	padding-bottom: 0.6875rem;
-	padding-left: 3.375rem;
-	padding-right: 2.5rem;
-	padding-top: 0.9375rem;
-}
-
-.page-contact__btn .common-btn__asset {
-	gap: 0.5rem;
-	padding-right: 0.9375rem;
-}
-
-.page-contact__btn .common-btn__img {
-	margin-left: 0;
-	padding-bottom: 0.625rem;
-}
-
 .page-contact__form-submit {
 	margin-top: 3.75rem;
 	text-align: center;
-}
-
-.common-btn__text.common-btn__text-submit {
-	color: #fff;
-	line-height: 1.5714;
-	padding-left: 0;
-}
-
-.page-contact__btn.common-btn:hover .common-btn__text.common-btn__text-submit {
-	color: #408f95;
-}
-
-.page-contact__btn.common-btn:before {
-	height: 105%;
-	left: 0.125rem;
-	top: 0.25rem;
-	width: 102%;
 }
 
 textarea { /* フォーカスした際の青い枠線を消す */
 	outline: none; /* 右下の//(サイズ変更機能)を消す */
 	resize: none; /* widthを100%にしておくことで、レスポンシブ対応ができます。 */
 	width: 100%;
-}
-
-input.common-btn__text {
-	align-items: center;
-	display: flex;
 }
 
 .page-contact__error-text {
@@ -2023,7 +1984,6 @@ picture.price__content img {
 .blog-cards {
 	margin-left: auto;
 	margin-right: auto;
-	width: 96.5%;
 }
 
 .breadcrumbs-blog-layout {
@@ -3641,13 +3601,13 @@ html {
 	z-index: 30;
 }
 
-.blog-cards.blog__cards {
+.blog__cards {
 	gap: 2.5rem;
 	grid-template-columns: repeat(3, 1fr);
 	margin-top: 5rem;
 }
 
-.blog__card:not(:first-child) {
+.blog-cards__card:not(:first-child) {
 	margin-top: 0rem;
 }
 
@@ -4135,10 +4095,6 @@ textarea {
 	margin-top: 2.375rem;
 }
 
-.page-contact__btn .common-btn__asset {
-	align-items: center;
-}
-
 .inner .page-contact__error-text {
 	letter-spacing: 0;
 	margin-top: 2.5rem;
@@ -4458,7 +4414,6 @@ textarea {
 
 .blog-cards {
 	display: grid;
-	width: 100%;
 }
 
 .breadcrumbs.breadcrumbs-404 {
