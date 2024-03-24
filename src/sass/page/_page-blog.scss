@@ -41,7 +41,7 @@
   }
 }
 
-.blog-cards.page-blog__cards {
+.page-blog__cards {
   @include mq(md) {
     grid-template-columns: repeat(2, 1fr);
     gap: rem(80) rem(40);
@@ -58,20 +58,9 @@
   }
 }
 
-.page-blog__cards .blog-card:not(:first-child) {
-  margin-top: rem(40);
-  @include mq(md) {
-    margin-top: rem(0);
-  }
-}
+
 
 // ページナンバー位置調整
-.page-blog__pagenavi .wp-pagenavi {
-  @include mq(md) {
-    padding-right: rem(24);
-  }
-}
-
 .page-blog__pagenavi {
   max-width: rem(158);
   width: 100%;

@@ -22,10 +22,7 @@
   width: 100%;
   height: rem(55);
   @include mq(md) {
-    max-width: rem(300);
-    width: 100%;
-    height: rem(138);
-    top: -40%;
+    display: none;
   }
 }
 

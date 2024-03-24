@@ -1,7 +1,5 @@
 @use "global" as *;
 
-
-// 修正テスト
 .voice-cards {
   @include mq(md) {
     display: grid;
@@ -9,19 +7,3 @@
     gap: rem(40);
   }
 }
-
-.voice__cards.voice-cards {
-  margin-top: rem(45);
-  @include mq(md) {
-    margin-top: rem(30);
-  }
-}
-
-// voiceページ
-.page-voice__cards.voice-cards {
-  margin-top: rem(45);
-  @include mq(md) {
-    margin-top: rem(30);
-  }
-}
-

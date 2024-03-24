@@ -2,7 +2,7 @@
 
 // アニメーション
 
-div.voice-card__img div.color {
+.voice-card__img .color {
   position: absolute;
   top: 0;
   right: 0;
@@ -11,7 +11,7 @@ div.voice-card__img div.color {
   z-index: 2;
   background-color: #408f95;
 }
-div.voice-card__img img {
+.voice-card__img img {
   display: block;
   width: 100%;
 }

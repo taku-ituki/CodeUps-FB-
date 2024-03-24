@@ -1,0 +1,9 @@
+@use 'global' as *;
+// 404
+.breadcrumbs-404 {
+    color: $white;
+    padding-top: rem(87);
+    @include mq(md){
+      padding-top: rem(100);
+    }
+  }

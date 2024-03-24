@@ -27,6 +27,7 @@
 .page-contact__inner.inner {
   padding: 0 rem(15);
 }
+
 form {
   max-width: rem(700);
   width: 100%;
@@ -37,7 +38,6 @@ form {
 /*サイズ等の指定*/
 $fz: rem(16); //入力するときのfont-size
 $border-r: rem(6); //border-radius（テキスト系）
-
 /*チェックボックスの指定*/
 $check-fz: rem(16); //フォントサイズ
 $check-size: rem(14); //外枠の幅高さ

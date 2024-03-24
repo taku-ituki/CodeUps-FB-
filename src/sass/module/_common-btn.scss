@@ -1,37 +1,7 @@
 @use "global" as *;
 // Contactページ
 
-// 404ページ
-.error__btn.common-btn {
-  color: $green;
-  background-color: $white;
-  border: rem(1) solid $white;
-  padding: rem(16) rem(42);
-}
-
-.error__btn.common-btn::before {
-  border: rem(1) solid $white;
-}
-
-.error__btn.common-btn::after {
-  background-color: $green;
-}
-
-.common-btn__text.common-btn__text--error span {
-  text-transform: uppercase;
-  margin-left: rem(5);
-}
-
-.error__btn.common-btn:hover {
-  color: $white;
-}
-
-.common-btn__img.common-btn__img--error {
-  margin-left: rem(15);
-}
-
 // 修正用テストボタン
-
 .common-btn {
   color: $white;
   font-size: rem(14);
@@ -45,7 +15,6 @@
   background-color: $green;
   border: rem(1) solid $green;
 }
-
 
 .common-btn::first-letter{
   text-transform: capitalize;
@@ -118,4 +87,48 @@
   margin-left: rem(8);
   width: rem(40);
   height:rem(22);
+}
+
+
+// 404ページ
+.common-btn.common-btn--error{
+  color: $green;
+  background-color: $white;
+  border: rem(1) solid $white;
+  text-transform: capitalize;
+  padding-left: rem(40);
+  padding-right: rem(97);
+}
+.common-btn.common-btn--error span{
+  text-transform: uppercase;
+  left: 0;
+}
+/*影の設定*/
+.common-btn.common-btn--error:before {
+  border: rem(1) solid $white;
+}
+
+.common-btn.common-btn--error::after {
+  background-color: $green;
+}
+
+// 矢印の設定
+.common-btn.common-btn--error span::before {
+  background-image: url("./../images/common/common-btn-img--after.png");
+  margin-left:rem(15);
+ top: 15%;
+}
+
+.common-btn.common-btn--error:hover span::before{
+  background-image: url("./../images/common/common-btn-img--before.png");
+  margin-left:rem(15);
+  top:15%;
+}
+
+// ホバー変化
+.common-btn.common-btn--error:hover{
+  color: $white;
+}
+.common-btn.common-btn--error:hover span{
+  color: $white;
 }

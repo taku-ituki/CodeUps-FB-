@@ -62,39 +62,29 @@
   background-size: cover;
 }
 
-// footer調整
-
-// .common-nav__flex.common-nav__flex--right {
-//   margin-left: rem(10);
-//   @include mq(md) {
-//     margin-left: rem(20);
-//   }
-// }
-
-.sitemap .common-nav__flex-list {
+.common-nav__flex-list {
   margin-left: rem(10);
   @include mq(md) {
     margin-left: rem(20);
   }
 }
 
-.sitemap .common-nav__flex-list:first-child {
+.common-nav__flex-list:first-child {
   margin-left: rem(10);
   @include mq(md) {
     margin-left: rem(0);
   }
 }
 
-
 // ２列目の列の左の余白調整
-.sitemap .common-nav__flex-list:nth-child(2) {
+.common-nav__flex-list:nth-child(2) {
   @include mq(md) {
     padding-left: rem(50);
   }
 }
 
 // ４列目の列の左の余白調整
-.sitemap .common-nav__flex-list:last-child {
+.common-nav__flex-list:last-child {
   @include mq(md) {
     padding-left: rem(26.5);
   }
