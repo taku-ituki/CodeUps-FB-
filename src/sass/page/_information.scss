@@ -69,10 +69,10 @@
 
 // アニメーション
 
-div.information__img {
+.information__img {
   width: 100%;
 }
-div.information__img div.color {
+.information__img .color {
   position: absolute;
   top: 0;
   right: 0;
@@ -81,7 +81,7 @@ div.information__img div.color {
   z-index: 2;
   background-color: #408f95;
 }
-div.information__img img {
+.information__img img {
   display: block;
   width: 100%;
 }
