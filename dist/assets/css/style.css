@@ -1073,11 +1073,11 @@ a {
 	padding-top: 0.3125rem;
 }
 
-div.information__img {
+.information__img {
 	width: 100%;
 }
 
-div.information__img div.color {
+.information__img .color {
 	background-color: #408f95;
 	height: 100%;
 	position: absolute;
@@ -1087,7 +1087,7 @@ div.information__img div.color {
 	z-index: 2;
 }
 
-div.information__img img {
+.information__img img {
 	display: block;
 	width: 100%;
 }
@@ -1758,12 +1758,12 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	text-align: right;
 }
 
-picture.price__content {
+.price__content {
 	position: relative;
 	width: 80%;
 }
 
-picture.price__content div.color {
+.price__content div.color {
 	background-color: #408f95;
 	height: 100%;
 	position: absolute;
@@ -1773,7 +1773,7 @@ picture.price__content div.color {
 	z-index: 2;
 }
 
-picture.price__content img {
+.price__content img {
 	display: block;
 	width: 100%;
 }
@@ -2981,6 +2981,7 @@ footer {
 }
 
 .side-menu__article-title {
+	display: inline-block;
 	font-family: "Noto Sans JP", "sans-serif";
 	font-size: 1rem;
 }
