@@ -177,10 +177,10 @@ jQuery(function ($) {
 
   // informationページ　タブ切り替え
   $(function () {
-    $(".js-info-content-tab").on("click", function () {
+    $(".js-info-content__tab").on("click", function () {
       $(".info-content__tab, .info-content__card").removeClass("active");
       $(this).addClass("active");
-      var index = $(".js-info-content-tab").index(this);
+      var index = $(".js-info-content__tab").index(this);
       $(".js-info-content-card").eq(index).addClass("active");
     });
   });

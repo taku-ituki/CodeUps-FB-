@@ -44,18 +44,18 @@ jQuery(function ($) {
     effect: "fade",
     // フェードさせる為の設定
     fadeEffect: {
-      crossFade: true, //縦横比が統一されない画像の場合、重なる場合がある為、それを防ぐ設定
+      crossFade: true //縦横比が統一されない画像の場合、重なる場合がある為、それを防ぐ設定
     },
 
     autoplay: {
       delay: 4000,
       // 秒後に次の画像にいくようにする設定
-      disableOnInteraction: false, // ユーザーが操作後、自動再生を再開する設定
+      disableOnInteraction: false // ユーザーが操作後、自動再生を再開する設定
     },
 
     speed: 1000,
     // 2秒かけ次の画像へ移動させる設定
-    allowTouchMove: false, // マウスでのスワイプを禁止する設定
+    allowTouchMove: false // マウスでのスワイプを禁止する設定
   };
   // フォント読み込み完了後にコードを実行
   document.fonts.ready.then(function () {
@@ -76,7 +76,7 @@ jQuery(function ($) {
     autoplay: {
       delay: 4000,
       // 秒後に次の画像にいくようにする設定
-      disableOnInteraction: false, // ユーザーが操作後、自動再生を再開する設定
+      disableOnInteraction: false // ユーザーが操作後、自動再生を再開する設定
     },
 
     //ページネーション表示の設定
@@ -85,19 +85,19 @@ jQuery(function ($) {
       //ページネーションの要素
       type: "bullets",
       //ページネーションの種類
-      clickable: true, //クリックに反応させる
+      clickable: true //クリックに反応させる
     },
 
     //ナビゲーションボタン（矢印）表示の設定
     navigation: {
       nextEl: ".swiper-button-next",
       //「次へボタン」要素の指定
-      prevEl: ".swiper-button-prev", //「前へボタン」要素の指定
+      prevEl: ".swiper-button-prev" //「前へボタン」要素の指定
     },
 
     //スクロールバー表示の設定
     scrollbar: {
-      el: ".swiper-scrollbar", //要素の指定
+      el: ".swiper-scrollbar" //要素の指定
     },
 
     breakpoints: {
@@ -105,9 +105,9 @@ jQuery(function ($) {
         // 画面幅600px以上で適用
         slidesPerView: "3.5",
         spaceBetween: 40,
-        width: 1265,
-      },
-    },
+        width: 1265
+      }
+    }
   });
 
   // 画像アニメーション
@@ -126,38 +126,26 @@ jQuery(function ($) {
     //inviewを使って背景色が画面に現れたら処理をする
     color.on("inview", function () {
       if (counter == 0) {
-        $(this)
-          .delay(200)
-          .animate(
-            {
-              width: "100%",
-            },
-            speed,
-            function () {
-              image.css("opacity", "1");
-              $(this).css({
-                left: "0",
-                right: "auto",
-              });
-              $(this).animate(
-                {
-                  width: "0%",
-                },
-                speed
-              );
-            }
-          );
+        $(this).delay(200).animate({
+          width: "100%"
+        }, speed, function () {
+          image.css("opacity", "1");
+          $(this).css({
+            left: "0",
+            right: "auto"
+          });
+          $(this).animate({
+            width: "0%"
+          }, speed);
+        });
         counter = 1;
       }
     });
   });
   $(".js-page-top-btn").on("click", function () {
-    $("body,html").animate(
-      {
-        scrollTop: 0,
-      },
-      500
-    );
+    $("body,html").animate({
+      scrollTop: 0
+    }, 500);
     return false;
   });
 
@@ -178,7 +166,7 @@ jQuery(function ($) {
     //スクロールしてトップへ戻る
     btn.on("click", function () {
       $("body,html").animate({
-        scrollTop: 0,
+        scrollTop: 0
       });
     });
   });
@@ -202,10 +190,10 @@ jQuery(function ($) {
 
   // informationページ　タブ切り替え
   $(function () {
-    $(".js-info-content-tab").on("click", function () {
+    $(".js-info-content__tab").on("click", function () {
       $(".info-content__tab, .info-content__card").removeClass("active");
       $(this).addClass("active");
-      var index = $(".js-info-content-tab").index(this);
+      var index = $(".js-info-content__tab").index(this);
       $(".js-info-content-card").eq(index).addClass("active");
     });
   });
