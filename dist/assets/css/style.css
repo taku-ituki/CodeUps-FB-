@@ -3299,7 +3299,7 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	transition: 0.3s;
 }
 
-.current {
+.is-active {
 	align-items: center;
 	background-color: #408f95;
 	border: 0.0625rem solid #408f95;
@@ -4722,7 +4722,7 @@ textarea {
 	margin-left: 0.9375rem;
 }
 
-.current {
+.is-active {
 	margin-left: 2.5rem;
 }
 
