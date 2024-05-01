@@ -190,10 +190,10 @@ jQuery(function ($) {
 
   // informationページ　タブ切り替え
   $(function () {
-    $(".js-info-content__tab").on("click", function () {
+    $(".js-info-content-tab").on("click", function () {
       $(".info-content__tab, .info-content__card").removeClass("active");
       $(this).addClass("active");
-      var index = $(".js-info-content__tab").index(this);
+      var index = $(".js-info-content-tab").index(this);
       $(".js-info-content-card").eq(index).addClass("active");
     });
   });
@@ -259,7 +259,7 @@ jQuery(function ($) {
 
 // ドロワー展開時に、下の要素がスクロールするのを防ぐ
 var drawer = document.querySelector(".js-drawer");
-var overlay = document.querySelector(".js-header__overlay");
+var overlay = document.querySelector(".js-header-overlay");
 
 // ドロワーメニューを開く
 function openDrawer() {
