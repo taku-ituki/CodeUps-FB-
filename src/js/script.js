@@ -177,11 +177,11 @@ jQuery(function ($) {
 
   // informationページ　タブ切り替え
   $(function () {
-    $(".js-info-content__tab").on("click", function () {
+    $(".js-info-content-tab").on("click", function () {
       $(".info-content__tab, .info-content__card").removeClass("active");
       $(this).addClass("active");
-      var index = $(".js-info-content__tab").index(this);
-      $(".js-info-content__card").eq(index).addClass("active");
+      var index = $(".js-info-content-tab").index(this);
+      $(".js-info-content-card").eq(index).addClass("active");
     });
   });
 
@@ -244,28 +244,27 @@ jQuery(function ($) {
   });
 });
 
-
 // ドロワー展開時に、下の要素がスクロールするのを防ぐ
-const drawer = document.querySelector('.js-drawer');
-const overlay = document.querySelector('.js-header__overlay');
+const drawer = document.querySelector(".js-drawer");
+const overlay = document.querySelector(".js-header__overlay");
 
 // ドロワーメニューを開く
 function openDrawer() {
-  drawer.classList.add('is-open');
-  overlay.style.display = 'block';
-  document.body.style.overflow = 'hidden'; // ドロワーが開いている間は本体のスクロールを無効にする
+  drawer.classList.add("is-open");
+  overlay.style.display = "block";
+  document.body.style.overflow = "hidden"; // ドロワーが開いている間は本体のスクロールを無効にする
 }
 
 // ドロワーメニューを閉じる
 function closeDrawer() {
-  drawer.classList.remove('is-open');
-  overlay.style.display = 'none';
-  document.body.style.overflow = ''; // ドロワーが閉じられたら本体のスクロールを有効にする
+  drawer.classList.remove("is-open");
+  overlay.style.display = "none";
+  document.body.style.overflow = ""; // ドロワーが閉じられたら本体のスクロールを有効にする
 }
 
 // ドロワーメニューを開閉するためのイベントリスナー
-document.querySelector('.js-hamburger').addEventListener('click', () => {
-  if (drawer.classList.contains('is-open')) {
+document.querySelector(".js-hamburger").addEventListener("click", () => {
+  if (drawer.classList.contains("is-open")) {
     closeDrawer();
   } else {
     openDrawer();
@@ -273,13 +272,12 @@ document.querySelector('.js-hamburger').addEventListener('click', () => {
 });
 
 // オーバーレイをクリックしてドロワーを閉じる
-overlay.addEventListener('click', closeDrawer);
+overlay.addEventListener("click", closeDrawer);
 
 // ドロワーメニュー内のスクロールを制御する
-drawer.addEventListener('scroll', (event) => {
+drawer.addEventListener("scroll", (event) => {
   // ドロワーが開いている場合のみ、ドロワーメニュー内でのスクロールを有効にする
-  if (!drawer.classList.contains('is-open')) {
+  if (!drawer.classList.contains("is-open")) {
     event.preventDefault();
   }
 });
-
