@@ -225,6 +225,11 @@ a {
 	margin-top: 2rem;
 }
 
+.info-content-layout {
+	margin-top: 7.1875rem;
+	position: relative;
+}
+
 .information-layout {
 	margin-top: 5.1875rem;
 }
@@ -1778,11 +1783,6 @@ footer {
 	margin-top: 1rem;
 }
 
-.info-content-layout {
-	margin-top: 7.1875rem;
-	position: relative;
-}
-
 .info-content::before {
 	background: url("./../images/common/top-voice-fish.png") center center/cover no-repeat;
 	content: ""; /*絶対配置で線の位置を決める*/
@@ -1807,11 +1807,32 @@ footer {
 .info-content__tab {
 	background-color: #ddf0f1;
 	color: #408f95;
+	cursor: pointer;
 	display: inline-block;
 	font-family: "Noto Sans JP", "sans-serif";
 	font-size: 0.875rem;
 	padding-bottom: 0.625rem;
 	padding-top: 0.625rem;
+	position: relative;
+	transition: 0.3s;
+}
+
+.info-content__tab:after {
+	background-color: #fff;
+	content: "";
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	transition: 0.3s;
+	width: 100%;
+}
+
+.info-content__tab:hover:after {
+	opacity: 0.5;
+	transition: 0.3s;
 }
 
 .info-content__tab.info-content__tab--fun::before {
@@ -3404,6 +3425,10 @@ html {
 	position: relative;
 }
 
+.info-content-layout {
+	margin-top: 9.0625rem;
+}
+
 .information-layout {
 	margin-top: 8.75rem;
 }
@@ -4049,10 +4074,6 @@ footer {
 	display: none;
 }
 
-.info-content-layout {
-	margin-top: 9.0625rem;
-}
-
 .info-content::before {
 	height: 8.625rem;
 	left: calc(50% - min(48vw, 38.75rem));
@@ -4071,7 +4092,6 @@ footer {
 	padding-bottom: 1.625rem;
 	padding-right: 1.875rem;
 	padding-top: 1.8125rem;
-	position: relative;
 	width: 100%;
 }
 
