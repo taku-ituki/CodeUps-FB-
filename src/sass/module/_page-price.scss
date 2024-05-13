@@ -4,6 +4,7 @@
   position: relative;
 }
 
+
 // 画像
 .page-price::before {
   content: "";
@@ -68,19 +69,39 @@
   @include mq(md) {
     align-items: center;
     justify-content: center;
-    max-width: rem(200);
-    width: 100%;
+    width: 26%;
     padding-top: rem(76);
     text-indent: 0;
   }
 }
 
-// 最初と最後の値段表のタイトル余白調整
+.page-price__title {
+  font-family: $second-font-family;
+  color: $white;
+  background-color: $green;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.5;
+  text-align: center;
+  padding-top: rem(9);
+  padding-bottom: rem(7);
+  position: relative;
+  text-indent: 2em;
+  @include mq(md) {
+    align-items: center;
+    justify-content: center;
+    width: 26%;
+    padding-top: rem(76);
+    text-indent: 0;
+  }
+}
+
+// // 最初と最後の値段表のタイトル余白調整
 .page-price__list:first-child,
 .page-price__list:last-child {
   .page-price__title {
     @include mq(md) {
-      padding-top: rem(45);
+      padding-top: rem(42);
     }
   }
 }
@@ -92,24 +113,8 @@
   /*絶対配置で線の位置を決める*/
   display: block;
   position: absolute;
-  top: 15%;
-  left: calc(50% - (min(50vw, rem(74))));
-  /*線の形状*/
-  width: rem(24);
-  height: rem(24);
-  z-index: 30;
-  @include mq(md) {
-    width: rem(64);
-    height: rem(64);
-    top: 42%;
-    left: 35%;
-  }
-}
-
-// ファンダイビング画像位置調整
-.page-price__title.page-price__title--fun::after {
-  top: 15%;
-  left: calc(50% - (min(50vw, rem(80))));
+  top: 20%;
+ left: 29%;
   /*線の形状*/
   width: rem(24);
   height: rem(24);
@@ -118,25 +123,32 @@
     width: rem(64);
     height: rem(64);
     top: 45%;
-    left: 35%;
+    left: 40%;
   }
 }
 
-// スペシャルダイビング画像位置調整
-.page-price__title.page-price__title--sp::after {
-  top: 15%;
-  left: calc(50% - (min(50vw, rem(95))));
-  /*線の形状*/
-  width: rem(24);
-  height: rem(24);
-  z-index: 30;
-  @include mq(md) {
-    width: rem(64);
-    height: rem(64);
-    top: 45%;
-    left: 35%;
+// クジラ画像　料金表縦３個の位置
+.page-price__title.page-price__title--license::after{
+  @include mq(md){
+ top: 45%;
   }
 }
+
+.page-price__title.page-price__title--fun::after{
+  left: 27%;
+  @include mq(md){
+    left: 40%;
+  }
+}
+
+.page-price__title.page-price__title--special::after{
+  left: 22%;
+  @include mq(md){
+    top: 45%;
+    left: 40%;
+     }
+}
+
 
 .page-price__plan {
   display: flex;
@@ -168,7 +180,7 @@
 
 .page-price__price {
   display: flex;
-  width: 30%;
+  width: 27%;
   justify-content: right;
   padding-right: rem(16);
   align-items: center;

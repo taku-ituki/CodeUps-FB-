@@ -1,7 +1,6 @@
 @use "global" as *;
 
 .blog-card {
-  max-width: rem(630);
   width: 100%;
   padding: rem(16) rem(16) rem(24) rem(16);
   box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);

@@ -5,5 +5,18 @@
     margin-right: auto;
     @include mq(md) {
       display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    gap: rem(40);
     }
   }
+
+  // ブログページのカード並びの変更用のCSS
+  .blog-cards.blog-cards--blog-page {
+    @include mq(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(80) rem(40);
+      margin-left: rem(0);
+      margin-right: rem(0);
+    }
+  }
+  

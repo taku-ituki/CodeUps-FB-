@@ -1,7 +1,4 @@
 @use "global" as *;
-.blog-detail {
-  position: relative;
-}
 
 // 画像配置
 .blog-detail::before {
@@ -25,24 +22,18 @@
   }
 }
 
-.blog-detail__inner {
-  @include mq(md) {
-    display: flex;
-    justify-content: space-between;
-  }
-}
 
-.blog-detail__main-container {
+.blog-container__main-container.blog-container__main-container--detail {
   @include mq(md) {
     width: 64.85%;
   }
 }
 
-.blog-detail__main-container time {
+.blog-container__main-container.blog-container__main-container--detail time {
   font-size: rem(14);
 }
 
-.blog-detail__main-container h2 {
+.blog-container__main-container.blog-container__main-container--detail h1 {
   font-family: $second-font-family;
   font-size: rem(24);
   font-weight: $medium;
@@ -54,24 +45,24 @@
   }
 }
 
-.blog-detail__card {
+.blog-container__card.blog-container__card--detail{
   margin-top: rem(26);
   @include mq(md) {
     margin-top: rem(40);
   }
 }
 
-.blog-detail__img {
+.blog-container__img {
   aspect-ratio: 345/231;
 }
 
-.blog-detail__img img {
+.blog-container__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.blog-detail__main-container p {
+.blog-container__main-container.blog-container__main-container--detail p {
   font-family: $second-font-family;
   font-size: rem(16);
   line-height: 1.5;
@@ -81,7 +72,7 @@
   }
 }
 
-.blog-detail__main-container ul {
+.blog-container__main-container.blog-container__main-container--detail ul {
   max-width: rem(318);
   width: 100%;
   margin-top: rem(22);
@@ -93,19 +84,19 @@
   }
 }
 
-.blog-detail__main-container li {
+.blog-container__main-container.blog-container__main-container--detail li {
   position: relative;
   padding-left: rem(25);
   transition: 0.3s;
 }
 
-.blog-detail__main-container li:hover {
+.blog-container__main-container.blog-container__main-container--detail li:hover {
   transition: 0.3s;
   opacity: 0.5;
 }
 
 // ヒトデ画像
-.blog-detail__main-container li::before {
+.blog-container__main-container.blog-container__main-container--detail li::before {
   content: "";
   position: absolute;
   width: rem(18);
@@ -120,7 +111,7 @@
   }
 }
 
-.blog-detail__pagenavi {
+.blog-container__pagenavi.blog-container__pagenavi--detail {
   max-width: rem(158);
   width: 100%;
   margin-top: rem(35);
@@ -136,7 +127,7 @@
   }
 }
 
-.blog-detail__pagenavi-prev {
+.blog-container__pagenavi-prev.blog-container__pagenavi-prev--detail {
   position: relative;
   display: inline-block;
   padding: rem(18) rem(18);
@@ -144,7 +135,7 @@
   transition: 0.3s;
 }
 
-.blog-detail__pagenavi-prev::before {
+.blog-container__pagenavi-prev--detail::before {
   content: "";
   width: rem(10);
   height: rem(10);
@@ -156,7 +147,7 @@
   transform: rotate(-135deg);
 }
 
-.blog-detail__pagenavi-next {
+.blog-container__pagenavi-next.blog-container__pagenavi-next--detail {
   position: relative;
   display: inline-block;
   padding: rem(18) rem(18);
@@ -164,7 +155,7 @@
   transition: 0.3s;
 }
 
-.blog-detail__pagenavi-next::before {
+.blog-container__pagenavi-next.blog-container__pagenavi-next--detail::before {
   content: "";
   width: rem(10);
   height: rem(10);
@@ -177,22 +168,22 @@
 }
 
 // ホバー時、矢印の色変更
-.blog-detail__pagenavi-prev:hover {
+.blog-container__pagenavi-prev.blog-container__pagenavi-prev--detail:hover {
   background-color: $green;
   transition: 0.3s;
 }
 
-.blog-detail__pagenavi-prev:hover::before {
+.blog-container__pagenavi-prev.blog-container__pagenavi-prev--detail:hover::before {
   transition: inherit;
   border-color: $white;
 }
 
-.blog-detail__pagenavi-next:hover {
+.blog-container__pagenavi-next.blog-container__pagenavi-next--detail:hover {
   background-color: $green;
   transition: 0.3s;
 }
 
-.blog-detail__pagenavi-next:hover::before {
+.blog-container__pagenavi-next.blog-container__pagenavi-next--detail:hover::before {
   transition: inherit;
   border-color: $white;
 }

@@ -188,21 +188,88 @@ jQuery(function ($) {
     });
   });
 
-  // informationページ　タブ切り替え
+  // js-info-content-tabの処理
   $(function () {
-    $(".js-info-content-tab").on("click", function () {
-      $(".info-content__tab, .info-content__card").removeClass("active");
+    //.js-info-content-tabがクリックされたときの処理
+    $(".js-info-content-tab").click(function () {
+      // 選択された.js-info-content-tabのインデックスを取得
+      var index = $(this).index();
+      // すべての.js-info-content-cardを非表示にする
+      $(".js-info-content-card").hide();
+      // クリックされた.js-info-content-tabに対応する.js-info-content-cardを表示
+      $(".js-info-content-card").eq(index).show();
+      // すべての.js-info-content-tabからactiveクラスを削除
+      $(".js-info-content-tab").removeClass("active");
+      // クリックされた.js-info-content-tabにactiveクラスを追加
       $(this).addClass("active");
-      var index = $(".js-info-content-tab").index(this);
-      $(".js-info-content-card").eq(index).addClass("active");
     });
+  });
+
+  // スクロール位置の調整
+  $('#page-link a[href*="#"]').click(function () {
+    //全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
+    var elmHash = $(this).attr("href"); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+    var pos = $(elmHash).offset().top; //idの上部の距離を取得
+    $("body,html").animate({
+      scrollTop: pos
+    }, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+    return false;
+  });
+
+  // header、footerでクリックすると、クリックしたものに対応するタブが初期状態でアクティブになる
+  $(function () {
+    $(".js-info-content-tab:first-child").removeClass("active");
+    // URLパラメータからtabの値を取得
+    var urlParams = new URLSearchParams(window.location.search);
+    var selectedTab = urlParams.get("tab");
+    // 対応するjs-info-content-tabに'active'クラスを追加
+    $(".js-info-content-tab:nth-child(" + selectedTab + ")").addClass("active");
+    // 初期状態で他のjs-info-content-cardを非表示にする
+    $(".js-info-content-card").hide();
+    // 選択されたタブに基づいてコンテンツを表示
+    $(".js-info-content-card").eq(selectedTab - 1).show();
+    // js-info-content-tabがクリックされたときの処理
+    $(".js-info-content-tab").click(function () {
+      // クリックされたjs-info-content-tabのインデックスを取得
+      var index = $(this).index();
+      // すべてのjs-info-content-cardを非表示にする
+      $(".js-info-content-card").hide();
+      // クリックされたjs-info-content-tabに対応するjs-info-content-cardを表示
+      $(".js-info-content-card").eq(index).show();
+      // すべてのjs-info-content-tabからactiveクラスを削除
+      $(".js-info-content-tab").removeClass("active");
+      // クリックされたjs-info-content-tabにactiveクラスを追加
+      $(this).addClass("active");
+    });
+  });
+  document.querySelectorAll(".js-scroll a").forEach(function (item) {
+    item.addEventListener("click", function (event) {
+      event.preventDefault();
+      var targetId = item.getAttribute("href");
+      var targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+      }
+    });
+  });
+  $('a[href*="#"]').click(function () {
+    //全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
+    var elmHash = $(this).attr("href"); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+    var pos = $(elmHash).offset().top; //idの上部の距離を取得
+    $("body,html").animate({
+      scrollTop: pos
+    }, 0); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+    return false;
   });
 
   // Blogページ　アーカイブセクション　アコーディオン
   // 第一階層
   $(function () {
     // 最初のコンテンツは表示
-    $(".js-accordion-item .js-side-menu__accordion-content").css("display", "block");
+    $(".js-accordion-item .js-blog-container__accordion-content").css("display", "block");
     // 最初の矢印は開いた時の状態に
     $(".js-accordion-item .js-accordion-title").addClass("open");
     // タイトルをクリックすると

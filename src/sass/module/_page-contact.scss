@@ -215,8 +215,6 @@ textarea {
   @include mq(md) {
     display: flex;
     justify-content: space-between;
-    max-width: rem(700);
-    width: 100%;
   }
 }
 
@@ -326,7 +324,7 @@ textarea {
   border-bottom: rem(4) solid $check-bg-cr-inner;
   @include mq(md) {
     top: 26%;
-    left: 0.6%;
+    left: 1.2%;
   }
 }
 
@@ -400,9 +398,4 @@ textarea {
   color: $white;
 }
 
-.page-contact__form-error-layout {
-  margin-top: rem(38);
-  @include mq(md) {
-    margin-top: rem(38);
-  }
-}
+

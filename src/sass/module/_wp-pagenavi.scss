@@ -91,6 +91,12 @@
   }
 }
 
+.page.current{
+  @include mq(md) {
+    margin-left: rem(40);
+  }
+}
+
 .page:hover {
   color: $white;
   background-color: $green;

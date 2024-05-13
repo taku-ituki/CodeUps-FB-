@@ -56,7 +56,7 @@
               </a>
             </li>
             <li class="header__nav-item">
-              <a href="information.html">
+              <a href="information.html?tab=1">
                 <div class="header__nav-text">information<span>ダイビング情報</span></div>
               </a>
             </li>
@@ -194,7 +194,7 @@
           <source srcset="./assets/images/common//blog-mv-sp.jpg" media="(max-width: 767px)" />
           <img src="./assets/images/common/blog-mv-pc.jpg" alt="fishes" />
         </picture>
-        <h1 class="sub-fv__title"><span>b</span>log</h1>
+        <div class="sub-fv__title"><span>b</span>log</div>
       </section>
       <!-- パンくずリスト -->
       <div class="breadcrumbs breadcrumbs-blog-layout">
@@ -209,15 +209,17 @@
 
       <!-- Blog詳細 -->
       <section class="blog-detail blog-detail-layout">
-        <div class="blog-detail__inner inner">
+        <div class="blog-container__inner inner">
+          <!-- 左右セクションを合体して一つのブロック化 -->
+          <div class="blog-container__container blog-container">
           <!-- メインコンテンツ -->
-          <div class="blog-detail__main-container">
+          <div class="blog-container__main-container blog-container__main-container--detail">
             <!-- 管理画面で編集 -->
             <time datetime="2023-11-17">2023.11/17</time>
-            <h2>ライセンス取得</h2>
-            <div class="blog-detail__cards">
-              <div class="blog-detail__card">
-                <div class="blog-detail__img">
+            <h1>ライセンス取得</h1>
+            <div class="blog-container__cards blog-container__cards--detail">
+              <div class="blog-container__card blog-container__card--detail">
+                <div>
                   <img src="./assets/images/common/blog-coral.jpg" alt="coral" />
                 </div>
                 <p>
@@ -225,8 +227,8 @@
                   ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
                 </p>
               </div>
-              <div class="blog-detail__card">
-                <div class="blog-detail__img">
+              <div>
+                <div>
                   <img src="./assets/images/common/blog-coral.jpg" alt="coral" />
                 </div>
                 <p>
@@ -236,89 +238,89 @@
               </div>
             </div>
             <ul>
-              <li><a href="#">リスト1</a></li>
-              <li><a href="#">リスト2</a></li>
-              <li><a href="#">リスト3</a></li>
+              <li>リスト1</li>
+              <li>リスト2</li>
+              <li>リスト3</li>
             </ul>
             <p>
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
               ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
             </p>
             <!-- ページナビ -->
-            <div class="blog-detail__pagenavi">
-              <a class="blog-detail__pagenavi-prev" rel="prev" href="#"></a>
-              <a class="blog-detail__pagenavi-next" rel="next" href="#"></a>
+            <div class="blog-container__pagenavi blog-container__pagenavi--detail">
+              <a class="blog-container__pagenavi-prev--detail" rel="prev" href="#"></a>
+              <a class="blog-container__pagenavi-next--detail" rel="next" href="#"></a>
             </div>
             <!-- /管理画面で編集 -->
           </div>
           <!-- サイドメニュー -->
-          <div class="page-blog__side-wrap side-menu">
-            <div class="side-menu-inner inner">
+          <div class="blog-container__side blog-container">
+            <div class="blog-container__inner inner">
               <!-- 人気記事 -->
-              <div class="side-menu__article">
-                <h2 class="side-menu__title side-menu__title--article">人気記事</h2>
-                <div class="side-menu__article-cards">
-                  <div class="side-menu__article-card">
+              <div class="blog-container__article">
+                <h2 class="blog-container__title">人気記事</h2>
+                <div class="blog-container__article-cards">
+                  <div class="blog-container__article-card">
                     <a href="#">
-                      <div class="side-menu__article-img">
+                      <div class="blog-container__article-img">
                         <img src="./assets/images/common/about-img2-fish.jpg" alt="yellow-fish" />
                       </div>
-                      <div class="side-menu__article-texts">
-                        <time class="side-menu__article-date" datetime="2023-11-17">2023.11/17</time>
-                        <h3 class="side-menu__article-title">ライセンス取得</h3>
+                      <div class="blog-container__article-texts">
+                        <time class="blog-container__article-date" datetime="2023-11-17">2023.11/17</time>
+                        <h3 class="blog-container__article-title">ライセンス取得</h3>
                       </div>
                     </a>
                   </div>
 
-                  <div class="side-menu__article-card">
+                  <div class="blog-container__article-card">
                     <a href="#">
-                      <div class="side-menu__article-img">
+                      <div class="blog-container__article-img">
                         <img src="./assets/images/common/blog-card-turtle.jpg" alt="turtle" />
                       </div>
-                      <div class="side-menu__article-texts">
-                        <time class="side-menu__article-date" datetime="2023-11-17">2023.11/17</time>
-                        <h3 class="side-menu__article-title">ウミガメと泳ぐ</h3>
+                      <div class="blog-container__article-texts">
+                        <time class="blog-container__article-date" datetime="2023-11-17">2023.11/17</time>
+                        <h3 class="blog-container__article-title">ウミガメと泳ぐ</h3>
                       </div>
                     </a>
                   </div>
-                  <div class="side-menu__article-card">
+                  <div class="blog-container__article-card">
                     <a href="">
-                      <div class="side-menu__article-img">
+                      <div class="blog-container__article-img">
                         <img src="./assets/images/common/blog-card-clownfish.jpg" alt="clown-fish" />
                       </div>
-                      <div class="side-menu__article-texts">
-                        <time class="side-menu__article-date" datetime="2023-11-17">2023.11/17</time>
-                        <h3 class="side-menu__article-title">カクレクマノミ</h3>
+                      <div class="blog-container__article-texts">
+                        <time class="blog-container__article-date" datetime="2023-11-17">2023.11/17</time>
+                        <h3 class="blog-container__article-title">カクレクマノミ</h3>
                       </div>
                     </a>
                   </div>
                 </div>
               </div>
               <!-- 口コミ -->
-              <div class="page-blog__reviews">
-                <h2 class="side-menu__title side-menu__title--reviews">口コミ</h2>
-                <div class="side-menu__reviews-card">
-                  <div class="side-menu__reviews-img">
+              <div class="blog-container__reviews">
+                <h2 class="blog-container__side__title blog-container__side__title--reviews">口コミ</h2>
+                <div class="blog-container__side__reviews-card">
+                  <div class="blog-container__side__reviews-img">
                     <img src="./assets/images/common/reviewd-img.jpg" alt="men&women" />
                   </div>
-                  <div class="side-menu__reviews-texts">
-                    <time class="side-menu__reviews-date" datetime="2023-11-17">30代(カップル)</time>
-                    <h3 class="side-menu__reviews-text">ここにタイトルが入ります。ここにタイトル</h3>
+                  <div class="blog-container__side__reviews-texts">
+                    <time class="blog-container__side__reviews-date" datetime="2023-11-17">30代(カップル)</time>
+                    <h3 class="blog-container__side__reviews-text">ここにタイトルが入ります。ここにタイトル</h3>
                   </div>
                 </div>
                 <!-- common　ボタン -->
-                <div class="side-menu__btn-wrap side-menu__btn-wrap--reviews">
-                  <a class="side-menu__btn common-btn" href="#">
+                <div class="blog-container__btn-wrap blog-container__btn-wrap--reviews">
+                  <a class="blog-container__btn common-btn" href="#">
                     <span>view more</span>
                   </a>
                 </div>
               </div>
               <!-- キャンペーン -->
-              <div class="side-menu__campaign">
-                <h2 class="side-menu__title">キャンペーン</h2>
-                <div class="side-menu__campaign-cards campaign-cards">
-                  <div class="side-menu__campaign-card campaign-card">
-                    <div class="campaign-card__img campaign-card__img--side-menu">
+              <div class="blog-container__campaign">
+                <h2 class="blog-container__title">キャンペーン</h2>
+                <div class="blog-container__campaign-cards campaign-cards">
+                  <div class="blog-container__campaign-card campaign-card">
+                    <div class="campaign-card__img campaign-card__img--blog-container__side">
                       <img src="./assets/images/common/campaign-test.jpg" alt="campaign-card-fish" />
                     </div>
                     <div class="campaign-card__text-wrapper campaign-card__text-wrapper--blog">
@@ -332,8 +334,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="side-menu__campaign-card campaign-card">
-                    <div class="campaign-card__img campaign-card__img--side-menu">
+                  <div class="blog-container__campaign-card campaign-card">
+                    <div class="campaign-card__img campaign-card__img--blog-container__side">
                       <img src="./assets/images/common/campaign-card-boat.jpg" alt="campaign-card-boat" />
                     </div>
                     <div class="campaign-card__text-wrapper campaign-card__text-wrapper--blog">
@@ -350,62 +352,62 @@
                 </div>
               </div>
               <!-- common　ボタン -->
-              <div class="side-menu__btn-wrap side-menu__btn-wrap--campaign">
-                <a class="side-menu__btn common-btn" href="#">
+              <div class="blog-container__btn-wrap blog-container__btn-wrap--campaign">
+                <a class="blog-container__btn common-btn" href="#">
                   <span>view more</span>
                 </a>
               </div>
               <!--アーカイブ -->
-              <div class="side-menu__archive">
-                <h2 class="side-menu__title side-menu__title--archive">アーカイブ</h2>
+              <div class="blog-container__archive">
+                <h2 class="blog-container__title blog-container__title--archive">アーカイブ</h2>
                 <!-- accordion -->
-                <div class="side-menu__accordion">
-                  <div class="side-menu__accordion-container">
-                    <div class="side-menu__accordion-item js-accordion-item">
-                      <h3 class="side-menu__accordion-title js-accordion-title">2023</h3>
-                      <div class="side-menu__accordion-content js-side-menu__accordion-content">
-                        <div class="side-menu__accordion-container-month">
-                          <div class="side-menu__accordion-item-month">
-                            <h3 class="side-menu__accordion-title-month js-accordion-title-month">3月</h3>
-                            <div class="side-menu__accordion-content-month">
-                              <p class="side-menu__accordion-text">コンテンツが入ります。</p>
+                <div class="blog-container__accordion">
+                  <div class="blog-container__accordion-container">
+                    <div class="blog-container__accordion-item js-accordion-item">
+                      <h3 class="blog-container__accordion-title js-accordion-title">2023</h3>
+                      <div class="blog-container__accordion-content js-blog-container__side__accordion-content">
+                        <div class="blog-container__accordion-container-month">
+                          <div class="blog-container__accordion-item-month">
+                            <h3 class="blog-container__accordion-title-month js-accordion-title-month">3月</h3>
+                            <div class="blog-container__accordion-content-month">
+                              <p class="blog-container__accordion-text">コンテンツが入ります。</p>
                             </div>
                           </div>
-                          <div class="side-menu__accordion-item-month">
-                            <h3 class="side-menu__accordion-title-month js-accordion-title-month">2月</h3>
-                            <div class="side-menu__accordion-content-month">
-                              <p class="side-menu__accordion-text">コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
+                          <div class="blog-container__accordion-item-month">
+                            <h3 class="blog-container__accordion-title-month js-accordion-title-month">2月</h3>
+                            <div class="blog-container__accordion-content-month">
+                              <p class="blog-container__accordion-text">コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
                             </div>
                           </div>
-                          <div class="side-menu__accordion-item-moth">
-                            <h3 class="side-menu__accordion-title-month js-accordion-title-month">1月</h3>
-                            <div class="side-menu__accordion-content-month">
-                              <p class="side-menu__accordion-text">コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
+                          <div class="blog-container__accordion-item-moth">
+                            <h3 class="blog-container__accordion-title-month js-accordion-title-month">1月</h3>
+                            <div class="blog-container__accordion-content-month">
+                              <p class="blog-container__accordion-text">コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="side-menu__accordion-item-month">
-                      <h3 class="side-menu__accordion-title js-accordion-title">2022</h3>
-                      <div class="side-menu__accordion-content">
-                        <div class="side-menu__accordion-container-month">
-                          <div class="side-menu__accordion-item-month">
-                            <h3 class="side-menu__accordion-title-month js-accordion-title-month">3月</h3>
-                            <div class="side-menu__accordion-content-month">
-                              <p class="side-menu__accordion-text">コンテンツが入ります。</p>
+                    <div class="blog-container__accordion-item-month">
+                      <h3 class="blog-container__accordion-title js-accordion-title">2022</h3>
+                      <div class="blog-container__accordion-content">
+                        <div class="blog-container__accordion-container-month">
+                          <div class="blog-container__accordion-item-month">
+                            <h3 class="blog-container__accordion-title-month js-accordion-title-month">3月</h3>
+                            <div class="blog-container__accordion-content-month">
+                              <p class="blog-container__accordion-text">コンテンツが入ります。</p>
                             </div>
                           </div>
-                          <div class="side-menu__accordion-item-month">
-                            <h3 class="side-menu__accordion-title-month js-accordion-title-month">2月</h3>
-                            <div class="side-menu__accordion-content-month">
-                              <p class="side-menu__accordion-text">コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
+                          <div class="blog-container__accordion-item-month">
+                            <h3 class="blog-container__accordion-title-month js-accordion-title-month">2月</h3>
+                            <div class="blog-container__accordion-content-month">
+                              <p class="blog-container__accordion-text">コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
                             </div>
                           </div>
-                          <div class="side-menu__accordion-item-moth">
-                            <h3 class="side-menu__accordion-title-month js-accordion-title-month">1月</h3>
-                            <div class="side-menu__accordion-content-month">
-                              <p class="side-menu__accordion-text">コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
+                          <div class="blog-container__accordion-item-moth">
+                            <h3 class="blog-container__accordion-title-month js-accordion-title-month">1月</h3>
+                            <div class="blog-container__accordion-content-month">
+                              <p class="blog-container__accordion-text">コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。コンテンツが入ります。</p>
                             </div>
                           </div>
                         </div>
@@ -417,6 +419,7 @@
                 <!-- .accordion -->
               </div>
             </div>
+          </div>
           </div>
         </div>
       </section>
@@ -512,22 +515,20 @@
             <ul class="common-nav__flex-list common-nav__flex-list--footer">
               <!-- ダイビング情報 -->
               <li class="common-nav__item common-nav__item--head">
-                <a href="information.html">ダイビング情報</a>
+                <a href="information.html?tab=1">ダイビング情報</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">ライセンス講習</a>
+                <a href="information.html?tab=1">ライセンス講習</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">体験ダイビング</a>
+                <a href="information.html?tab=3">体験ダイビング</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">ファンダイビング</a>
+                <a href="information.html?tab=2">ファンダイビング</a>
               </li>
               <!--ブログ -->
-              <li class="common-nav__items common-nav__items--blog">
-                <div class="common-nav__item common-nav__item--head">
-                  <a href="blog.html">ブログ</a>
-                </div>
+              <li class="common-nav__item common-nav__item--head">
+                <a href="blog.html">ブログ</a>
               </li>
             </ul>
           </div>
@@ -543,13 +544,13 @@
                 <a href="price.html">料金一覧</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">ライセンス講習</a>
+                <a href="price.html">ライセンス講習</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">体験ダイビング</a>
+                <a href="price.html#price-lisence-diving-link" >体験ダイビング</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">ファンダイビング</a>
+                <a href="price.html#price-lisence-diving-link">ファンダイビング</a>
               </li>
             </ul>
             <ul class="common-nav__flex-list common-nav__flex-list--footer">

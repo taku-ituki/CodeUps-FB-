@@ -55,8 +55,8 @@
                 <div class="header__nav-text">about us<span>私たちについて</span></div>
               </a>
             </li>
-            <li class="header__nav-item">
-              <a href="information.html">
+            <li class="header__nav-item js-header-info-tab">
+              <a href="information.html?tab=1">
                 <div class="header__nav-text">information<span>ダイビング情報</span></div>
               </a>
             </li>
@@ -120,16 +120,16 @@
               <ul class="common-nav__flex-list">
                 <!-- ダイビング情報 -->
                 <li class="common-nav__item common-nav__item--head">
-                  <a href="#">ダイビング情報</a>
+                  <a href="information.html?tab=1">ダイビング情報</a>
                 </li>
                 <li class="common-nav__item">
-                  <a href="#">ライセンス講習</a>
+                  <a href="information.html?tab=1">ライセンス講習</a>
                 </li>
                 <li class="common-nav__item">
-                  <a href="#">体験ダイビング</a>
+                  <a href="information.html?tab=3">体験ダイビング</a>
                 </li>
                 <li class="common-nav__item">
-                  <a href="#">ファンダイビング</a>
+                  <a href="information.html?tab=2">ファンダイビング</a>
                 </li>
                 <!--ブログ -->
                 <li class="common-nav__item common-nav__item--head">
@@ -149,13 +149,13 @@
                   <a href="price.html">料金一覧</a>
                 </li>
                 <li class="common-nav__item">
-                  <a href="#">ライセンス講習</a>
+                  <a href="#" id="info-lisence">ライセンス講習</a>
                 </li>
                 <li class="common-nav__item">
-                  <a href="#">体験ダイビング</a>
+                  <a href="#" id="info-experience-diving">体験ダイビング</a>
                 </li>
                 <li class="common-nav__item">
-                  <a href="#">ファンダイビング</a>
+                  <a href="#" id="info-fun-diving">ファンダイビング</a>
                 </li>
               </ul>
               <ul class="common-nav__flex-list">
@@ -208,13 +208,13 @@
       <section class="info-content info-content-layout">
         <div class="info-content__inner inner">
           <ul class="info-content__tab-area">
-            <li class="info-content__tab js-info-content-tab active">ライセンス<br />講習</li>
+            <li class="info-content__tab js-info-content-tab">ライセンス<br />講習</li>
             <li class="info-content__tab js-info-content-tab info-content__tab--fun">ファン<br />ダイビング</li>
             <li class="info-content__tab js-info-content-tab info-content__tab--experience">体験<br />ダイビング</li>
           </ul>
           <div class="info-content__cards">
             <!-- ライセンス講習 -->
-            <div class="info-content__card js-info-content-card active">
+            <div class="info-content__card js-info-content-card" id="#lisence-link">
               <div class="info-content__card-text-block">
                 <h2 class="info-content__card-title">ライセンス講習</h2>
                 <div class="info-content__card-text">
@@ -339,17 +339,17 @@
             </ul>
             <ul class="common-nav__flex-list common-nav__flex-list--footer">
               <!-- ダイビング情報 -->
-              <li class="common-nav__item common-nav__item--head">
-                <a href="#">ダイビング情報</a>
+              <li class="common-nav__item common-nav__item--head" id="js-lisence-link">
+                <a href="information.html?tab=1">ダイビング情報</a>
+              </li>
+              <li class="common-nav__item" id="#experience-diving-link">
+                <a href="information.html?tab=1">ライセンス講習</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">ライセンス講習</a>
+                <a href="information.html?tab=3">体験ダイビング</a>
               </li>
-              <li class="common-nav__item">
-                <a href="#">体験ダイビング</a>
-              </li>
-              <li class="common-nav__item">
-                <a href="#">ファンダイビング</a>
+              <li class="common-nav__item" id="#fun-diving-link">
+                <a href="information.html?tab=2">ファンダイビング</a>
               </li>
               <!--ブログ -->
               <li class="common-nav__items common-nav__items--blog">

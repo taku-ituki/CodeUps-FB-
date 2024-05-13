@@ -1,4 +1,75 @@
 @use "global" as *;
+
+.blog-container {
+  @include mq(md) {
+    position: relative;
+  }
+}
+
+// 画像配置
+.blog-container::before {
+  content: "";
+  background: url("./../images/common/top-voice-fish.png") center center / cover no-repeat;
+  /*絶対配置で線の位置を決める*/
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  top: 41.5%;
+  left: calc(50% - (min(48.062vw, rem(620))));
+  /*線の形状*/
+  max-width: rem(120);
+  height: rem(55);
+  @include mq(md) {
+    top: -2.6%;
+    /*線の形状*/
+    max-width: rem(300);
+    height: rem(138);
+  }
+}
+
+
+.blog-container {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.blog-container__main {
+  @include mq(md) {
+    width: 67.75%;
+  }
+}
+
+// sideメニューの上の余白
+.blog-container-wrap {
+  margin-top: rem(80);
+  @include mq(md) {
+    margin-top: rem(0);
+  }
+}
+
+// ページナンバー位置調整
+.blog-container__pagenavi {
+  max-width: rem(158);
+  width: 100%;
+  margin-top: rem(35);
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  @include mq(md) {
+    max-width: rem(186);
+    width: 100%;
+    margin-top: rem(75);
+    padding-right: rem(28);
+  }
+}
+
+
+
+// 記事詳細（detail）ページ
 // 共通部分
 .blog-container__side {
   @include mq(md) {

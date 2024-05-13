@@ -56,7 +56,7 @@
               </a>
             </li>
             <li class="header__nav-item">
-              <a href="information.html">
+              <a href="information.html?tab=1">
                 <div class="header__nav-text">information<span>ダイビング情報</span></div>
               </a>
             </li>
@@ -146,16 +146,16 @@
                 </li>
                 <!-- 料金一覧 -->
                 <li class="common-nav__item common-nav__item--head">
-                  <a href="price.html">料金一覧</a>
+                  <a href="#">料金一覧</a>
                 </li>
-                <li class="common-nav__item">
-                  <a href="#">ライセンス講習</a>
+                <li class="common-nav__item js-scroll">
+                  <a href="#info-license">ライセンス講習</a>
                 </li>
-                <li class="common-nav__item">
-                  <a href="#">体験ダイビング</a>
+                <li class="common-nav__item js-scroll">
+                  <a href="#info-experience-diving">体験ダイビング</a>
                 </li>
-                <li class="common-nav__item">
-                  <a href="#">ファンダイビング</a>
+                <li class="common-nav__item js-scroll">
+                  <a href="#info-fun-diving">ファンダイビング</a>
                 </li>
               </ul>
               <ul class="common-nav__flex-list">
@@ -208,8 +208,8 @@
         <div class="page-price__inner inner">
           <ul class="page-price__list-wrap">
             <!-- ライセンス講習 -->
-            <li class="page-price__list">
-              <h2 class="page-price__title">ライセンス講習</h2>
+            <li class="page-price__list" id="price-lisence-diving-link">
+              <h2 class="page-price__title page-price__title--license">ライセンス講習</h2>
               <div class="page-price__items">
                 <dl class="page-price__item">
                   <dt class="page-price__plan">オープンウォーター<br />ダイバーコース</dt>
@@ -273,8 +273,8 @@
               </div>
             </li>
             <!-- スペシャルダイビング -->
-            <li class="page-price__list">
-              <h2 class="page-price__title page-price__title--sp">スペシャルダイビング</h2>
+            <li class="page-price__list" id="info-special-diving">
+              <h2 class="page-price__title page-price__title--special">スペシャルダイビング</h2>
               <div class="page-price__items">
                 <dl class="page-price__item">
                   <dt class="page-price__plan">貸切ダイビング<br />(2ダイブ)</dt>
@@ -384,22 +384,20 @@
             <ul class="common-nav__flex-list common-nav__flex-list--footer">
               <!-- ダイビング情報 -->
               <li class="common-nav__item common-nav__item--head">
-                <a href="information.html">ダイビング情報</a>
+                <a href="information.html?tab=1">ダイビング情報</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">ライセンス講習</a>
+                <a href="information.html?tab=1">ライセンス講習</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">体験ダイビング</a>
+                <a href="information.html?tab=3">体験ダイビング</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">ファンダイビング</a>
+                <a href="information.html?tab=2">ファンダイビング</a>
               </li>
               <!--ブログ -->
-              <li class="common-nav__items common-nav__items--blog">
-                <div class="common-nav__item common-nav__item--head">
-                  <a href="blog.html">ブログ</a>
-                </div>
+              <li class="common-nav__item common-nav__item--head">
+                <a href="blog.html">ブログ</a>
               </li>
             </ul>
           </div>
@@ -415,13 +413,13 @@
                 <a href="price.html">料金一覧</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">ライセンス講習</a>
+                <a href="price.html">ライセンス講習</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">体験ダイビング</a>
+                <a href="price.html#price-lisence-diving-link" >体験ダイビング</a>
               </li>
               <li class="common-nav__item">
-                <a href="#">ファンダイビング</a>
+                <a href="price.html#price-lisence-diving-link">ファンダイビング</a>
               </li>
             </ul>
             <ul class="common-nav__flex-list common-nav__flex-list--footer">

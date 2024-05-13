@@ -201,6 +201,12 @@ a {
 	margin-top: 5.25rem;
 }
 
+/*========= レイアウトのためのCSS ===============*/
+
+.faq-item-layout {
+	margin-top: 2.5rem;
+}
+
 .faq-layout {
 	margin-top: 2.8125rem;
 }
@@ -241,6 +247,10 @@ a {
 .page-campaign-layout {
 	margin-top: 3rem;
 	position: relative;
+}
+
+.page-contact__form-error-layout {
+	margin-top: 2.375rem;
 }
 
 .page-contact-layout {
@@ -403,7 +413,6 @@ a {
 .blog-card {
 	background-color: #fff;
 	box-shadow: 0.125rem 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.25);
-	max-width: 39.375rem;
 	padding: 1rem 1rem 1.5rem 1rem;
 	position: relative;
 	transition: 0.3s;
@@ -464,8 +473,298 @@ a {
 	margin-right: auto;
 }
 
-.blog-detail {
+.blog-container::before {
+	background: url("./../images/common/top-voice-fish.png") center center/cover no-repeat;
+	content: ""; /*絶対配置で線の位置を決める*/
+	display: block;
+	height: 3.4375rem;
+	left: calc(50% - min(48.062vw, 38.75rem)); /*線の形状*/
+	max-width: 7.5rem;
+	position: absolute;
+	top: 41.5%;
+	width: 100%;
+	z-index: -1;
+}
+
+.blog-container-wrap {
+	margin-top: 5rem;
+}
+
+.blog-container__pagenavi {
+	display: flex;
+	justify-content: space-between;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.1875rem;
+	max-width: 9.875rem;
+	width: 100%;
+}
+
+.blog-container__inner.inner {
+	margin-left: auto;
+	margin-right: auto;
+	width: 93.9%;
+}
+
+.blog-container__title {
+	border-left: 0.5rem solid #408f95;
+	font-size: 1.5rem;
+	font-weight: "Noto Sans JP", "sans-serif";
+	font-weight: normal;
+	padding-left: 4.6875rem;
+	padding-top: 0.9375rem;
 	position: relative;
+}
+
+.blog-container__title::before {
+	background: url("./../images/common/whale-black.png") center center/cover no-repeat;
+	content: ""; /*絶対配置で線の位置を決める*/
+	display: block;
+	height: 3.125rem;
+	left: 5%;
+	position: absolute;
+	top: 0%; /*線の形状*/
+	width: 3.125rem;
+	z-index: 30;
+}
+
+.blog-container__btn-wrap {
+	text-align: center;
+}
+
+.blog-container__btn-wrap--reviews {
+	margin-top: 2.75rem;
+}
+
+.blog-container__btn-wrap--campaign {
+	margin-top: 2.5rem;
+}
+
+.blog-container__article {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.blog-container__article-cards {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.4375rem;
+}
+
+.blog-container__article-card a {
+	box-shadow: 0.125rem 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.25);
+	display: flex;
+	gap: 1rem;
+	padding: 1rem;
+	transition: 0.3s;
+}
+
+.blog-container__article-card:hover a {
+	cursor: pointer;
+	opacity: 0.7;
+	transition: 0.3s;
+}
+
+.blog-container__article-card:not(:first-child) {
+	margin-top: 1.5rem;
+}
+
+.blog-container__article-img {
+	aspect-ratio: 121/90;
+	width: 46.4%;
+}
+
+.blog-container__article-img img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.blog-container__article-texts {
+	display: inline-block;
+}
+
+.blog-container__article-date {
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+.blog-container__article-title {
+	display: inline-block;
+	font-family: "Noto Sans JP", "sans-serif";
+	font-size: 1rem;
+}
+
+.blog-container__reviews {
+	margin-top: 4.9375rem;
+}
+
+.blog-container__reviews-card {
+	margin-top: 1.5625rem;
+}
+
+.blog-container__reviews-img {
+	aspect-ratio: 294/218;
+}
+
+.blog-container__reviews-img img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.blog-container__reviews-texts {
+	margin-top: 0.9375rem;
+}
+
+.blog-container__reviews-date {
+	font-family: "Noto Sans JP", "sans-serif";
+	font-size: 0.75rem;
+	line-height: 1.5;
+}
+
+.blog-container__reviews-text {
+	font-family: "Noto Sans JP", "sans-serif";
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.blog-container__campaign {
+	margin-top: 5.0625rem;
+}
+
+.blog-container__campaign-cards.campaign-cards {
+	margin-top: 1.8125rem;
+}
+
+.blog-container__campaign-card:not(:first-child) {
+	margin-top: 2.8125rem;
+}
+
+.blog-container__campaign .campaign-card__text {
+	font-size: 0.875rem;
+}
+
+.blog-container__campaign .campaign-card__price-wrapper {
+	padding-bottom: 0.9375rem;
+}
+
+.blog-container__campaign .campaign-card__price-before {
+	font-size: 1.25rem;
+}
+
+.blog-container__campaign .campaign-card__price-after {
+	font-size: 2rem;
+}
+
+.blog-container__campaign .campaign-card__text {
+	padding-top: 0.5625rem;
+}
+
+.blog-container__campaign-card.campaign-card:hover {
+	opacity: 1;
+}
+
+.blog-container__archive {
+	margin-top: 5rem;
+}
+
+.blog-container__accordion {
+	font-family: "Noto Sans JP", "sans-serif";
+	margin-top: 0.9375rem;
+	max-width: 18.75rem;
+	padding-left: 0.9375rem;
+	position: relative;
+	width: 100%;
+}
+
+.blog-container__accordion-title {
+	color: #408f95;
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: normal;
+	padding: 0.625rem 0.9375rem;
+}
+
+.blog-container__accordion-content {
+	display: none;
+	line-height: 1;
+	margin-top: -0.625rem;
+	padding: 0 1.25rem;
+}
+
+.blog-container__accordion-text {
+	font-size: 0.8125rem;
+	line-height: 1.5;
+}
+
+/* 矢印 */
+
+.blog-container__accordion-title {
+	position: relative;
+}
+
+.blog-container__accordion-title::after {
+	content: url("./../images/common/archive-arrow-left.png");
+	display: block;
+	height: 1.5rem;
+	left: -4.5%;
+	position: absolute;
+	top: 25%;
+	transform: rotate(135deg);
+	transform: scale(0.5);
+	transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+	width: 1.5rem;
+}
+
+.blog-container__accordion-title.open::after {
+	left: -2.9%;
+	top: 30%;
+	transform: scale(0.5) rotate(90deg);
+}
+
+.blog-container__accordion-title-month {
+	color: #408f95;
+	cursor: pointer;
+	font-size: 1.5rem;
+	font-weight: normal;
+	line-height: 1;
+	padding: 0.4375rem 1.25rem;
+}
+
+.blog-container__accordion-content-month {
+	display: none;
+	padding: 0.625rem 1.25rem;
+}
+
+.blog-container__accordion-month {
+	margin-top: rem-(10);
+}
+
+/* 矢印 */
+
+.blog-container__accordion-title-month {
+	position: relative;
+}
+
+.blog-container__accordion-title-month::after {
+	content: url("./../images/common/archive-arrow-left.png");
+	display: block;
+	height: 1.5rem;
+	left: -5%;
+	position: absolute;
+	top: 15%;
+	transform: rotate(135deg);
+	transform: scale(0.5);
+	transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+	width: 1.5rem;
+}
+
+.blog-container__accordion-title-month.open::after {
+	top: 30%;
+	transform: scale(0.5) rotate(90deg);
 }
 
 .blog-detail::before {
@@ -481,11 +780,11 @@ a {
 	z-index: -1;
 }
 
-.blog-detail__main-container time {
+.blog-container__main-container.blog-container__main-container--detail time {
 	font-size: 0.875rem;
 }
 
-.blog-detail__main-container h2 {
+.blog-container__main-container.blog-container__main-container--detail h1 {
 	border-bottom: 0.0625rem solid #408f95;
 	font-family: "Noto Sans JP", "sans-serif";
 	font-size: 1.5rem;
@@ -493,46 +792,46 @@ a {
 	margin-top: 0.5rem;
 }
 
-.blog-detail__card {
+.blog-container__card.blog-container__card--detail {
 	margin-top: 1.625rem;
 }
 
-.blog-detail__img {
+.blog-container__img {
 	aspect-ratio: 345/231;
 }
 
-.blog-detail__img img {
+.blog-container__img img {
 	-o-object-fit: cover;
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
 }
 
-.blog-detail__main-container p {
+.blog-container__main-container.blog-container__main-container--detail p {
 	font-family: "Noto Sans JP", "sans-serif";
 	font-size: 1rem;
 	line-height: 1.5;
 	margin-top: 1.5rem;
 }
 
-.blog-detail__main-container ul {
+.blog-container__main-container.blog-container__main-container--detail ul {
 	margin-top: 1.375rem;
 	max-width: 19.875rem;
 	width: 100%;
 }
 
-.blog-detail__main-container li {
+.blog-container__main-container.blog-container__main-container--detail li {
 	padding-left: 1.5625rem;
 	position: relative;
 	transition: 0.3s;
 }
 
-.blog-detail__main-container li:hover {
+.blog-container__main-container.blog-container__main-container--detail li:hover {
 	opacity: 0.5;
 	transition: 0.3s;
 }
 
-.blog-detail__main-container li::before {
+.blog-container__main-container.blog-container__main-container--detail li::before {
 	background-image: url(./../images/common/blog-star-fish.png);
 	background-size: cover;
 	content: "";
@@ -544,7 +843,7 @@ a {
 	width: 1.125rem;
 }
 
-.blog-detail__pagenavi {
+.blog-container__pagenavi.blog-container__pagenavi--detail {
 	display: flex;
 	justify-content: space-between;
 	margin-left: auto;
@@ -554,7 +853,7 @@ a {
 	width: 100%;
 }
 
-.blog-detail__pagenavi-prev {
+.blog-container__pagenavi-prev.blog-container__pagenavi-prev--detail {
 	border: 0.0625rem solid #408f95;
 	display: inline-block;
 	padding: 1.125rem 1.125rem;
@@ -562,7 +861,7 @@ a {
 	transition: 0.3s;
 }
 
-.blog-detail__pagenavi-prev::before {
+.blog-container__pagenavi-prev--detail::before {
 	border-right: solid 0.0625rem #408f95;
 	border-top: solid 0.0625rem #408f95;
 	content: "";
@@ -574,7 +873,7 @@ a {
 	width: 0.625rem;
 }
 
-.blog-detail__pagenavi-next {
+.blog-container__pagenavi-next.blog-container__pagenavi-next--detail {
 	border: 0.0625rem solid #408f95;
 	display: inline-block;
 	padding: 1.125rem 1.125rem;
@@ -582,7 +881,7 @@ a {
 	transition: 0.3s;
 }
 
-.blog-detail__pagenavi-next::before {
+.blog-container__pagenavi-next.blog-container__pagenavi-next--detail::before {
 	border-right: solid 0.0625rem #408f95;
 	border-top: solid 0.0625rem #408f95;
 	content: "";
@@ -594,22 +893,22 @@ a {
 	width: 0.625rem;
 }
 
-.blog-detail__pagenavi-prev:hover {
+.blog-container__pagenavi-prev.blog-container__pagenavi-prev--detail:hover {
 	background-color: #408f95;
 	transition: 0.3s;
 }
 
-.blog-detail__pagenavi-prev:hover::before {
+.blog-container__pagenavi-prev.blog-container__pagenavi-prev--detail:hover::before {
 	border-color: #fff;
 	transition: inherit;
 }
 
-.blog-detail__pagenavi-next:hover {
+.blog-container__pagenavi-next.blog-container__pagenavi-next--detail:hover {
 	background-color: #408f95;
 	transition: 0.3s;
 }
 
-.blog-detail__pagenavi-next:hover::before {
+.blog-container__pagenavi-next.blog-container__pagenavi-next--detail:hover::before {
 	border-color: #fff;
 	transition: inherit;
 }
@@ -631,12 +930,12 @@ a {
 	margin-top: 1.6875rem;
 }
 
-.blog-cards__card {
+.blog-container__card {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.blog-cards__card:not(:first-child) {
+.blog-container__card:not(:first-child) {
 	margin-top: 2.5rem;
 }
 
@@ -704,7 +1003,7 @@ a {
 	width: 100%;
 }
 
-.campaign-card__img.campaign-card__img--side-menu {
+.campaign-card__img.campaign-card__img--blog-container {
 	aspect-ratio: 294/188;
 }
 
@@ -1259,6 +1558,64 @@ a {
 	margin-top: 2.375rem;
 }
 
+.faq-item {
+	border: 0.0625rem solid #408f95;
+}
+
+/*アコーディオンタイトル*/
+
+.faq-item__accordion-title {
+	background-color: #408f95;
+	color: #fff;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: normal;
+	padding: 1rem;
+	position: relative; /*+マークの位置基準とするためrelative指定*/
+	transition: all 0.5s ease;
+}
+
+.faq-item__accordion-title-text {
+	max-width: 85%;
+	width: 100%;
+}
+
+/*アイコンの＋と×*/
+
+.faq-item__accordion-title::before,
+.faq-item__accordion-title::after {
+	background-color: #fff;
+	content: "";
+	display: block;
+	height: 0.0625rem;
+	margin-left: 0.625rem;
+	position: absolute; /* アニメーション時間とイージング関数を指定 */
+	transition: transform 0.3s ease;
+	width: 1.75rem;
+}
+
+.faq-item__accordion-title::before {
+	left: 84.6%;
+	top: 48%;
+	transform: rotate(0deg);
+}
+
+.faq-item__accordion-title::after {
+	left: 84.6%;
+	top: 48%;
+	transform: rotate(0deg);
+}
+
+/*　closeというクラスがついたら形状変化　*/
+
+.faq-item__accordion-title.close::before {
+	transform: rotate(90deg);
+}
+
+.faq-item__accordion-title.close::after {
+	transform: rotate(-180deg);
+}
+
 .faq {
 	position: relative;
 }
@@ -1283,67 +1640,6 @@ a {
 	list-style: none;
 	margin: 0 auto;
 	max-width: 43.75rem;
-}
-
-/*========= レイアウトのためのCSS ===============*/
-
-.faq__accordion-area li {
-	border: 0.0625rem solid #408f95;
-	margin-top: 2.5rem;
-}
-
-/*アコーディオンタイトル*/
-
-.faq__accordion-title {
-	background-color: #408f95;
-	color: #fff;
-	cursor: pointer;
-	font-size: 1rem;
-	font-weight: normal;
-	padding: 1rem;
-	position: relative; /*+マークの位置基準とするためrelative指定*/
-	transition: all 0.5s ease;
-}
-
-.faq__accordion-title-text {
-	max-width: 85%;
-	width: 100%;
-}
-
-/*アイコンの＋と×*/
-
-.faq__accordion-title::before,
-.faq__accordion-title::after {
-	background-color: #fff;
-	content: "";
-	display: block;
-	height: 0.0625rem;
-	margin-left: 0.625rem;
-	position: absolute; /* アニメーション時間とイージング関数を指定 */
-	transition: transform 0.3s ease;
-	width: 1.75rem;
-}
-
-.faq__accordion-title::before {
-	left: 84.6%;
-	top: 48%;
-	transform: rotate(0deg);
-}
-
-.faq__accordion-title::after {
-	left: 84.6%;
-	top: 48%;
-	transform: rotate(0deg);
-}
-
-/*　closeというクラスがついたら形状変化　*/
-
-.faq__accordion-title.close::before {
-	transform: rotate(90deg);
-}
-
-.faq__accordion-title.close::after {
-	transform: rotate(-180deg);
 }
 
 /*アコーディオンで現れるエリア*/
@@ -1854,15 +2150,12 @@ footer {
 }
 
 .info-content__card {
-	border: 0.0625rem solid #408f95;
-	display: none;
-	padding: 1.0625rem 1.5rem 1.5rem 1.5rem;
-}
-
-.info-content__card.active {
 	animation-duration: 2s;
 	animation-name: fadein;
+	border: 0.0625rem solid #408f95;
+	display: none;
 	display: block;
+	padding: 1.0625rem 1.5rem 1.5rem 1.5rem;
 }
 
 .info-content__card-text-block {
@@ -1967,33 +2260,6 @@ footer {
 	width: 100%;
 }
 
-.page-blog::before {
-	background: url("./../images/common/top-voice-fish.png") center center/cover no-repeat;
-	content: ""; /*絶対配置で線の位置を決める*/
-	display: block;
-	height: 3.4375rem;
-	left: calc(50% - min(48.062vw, 38.75rem)); /*線の形状*/
-	max-width: 7.5rem;
-	position: absolute;
-	top: 41.5%;
-	width: 100%;
-	z-index: -1;
-}
-
-.page-blog__side-wrap {
-	margin-top: 5rem;
-}
-
-.page-blog__pagenavi {
-	display: flex;
-	justify-content: space-between;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2.1875rem;
-	max-width: 9.875rem;
-	width: 100%;
-}
-
 .page-campaign::before {
 	background: url("./../images/common/top-voice-fish.png") center center/cover no-repeat;
 	content: ""; /*絶対配置で線の位置を決める*/
@@ -2011,7 +2277,6 @@ footer {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 2.5rem;
-	width: 81%;
 }
 
 .page-campaign__card {
@@ -2372,10 +2637,6 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	color: #fff;
 }
 
-.page-contact__form-error-layout {
-	margin-top: 2.375rem;
-}
-
 .page-price {
 	position: relative;
 }
@@ -2424,32 +2685,38 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	text-indent: 2em;
 }
 
+.page-price__title {
+	background-color: #408f95;
+	color: #fff;
+	font-family: "Noto Sans JP", "sans-serif";
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.5;
+	padding-bottom: 0.4375rem;
+	padding-top: 0.5625rem;
+	position: relative;
+	text-align: center;
+	text-indent: 2em;
+}
+
 .page-price__title::after {
 	background: url("./../images/common/price-whale.png") center center/cover no-repeat;
 	content: ""; /*絶対配置で線の位置を決める*/
 	display: block;
 	height: 1.5rem;
-	left: calc(50% - min(50vw, 4.625rem));
+	left: 29%;
 	position: absolute;
-	top: 15%; /*線の形状*/
+	top: 20%; /*線の形状*/
 	width: 1.5rem;
 	z-index: 30;
 }
 
 .page-price__title.page-price__title--fun::after {
-	height: 1.5rem;
-	left: calc(50% - min(50vw, 5rem));
-	top: 15%; /*線の形状*/
-	width: 1.5rem;
-	z-index: 30;
+	left: 27%;
 }
 
-.page-price__title.page-price__title--sp::after {
-	height: 1.5rem;
-	left: calc(50% - min(50vw, 5.9375rem));
-	top: 15%; /*線の形状*/
-	width: 1.5rem;
-	z-index: 30;
+.page-price__title.page-price__title--special::after {
+	left: 22%;
 }
 
 .page-price__plan {
@@ -2474,7 +2741,7 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	justify-content: right;
 	line-height: 1.5;
 	padding-right: 1rem;
-	width: 30%;
+	width: 27%;
 }
 
 .page-page-common {
@@ -2708,13 +2975,13 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	margin-top: 2.0625rem;
 }
 
-.side-menu__inner.inner {
+.blog-container__inner.inner {
 	margin-left: auto;
 	margin-right: auto;
 	width: 93.9%;
 }
 
-.side-menu__title {
+.blog-container__title {
 	border-left: 0.5rem solid #408f95;
 	font-size: 1.5rem;
 	font-weight: "Noto Sans JP", "sans-serif";
@@ -2724,7 +2991,7 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	position: relative;
 }
 
-.side-menu__title::before {
+.blog-container__title::before {
 	background: url("./../images/common/whale-black.png") center center/cover no-repeat;
 	content: ""; /*絶対配置で線の位置を決める*/
 	display: block;
@@ -2736,30 +3003,30 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	z-index: 30;
 }
 
-.side-menu__btn-wrap {
+.blog-container__btn-wrap {
 	text-align: center;
 }
 
-.side-menu__btn-wrap--reviews {
+.blog-container__btn-wrap--reviews {
 	margin-top: 2.75rem;
 }
 
-.side-menu__btn-wrap--campaign {
+.blog-container__btn-wrap--campaign {
 	margin-top: 2.5rem;
 }
 
-.side-menu__article {
+.blog-container__article {
 	margin-left: auto;
 	margin-right: auto;
 }
 
-.side-menu__article-cards {
+.blog-container__article-cards {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1.4375rem;
 }
 
-.side-menu__article-card a {
+.blog-container__article-card a {
 	box-shadow: 0.125rem 0.125rem 0.625rem 0 rgba(0, 0, 0, 0.25);
 	display: flex;
 	gap: 1rem;
@@ -2767,119 +3034,119 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	transition: 0.3s;
 }
 
-.side-menu__article-card:hover a {
+.blog-container__article-card:hover a {
 	cursor: pointer;
 	opacity: 0.7;
 	transition: 0.3s;
 }
 
-.side-menu__article-card:not(:first-child) {
+.blog-container__article-card:not(:first-child) {
 	margin-top: 1.5rem;
 }
 
-.side-menu__article-img {
+.blog-container__article-img {
 	aspect-ratio: 121/90;
 	width: 46.4%;
 }
 
-.side-menu__article-img img {
+.blog-container__article-img img {
 	-o-object-fit: cover;
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
 }
 
-.side-menu__article-texts {
+.blog-container__article-texts {
 	display: inline-block;
 }
 
-.side-menu__article-date {
+.blog-container__article-date {
 	font-size: 0.75rem;
 	font-weight: 500;
 }
 
-.side-menu__article-title {
+.blog-container__article-title {
 	display: inline-block;
 	font-family: "Noto Sans JP", "sans-serif";
 	font-size: 1rem;
 }
 
-.page-blog__reviews {
+.blog-container__reviews {
 	margin-top: 4.9375rem;
 }
 
-.side-menu__reviews-card {
+.blog-container__reviews-card {
 	margin-top: 1.5625rem;
 }
 
-.side-menu__reviews-img {
+.blog-container__reviews-img {
 	aspect-ratio: 294/218;
 }
 
-.side-menu__reviews-img img {
+.blog-container__reviews-img img {
 	-o-object-fit: cover;
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
 }
 
-.side-menu__reviews-texts {
+.blog-container__reviews-texts {
 	margin-top: 0.9375rem;
 }
 
-.side-menu__reviews-date {
+.blog-container__reviews-date {
 	font-family: "Noto Sans JP", "sans-serif";
 	font-size: 0.75rem;
 	line-height: 1.5;
 }
 
-.side-menu__reviews-text {
+.blog-container__reviews-text {
 	font-family: "Noto Sans JP", "sans-serif";
 	font-size: 1.5rem;
 	font-weight: 500;
 }
 
-.side-menu__campaign {
+.blog-container__campaign {
 	margin-top: 5.0625rem;
 }
 
-.side-menu__campaign-cards.campaign-cards {
+.blog-container__campaign-cards.campaign-cards {
 	margin-top: 1.8125rem;
 }
 
-.side-menu__campaign-card:not(:first-child) {
+.blog-container__campaign-card:not(:first-child) {
 	margin-top: 2.8125rem;
 }
 
-.side-menu__campaign .campaign-card__text {
+.blog-container__campaign .campaign-card__text {
 	font-size: 0.875rem;
 }
 
-.side-menu__campaign .campaign-card__price-wrapper {
+.blog-container__campaign .campaign-card__price-wrapper {
 	padding-bottom: 0.9375rem;
 }
 
-.side-menu__campaign .campaign-card__price-before {
+.blog-container__campaign .campaign-card__price-before {
 	font-size: 1.25rem;
 }
 
-.side-menu__campaign .campaign-card__price-after {
+.blog-container__campaign .campaign-card__price-after {
 	font-size: 2rem;
 }
 
-.side-menu__campaign .campaign-card__text {
+.blog-container__campaign .campaign-card__text {
 	padding-top: 0.5625rem;
 }
 
-.side-menu__campaign-card.campaign-card:hover {
+.blog-container__campaign-card.campaign-card:hover {
 	opacity: 1;
 }
 
-.side-menu__archive {
+.blog-container__archive {
 	margin-top: 5rem;
 }
 
-.side-menu__accordion {
+.blog-container__accordion {
 	font-family: "Noto Sans JP", "sans-serif";
 	margin-top: 0.9375rem;
 	max-width: 18.75rem;
@@ -2888,7 +3155,7 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	width: 100%;
 }
 
-.side-menu__accordion-title {
+.blog-container__accordion-title {
 	color: #408f95;
 	cursor: pointer;
 	font-size: 1.5rem;
@@ -2896,25 +3163,25 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	padding: 0.625rem 0.9375rem;
 }
 
-.side-menu__accordion-content {
+.blog-container__accordion-content {
 	display: none;
 	line-height: 1;
 	margin-top: -0.625rem;
 	padding: 0 1.25rem;
 }
 
-.side-menu__accordion-text {
+.blog-container__accordion-text {
 	font-size: 0.8125rem;
 	line-height: 1.5;
 }
 
 /* 矢印 */
 
-.side-menu__accordion-title {
+.blog-container__accordion-title {
 	position: relative;
 }
 
-.side-menu__accordion-title::after {
+.blog-container__accordion-title::after {
 	content: url("./../images/common/archive-arrow-left.png");
 	display: block;
 	height: 1.5rem;
@@ -2927,13 +3194,13 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	width: 1.5rem;
 }
 
-.side-menu__accordion-title.open::after {
+.blog-container__accordion-title.open::after {
 	left: -2.9%;
 	top: 30%;
 	transform: scale(0.5) rotate(90deg);
 }
 
-.side-menu__accordion-title-month {
+.blog-container__accordion-title-month {
 	color: #408f95;
 	cursor: pointer;
 	font-size: 1.5rem;
@@ -2942,22 +3209,22 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	padding: 0.4375rem 1.25rem;
 }
 
-.side-menu__accordion-content-month {
+.blog-container__accordion-content-month {
 	display: none;
 	padding: 0.625rem 1.25rem;
 }
 
-.side-menu__accordion-month {
+.blog-container__accordion-month {
 	margin-top: rem-(10);
 }
 
 /* 矢印 */
 
-.side-menu__accordion-title-month {
+.blog-container__accordion-title-month {
 	position: relative;
 }
 
-.side-menu__accordion-title-month::after {
+.blog-container__accordion-title-month::after {
 	content: url("./../images/common/archive-arrow-left.png");
 	display: block;
 	height: 1.5rem;
@@ -2970,7 +3237,7 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	width: 1.5rem;
 }
 
-.side-menu__accordion-title-month.open::after {
+.blog-container__accordion-title-month.open::after {
 	top: 30%;
 	transform: scale(0.5) rotate(90deg);
 }
@@ -3404,6 +3671,10 @@ html {
 	margin-top: 8.75rem;
 }
 
+.faq-item-layout {
+	margin-top: 2.6875rem;
+}
+
 .faq-layout {
 	margin-top: 9.125rem;
 }
@@ -3439,6 +3710,10 @@ html {
 
 .page-campaign-layout {
 	margin-top: 9.0625rem;
+}
+
+.page-contact__form-error-layout {
+	margin-top: 2.375rem;
 }
 
 .page-contact-layout {
@@ -3575,11 +3850,75 @@ html {
 	height: 8.625rem;
 	left: 7%;
 	max-width: 18.75rem;
-	top: -3.3%;
+	top: -10.3%;
 }
 
 .blog-cards {
+	grid-gap: 2.5rem;
 	display: grid;
+	gap: 2.5rem;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.blog-cards.blog-cards--blog-page {
+	gap: 5rem 2.5rem;
+	grid-template-columns: repeat(2, 1fr);
+	margin-left: 0rem;
+	margin-right: 0rem;
+}
+
+.blog-container {
+	position: relative;
+}
+
+.blog-container::before {
+	height: 8.625rem; /*線の形状*/
+	max-width: 18.75rem;
+	top: -2.6%;
+}
+
+.blog-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.blog-container__main {
+	width: 67.75%;
+}
+
+.blog-container-wrap {
+	margin-top: 0rem;
+}
+
+.blog-container__pagenavi {
+	margin-top: 4.6875rem;
+	max-width: 11.625rem;
+	padding-right: 1.75rem;
+	width: 100%;
+}
+
+.blog-container__side {
+	width: 27.23%;
+}
+
+.blog-container__inner.inner {
+	padding-left: 0;
+	padding-right: 0;
+	width: 100%;
+}
+
+.blog-container__campaign-cards.campaign-cards {
+	display: block;
+	margin-top: 1.875rem;
+}
+
+.blog-container__archive {
+	margin-top: 5.25rem;
+}
+
+.blog-container__accordion {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .blog-detail::before {
@@ -3589,40 +3928,35 @@ html {
 	top: -2.8%;
 }
 
-.blog-detail__inner {
-	display: flex;
-	justify-content: space-between;
-}
-
-.blog-detail__main-container {
+.blog-container__main-container.blog-container__main-container--detail {
 	width: 64.85%;
 }
 
-.blog-detail__main-container h2 {
+.blog-container__main-container.blog-container__main-container--detail h1 {
 	font-size: 2rem;
 	margin-top: 0;
 }
 
-.blog-detail__card {
+.blog-container__card.blog-container__card--detail {
 	margin-top: 2.5rem;
 }
 
-.blog-detail__main-container p {
+.blog-container__main-container.blog-container__main-container--detail p {
 	margin-top: 2.5rem;
 }
 
-.blog-detail__main-container ul {
+.blog-container__main-container.blog-container__main-container--detail ul {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 2.5rem;
 	max-width: 42.25rem;
 }
 
-.blog-detail__main-container li::before {
+.blog-container__main-container.blog-container__main-container--detail li::before {
 	left: -2%;
 }
 
-.blog-detail__pagenavi {
+.blog-container__pagenavi.blog-container__pagenavi--detail {
 	margin-top: 4.6875rem;
 	max-width: 11.625rem;
 	padding-right: 1.75rem;
@@ -3660,12 +3994,10 @@ html {
 }
 
 .blog__cards {
-	gap: 2.5rem;
-	grid-template-columns: repeat(3, 1fr);
 	margin-top: 5rem;
 }
 
-.blog-cards__card:not(:first-child) {
+.blog-container__card:not(:first-child) {
 	margin-top: 0rem;
 }
 
@@ -3895,39 +4227,38 @@ html {
 	margin-top: 4.8125rem;
 }
 
+.faq-item {
+	border: none;
+}
+
+.faq-item__accordion-title {
+	padding: 1.5rem 2.5rem;
+}
+
+.faq-item__accordion-title-text {
+	font-size: 1.25rem;
+}
+
+.faq-item__accordion-title::before,
+.faq-item__accordion-title::after {
+	width: 2rem;
+}
+
+.faq-item__accordion-title::before {
+	left: 88.3%;
+	top: 48%;
+}
+
+.faq-item__accordion-title::after {
+	left: 88.3%;
+	top: 48%;
+}
+
 .faq::before {
 	height: 8.625rem;
 	max-width: 18.75rem;
 	top: -3.5%;
 	width: 100%;
-}
-
-.faq__accordion-area li {
-	border: none;
-	margin-top: 2.6875rem;
-}
-
-.faq__accordion-title {
-	padding: 1.5rem 2.5rem;
-}
-
-.faq__accordion-title-text {
-	font-size: 1.25rem;
-}
-
-.faq__accordion-title::before,
-.faq__accordion-title::after {
-	width: 2rem;
-}
-
-.faq__accordion-title::before {
-	left: 88.3%;
-	top: 48%;
-}
-
-.faq__accordion-title::after {
-	left: 88.3%;
-	top: 48%;
 }
 
 .faq__accordion-box {
@@ -4100,7 +4431,7 @@ footer {
 	background-size: cover;
 	content: "";
 	height: 4rem;
-	left: 9%;
+	left: 7%;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -4122,12 +4453,9 @@ footer {
 .info-content__card {
 	align-items: center;
 	border: 0.125rem solid #408f95;
+	display: flex;
 	gap: 3rem;
 	padding-top: 0.9375rem;
-}
-
-.info-content__card.active {
-	display: flex;
 }
 
 .info-content__card-text-block {
@@ -4178,52 +4506,11 @@ footer {
 	padding-right: 20px;
 }
 
-.page-blog {
-	position: relative;
-}
-
-.page-blog::before {
-	height: 8.625rem; /*線の形状*/
-	max-width: 18.75rem;
-	top: -2.6%;
-}
-
-.page-blog__inner {
-	display: flex;
-	justify-content: space-between;
-}
-
-.page-blog__main-container {
-	width: 67.75%;
-}
-
-.page-blog__cards {
-	gap: 5rem 2.5rem;
-	grid-template-columns: repeat(2, 1fr);
-	margin-left: 0rem;
-	margin-right: 0rem;
-}
-
-.page-blog__side-wrap {
-	margin-top: 0rem;
-}
-
-.page-blog__pagenavi {
-	margin-top: 4.6875rem;
-	max-width: 11.625rem;
-	padding-right: 1.75rem;
-	width: 100%;
-}
-
 .page-campaign::before {
 	height: 8.625rem;
 	left: 7%;
 	max-width: 18.75rem;
 	top: -3.3%;
-}
-
-.page-campaign__cards {
-	width: 100%;
 }
 
 .page-campaign__card:not(:first-child) {
@@ -4282,8 +4569,6 @@ textarea {
 .page-contact__inner dl {
 	display: flex;
 	justify-content: space-between;
-	max-width: 43.75rem;
-	width: 100%;
 }
 
 .page-contact__inner dl:not(:first-child) {
@@ -4319,7 +4604,7 @@ textarea {
 }
 
 .page-contact__form-agreement [type=checkbox] + span::after {
-	left: 0.6%;
+	left: 1.2%;
 	top: 26%;
 }
 
@@ -4342,10 +4627,6 @@ textarea {
 	padding-left: 0;
 }
 
-.page-contact__form-error-layout {
-	margin-top: 2.375rem;
-}
-
 .page-price::before {
 	height: 8.625rem;
 	max-width: 18.75rem;
@@ -4365,36 +4646,42 @@ textarea {
 .page-price__title {
 	align-items: center;
 	justify-content: center;
-	max-width: 12.5rem;
 	padding-top: 4.75rem;
 	text-indent: 0;
-	width: 100%;
+	width: 26%;
+}
+
+.page-price__title {
+	align-items: center;
+	justify-content: center;
+	padding-top: 4.75rem;
+	text-indent: 0;
+	width: 26%;
 }
 
 .page-price__list:first-child .page-price__title,
 .page-price__list:last-child .page-price__title {
-	padding-top: 2.8125rem;
+	padding-top: 2.625rem;
 }
 
 .page-price__title::after {
 	height: 4rem;
-	left: 35%;
-	top: 42%;
+	left: 40%;
+	top: 45%;
 	width: 4rem;
+}
+
+.page-price__title.page-price__title--license::after {
+	top: 45%;
 }
 
 .page-price__title.page-price__title--fun::after {
-	height: 4rem;
-	left: 35%;
-	top: 45%;
-	width: 4rem;
+	left: 40%;
 }
 
-.page-price__title.page-price__title--sp::after {
-	height: 4rem;
-	left: 35%;
+.page-price__title.page-price__title--special::after {
+	left: 40%;
 	top: 45%;
-	width: 4rem;
 }
 
 .page-price__plan {
@@ -4537,26 +4824,26 @@ textarea {
 	margin-top: 0rem;
 }
 
-.side-menu {
+.blog-container__side {
 	width: 27.23%;
 }
 
-.side-menu__inner.inner {
+.blog-container__inner.inner {
 	padding-left: 0;
 	padding-right: 0;
 	width: 100%;
 }
 
-.side-menu__campaign-cards.campaign-cards {
+.blog-container__campaign-cards.campaign-cards {
 	display: block;
 	margin-top: 1.875rem;
 }
 
-.side-menu__archive {
+.blog-container__archive {
 	margin-top: 5.25rem;
 }
 
-.side-menu__accordion {
+.blog-container__accordion {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -4740,6 +5027,10 @@ textarea {
 
 .page {
 	margin-left: 0.9375rem;
+}
+
+.page.current {
+	margin-left: 2.5rem;
 }
 
 .is-active {

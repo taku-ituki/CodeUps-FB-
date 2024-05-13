@@ -62,7 +62,7 @@
     width: rem(64);
     height: rem(64);
     top: 50%;
-    left: 9%;
+    left: 7%;
     transform: translateY(-50%);
     background-image: url(./../images/common/info-whale-befor.png);
     background-size: cover;
@@ -80,13 +80,14 @@
   position: absolute;
   top: 0;
   transition: 0.3s;
-  width: 100%;}
+  width: 100%;
+}
 
-  .info-content__tab:hover:after{
-    opacity: 0.5;
-    transition: 0.3s;
-  }
-// 
+.info-content__tab:hover:after {
+  opacity: 0.5;
+  transition: 0.3s;
+}
+//
 
 .info-content__tab.info-content__tab--fun {
   @include mq(md) {
@@ -127,23 +128,19 @@
   display: none;
   padding: rem(17) rem(24) rem(24) rem(24);
   border: rem(1) solid $green;
+  display: block;
+  animation-name: fadein;
+  animation-duration: 2s;
   @include mq(md) {
     align-items: center;
     gap: rem(48);
     border: rem(2) solid $green;
     padding-top: rem(15);
-  }
-}
-
-.info-content__card.active {
-  display: block;
-  animation-name: fadein;
-  animation-duration: 2s;
-  @include mq(md) {
     display: flex;
   }
 }
 
+// ふわっとタブが変わる（↑.info-content__cardのanimationも）
 @keyframes fadein {
   from {
     opacity: 0;
