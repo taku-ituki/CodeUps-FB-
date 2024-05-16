@@ -15,7 +15,9 @@
 
 .common-nav__item {
   margin-top: rem(5);
-  padding-left: rem(21);
+  @include mq(md){
+    padding-left: rem(21);
+  }
 }
 
 .common-nav__item br {

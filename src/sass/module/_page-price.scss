@@ -4,6 +4,12 @@
   position: relative;
 }
 
+.page-price__inner.inner {
+@include mq(md){
+  max-width:rem(740);
+  width:100%;
+}
+}
 
 // 画像
 .page-price::before {
@@ -41,6 +47,38 @@
   }
 }
 
+
+// ①ブロック一式（②左側＋③右側）
+.page-price__items{
+  @include mq(md){
+    width: 71.5%;
+  }
+}
+
+// ②緑のタイトル部分（左側）
+.page-price__title {
+  font-family: $second-font-family;
+  color: $white;
+  background-color: $green;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 1.5;
+  text-align: center;
+  padding-top: rem(9);
+  padding-bottom: rem(7);
+  position: relative;
+  text-indent: 2em;
+  @include mq(md) {
+    align-items: center;
+    justify-content: center;
+    width:28.5%;
+    padding-top: rem(76);
+    text-indent: 0;
+  }
+}
+
+
+// ③プラン名＋料金の小ブロック部分（右側）
 .page-price__item {
   display: flex;
   align-items: center;
@@ -52,48 +90,6 @@
 
 .page-price__item:last-child {
   border-bottom: rem(1) solid $green;
-}
-
-.page-price__title {
-  font-family: $second-font-family;
-  color: $white;
-  background-color: $green;
-  font-size: rem(16);
-  font-weight: $bold;
-  line-height: 1.5;
-  text-align: center;
-  padding-top: rem(9);
-  padding-bottom: rem(7);
-  position: relative;
-  text-indent: 2em;
-  @include mq(md) {
-    align-items: center;
-    justify-content: center;
-    width: 26%;
-    padding-top: rem(76);
-    text-indent: 0;
-  }
-}
-
-.page-price__title {
-  font-family: $second-font-family;
-  color: $white;
-  background-color: $green;
-  font-size: rem(16);
-  font-weight: $bold;
-  line-height: 1.5;
-  text-align: center;
-  padding-top: rem(9);
-  padding-bottom: rem(7);
-  position: relative;
-  text-indent: 2em;
-  @include mq(md) {
-    align-items: center;
-    justify-content: center;
-    width: 26%;
-    padding-top: rem(76);
-    text-indent: 0;
-  }
 }
 
 // // 最初と最後の値段表のタイトル余白調整
@@ -150,9 +146,10 @@
 }
 
 
+// プラン名
 .page-price__plan {
-  display: flex;
   width: 70%;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -163,7 +160,7 @@
   border-right: rem(1) solid $green;
   height: inherit;
   @include mq(md) {
-    width: rem(336);
+    width: 70%;
     justify-content: left;
     padding-left: rem(8);
     text-align: left;
@@ -178,9 +175,10 @@
   }
 }
 
+// 料金部分
 .page-price__price {
   display: flex;
-  width: 27%;
+  width: 28.8%;
   justify-content: right;
   padding-right: rem(16);
   align-items: center;
@@ -188,6 +186,6 @@
   line-height: 1.5;
   height: inherit;
   @include mq(md) {
-    width: rem(160);
+    width: 32%;
   }
 }

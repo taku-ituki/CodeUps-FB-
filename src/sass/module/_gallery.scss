@@ -24,56 +24,6 @@
   }
 }
 
-.gallery__item:nth-child(6n + 1) {
-  grid-row: span 2;
-  @include mq("md") {
-    grid-column: span 5;
-  }
-}
-
-.gallery__item:nth-child(6n + 2),
-.gallery__item:nth-child(6n + 3) {
-  grid-row: span 1;
-  @include mq("md") {
-    grid-column: span 6;
-  }
-}
-
-.gallery__item:nth-child(6n + 4),
-.gallery__item:nth-child(6n + 5) {
-  grid-row: span 1;
-  @include mq("md") {
-    grid-column: span 6;
-  }
-}
-
-.gallery__item:nth-child(6n + 6) {
-  grid-row: span 2;
-  @include mq("md") {
-    grid-column: span 5;
-  }
-}
-
-.gallery__item:nth-child(6n + 1),
-.gallery__item:nth-child(6n + 6) {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  @include mq("md") {
-    cursor: pointer;
-  }
-}
-
-.gallery__item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  @include mq("md") {
-    cursor: pointer;
-  }
-}
-
-// モーダル
 .gallery__img-list {
   margin: 40 auto 0;
   display: grid;
@@ -85,34 +35,88 @@
   }
 }
 
+.gallery__item {
+  &:nth-child(6n + 1) {
+    grid-row: span 2;
+    @include mq("md") {
+      grid-column: span 5;
+    }
+  }
+
+  &:nth-child(6n + 2),
+  &:nth-child(6n + 3),
+  &:nth-child(6n + 4),
+  &:nth-child(6n + 5) {
+    grid-row: span 1;
+    @include mq("md") {
+      grid-column: span 6;
+    }
+  }
+
+  &:nth-child(6n + 6) {
+    grid-row: span 2;
+    @include mq("md") {
+      grid-column: span 5;
+    }
+  }
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include mq("md") {
+    cursor: pointer;
+  }
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    @include mq("md") {
+      cursor: pointer;
+    }
+  }
+}
+ // モーダルの黒背景のエリア設定。必ずleft:0,right:0もセットで記載！！（途中で途切れる
 .galley__modal {
   display: none;
   height: 100vh;
   position: fixed;
   top: 0;
+  // ↓モーダルの横幅の余白を左右０にすることで、横いっぱいに広がってくれる
+  left: 0;
+  right: 0;
   width: 100%;
   z-index: 9999;
 }
+
+// 画像クリック時の黒い背景
 .galley__modal-bg {
   background: rgba(32, 32, 32, 0.8);
   height: 100vh;
   position: absolute;
   width: 100%;
 }
+
+
+// 横の方が長い長方形画像
 .galley__modal-content {
-  left: 44%;
+  width: 85%;
+  left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 63.9%;
+  @include mq(md){
+    width: 63.9%;
+  }
 }
 
-// 縦長画像
+
+ // 縦長画像
 .galley__modal-content.galley__modal-content--long {
-  width: 40%;
-  left: 42%;
+  width: 85%;
   aspect-ratio: 345/523;
   @include mq("md") {
+    width: 40%;
     aspect-ratio: 492/746;
     cursor: pointer;
   }
@@ -123,3 +127,5 @@
   height: 100%;
   object-fit: cover;
 }
+
+

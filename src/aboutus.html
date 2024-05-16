@@ -33,7 +33,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
   </head>
-  <body>
+  <body class="no-scroll">
     <!-- header -->
     <header class="header header-layout js-header">
       <div class="header__inner">
@@ -232,27 +232,27 @@
             <h2 class="section-title__en">gallery</h2>
             <p class="section-title__ja">フォト</p>
           </div>
-          <div class="gallery__img-list">
+          <ul class="gallery__img-list">
             <!-- 表示される画像 （画像を押すとモーダルが開く）-->
-            <div class="gallery__item js-modal-open" data-target="modal01">
+            <li class="gallery__item js-modal-open" data-target="modal01">
               <img src="./assets/images/common/about-img-coral.jpg" alt="coral" />
-            </div>
-            <div id="modal2" class="gallery__item js-modal-open" data-target="modal02">
+            </li>
+            <li id="modal2" class="gallery__item js-modal-open" data-target="modal02">
               <img src="./assets/images/common/about-img-boat.jpg" alt="boat" />
-            </div>
-            <div id="modal3" class="gallery__item js-modal-open" data-target="modal03">
+            </li>
+            <li id="modal3" class="gallery__item js-modal-open" data-target="modal03">
               <img src="./assets/images/common/about-img-fish.jpg" alt="fish" />
-            </div>
-            <div id="modal4" class="gallery__item js-modal-open" data-target="modal04">
+            </li>
+            <li id="modal4" class="gallery__item js-modal-open" data-target="modal04">
               <img src="./assets/images/common/about-img2-fish.jpg" alt="coral" />
-            </div>
-            <div id="modal5" class="gallery__item js-modal-open" data-target="modal05">
+            </li>
+            <li id="modal5" class="gallery__item js-modal-open" data-target="modal05">
               <img src="./assets/images/common/about-img2-fish2.jpg" alt="fish" />
-            </div>
-            <div id="modal6" class="gallery__item js-modal-open" data-target="modal06">
+            </li>
+            <li id="modal6" class="gallery__item js-modal-open" data-target="modal06">
               <img src="./assets/images/common/about-img2-fish&coral.jpg" alt="coral&fish" />
-            </div>
-          </div>
+            </li>
+          </ul>
           <!-- モーダルを開くと表示される画像 -->
           <div id="modal01" class="galley__modal js-modal">
             <div class="galley__modal-bg js-modal-close"></div>
@@ -292,6 +292,7 @@
           </div>
         </div>
       </section>
+   <div class="header__overlay js-header-overlay"></div>
       <!-- contact -->
       <section class="contact contact-layout-page">
         <div class="contact__inner">

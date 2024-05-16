@@ -1374,7 +1374,6 @@ a {
 
 .common-nav__item {
 	margin-top: 0.3125rem;
-	padding-left: 1.3125rem;
 }
 
 .common-nav__item a {
@@ -1756,15 +1755,27 @@ footer {
 	max-width: 32.5rem;
 }
 
+.gallery__img-list {
+	grid-gap: 0.5rem;
+	display: grid;
+	gap: 0.5rem;
+	grid-auto-flow: dense;
+	margin: 40 auto 0;
+}
+
+.gallery__item {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
 .gallery__item:nth-child(6n+1) {
 	grid-row: span 2;
 }
 
 .gallery__item:nth-child(6n+2),
-.gallery__item:nth-child(6n+3) {
-	grid-row: span 1;
-}
-
+.gallery__item:nth-child(6n+3),
 .gallery__item:nth-child(6n+4),
 .gallery__item:nth-child(6n+5) {
 	grid-row: span 1;
@@ -1774,14 +1785,6 @@ footer {
 	grid-row: span 2;
 }
 
-.gallery__item:nth-child(6n+1),
-.gallery__item:nth-child(6n+6) {
-	-o-object-fit: cover;
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
-}
-
 .gallery__item img {
 	-o-object-fit: cover;
 	height: 100%;
@@ -1789,18 +1792,12 @@ footer {
 	width: 100%;
 }
 
-.gallery__img-list {
-	grid-gap: 0.5rem;
-	display: grid;
-	gap: 0.5rem;
-	grid-auto-flow: dense;
-	margin: 40 auto 0;
-}
-
 .galley__modal {
 	display: none;
 	height: 100vh;
+	left: 0;
 	position: fixed;
+	right: 0;
 	top: 0;
 	width: 100%;
 	z-index: 9999;
@@ -1814,17 +1811,16 @@ footer {
 }
 
 .galley__modal-content {
-	left: 44%;
+	left: 50%;
 	position: absolute;
 	top: 50%;
 	transform: translate(-50%, -50%);
-	width: 63.9%;
+	width: 85%;
 }
 
 .galley__modal-content.galley__modal-content--long {
 	aspect-ratio: 345/523;
-	left: 42%;
-	width: 40%;
+	width: 85%;
 }
 
 .galley__modal-content img {
@@ -2512,8 +2508,6 @@ textarea:focus {
 
 textarea {
 	height: 12.5rem;
-	max-width: 37.5rem;
-	width: 100%;
 }
 
 .page-contact__inner dl:not(:first-child) {
@@ -2536,6 +2530,7 @@ textarea {
 	display: flex;
 	flex-direction: column;
 	margin-top: 1.0625rem;
+	width: 68.6%;
 }
 
 .page-contact__form-title-wrap {
@@ -2573,7 +2568,7 @@ textarea {
 .page-contact__form-agreement [type=checkbox] + span::before {
 	height: 1.375rem;
 	left: -1%;
-	top: 15%;
+	top: 25%;
 	width: 1.375rem;
 }
 
@@ -2582,7 +2577,7 @@ textarea {
 	border-left: 0.25rem solid #c94800;
 	height: 0.625rem;
 	left: 0;
-	top: 8%;
+	top: 15%;
 	width: 0.9375rem;
 }
 
@@ -2658,6 +2653,20 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	margin-top: 2.5rem;
 }
 
+.page-price__title {
+	background-color: #408f95;
+	color: #fff;
+	font-family: "Noto Sans JP", "sans-serif";
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.5;
+	padding-bottom: 0.4375rem;
+	padding-top: 0.5625rem;
+	position: relative;
+	text-align: center;
+	text-indent: 2em;
+}
+
 .page-price__item {
 	align-items: center;
 	border-left: 0.0625rem solid #408f95;
@@ -2669,34 +2678,6 @@ textarea { /* フォーカスした際の青い枠線を消す */
 
 .page-price__item:last-child {
 	border-bottom: 0.0625rem solid #408f95;
-}
-
-.page-price__title {
-	background-color: #408f95;
-	color: #fff;
-	font-family: "Noto Sans JP", "sans-serif";
-	font-size: 1rem;
-	font-weight: 700;
-	line-height: 1.5;
-	padding-bottom: 0.4375rem;
-	padding-top: 0.5625rem;
-	position: relative;
-	text-align: center;
-	text-indent: 2em;
-}
-
-.page-price__title {
-	background-color: #408f95;
-	color: #fff;
-	font-family: "Noto Sans JP", "sans-serif";
-	font-size: 1rem;
-	font-weight: 700;
-	line-height: 1.5;
-	padding-bottom: 0.4375rem;
-	padding-top: 0.5625rem;
-	position: relative;
-	text-align: center;
-	text-indent: 2em;
 }
 
 .page-price__title::after {
@@ -2741,7 +2722,7 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	justify-content: right;
 	line-height: 1.5;
 	padding-right: 1rem;
-	width: 27%;
+	width: 28.8%;
 }
 
 .page-page-common {
@@ -3954,6 +3935,7 @@ html {
 
 .blog-container__main-container.blog-container__main-container--detail li::before {
 	left: -2%;
+	top: 0.625rem;
 }
 
 .blog-container__pagenavi.blog-container__pagenavi--detail {
@@ -4108,6 +4090,10 @@ html {
 .common-nav__flex {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
+}
+
+.common-nav__item {
+	padding-left: 1.3125rem;
 }
 
 .common-nav__item br {
@@ -4344,15 +4330,17 @@ footer {
 	max-width: initial;
 }
 
+.gallery__img-list {
+	grid-template-columns: repeat(11, 1fr);
+	margin-top: 5rem;
+}
+
 .gallery__item:nth-child(6n+1) {
 	grid-column: span 5;
 }
 
 .gallery__item:nth-child(6n+2),
-.gallery__item:nth-child(6n+3) {
-	grid-column: span 6;
-}
-
+.gallery__item:nth-child(6n+3),
 .gallery__item:nth-child(6n+4),
 .gallery__item:nth-child(6n+5) {
 	grid-column: span 6;
@@ -4362,8 +4350,7 @@ footer {
 	grid-column: span 5;
 }
 
-.gallery__item:nth-child(6n+1),
-.gallery__item:nth-child(6n+6) {
+.gallery__item {
 	cursor: pointer;
 }
 
@@ -4371,14 +4358,14 @@ footer {
 	cursor: pointer;
 }
 
-.gallery__img-list {
-	grid-template-columns: repeat(11, 1fr);
-	margin-top: 5rem;
+.galley__modal-content {
+	width: 63.9%;
 }
 
 .galley__modal-content.galley__modal-content--long {
 	aspect-ratio: 492/746;
 	cursor: pointer;
+	width: 40%;
 }
 
 .header {
@@ -4529,18 +4516,6 @@ footer {
 	width: 100%;
 }
 
-[type=text],
-[type=search],
-[type=tel],
-[type=url],
-[type=email],
-[type=password],
-[type=date],
-textarea {
-	max-width: 30rem;
-	width: 100%;
-}
-
 [type=checkbox] + span::before {
 	left: 0;
 }
@@ -4555,10 +4530,8 @@ textarea {
 }
 
 .page-contact__form-custum-pull {
-	max-width: 30rem;
 	padding-bottom: 0.3125rem;
 	padding-top: 0.3125rem;
-	width: 100%;
 }
 
 .page-contact__triangle::before {
@@ -4583,8 +4556,6 @@ textarea {
 
 .page-contact__inner dd {
 	margin-top: 0;
-	max-width: 30rem;
-	width: 100%;
 }
 
 .page-contact__form-agreement {
@@ -4627,6 +4598,11 @@ textarea {
 	padding-left: 0;
 }
 
+.page-price__inner.inner {
+	max-width: 46.25rem;
+	width: 100%;
+}
+
 .page-price::before {
 	height: 8.625rem;
 	max-width: 18.75rem;
@@ -4643,12 +4619,8 @@ textarea {
 	margin-top: 5rem;
 }
 
-.page-price__title {
-	align-items: center;
-	justify-content: center;
-	padding-top: 4.75rem;
-	text-indent: 0;
-	width: 26%;
+.page-price__items {
+	width: 71.5%;
 }
 
 .page-price__title {
@@ -4656,7 +4628,7 @@ textarea {
 	justify-content: center;
 	padding-top: 4.75rem;
 	text-indent: 0;
-	width: 26%;
+	width: 28.5%;
 }
 
 .page-price__list:first-child .page-price__title,
@@ -4690,7 +4662,7 @@ textarea {
 	padding-left: 0.5rem;
 	padding-top: 1.0625rem;
 	text-align: left;
-	width: 21rem;
+	width: 70%;
 }
 
 .page-price__plan br {
@@ -4698,7 +4670,7 @@ textarea {
 }
 
 .page-price__price {
-	width: 10rem;
+	width: 32%;
 }
 
 .page-page-common::before {

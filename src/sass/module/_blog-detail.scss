@@ -107,6 +107,7 @@
   background-image: url(./../images/common/blog-star-fish.png);
   background-size: cover;
   @include mq(md) {
+    top: rem(10);
     left: -2%;
   }
 }
