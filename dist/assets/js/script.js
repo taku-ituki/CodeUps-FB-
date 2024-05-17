@@ -172,22 +172,6 @@ jQuery(function ($) {
   });
 
   // Aboutモーダル
-  // JavaScriptの部分
-  // $(function () {
-  //   $(".js-modal-open").each(function () {
-  //     $(this).on("click", function () {
-  //       var target = $(this).data("target");
-  //       var modal = document.getElementById(target);
-  //       $(modal).fadeIn();
-  //       return false;
-  //     });
-  //   });
-  //   $(".js-modal-close").on("click", function () {
-  //     $(".js-modal").fadeOut();
-  //     return false;
-  //   });
-  // });
-
   // Aboutモーダル+画像開いているときはスクロールを止める
   // JavaScriptの部分
   $(function () {
@@ -259,15 +243,30 @@ jQuery(function ($) {
     });
   });
 
-  // スクロール位置の調整
-  $('#page-link a[href*="#"]').click(function () {
-    //全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
-    var elmHash = $(this).attr("href"); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
-    var pos = $(elmHash).offset().top; //idの上部の距離を取得
-    $("body,html").animate({
-      scrollTop: pos
-    }, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
-    return false;
+  // priceページリンク調整
+  $(document).ready(function () {
+    $('.common-nav__item a[href*="#"]').click(function (event) {
+      // ページ内リンクかどうかを確認
+      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        // リンク先のIDを取得
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+        if (target.length) {
+          // デフォルトの動作をキャンセル
+          event.preventDefault();
+
+          // スクロール位置のオフセット（調整値）
+          var offset = 0; // 調整するピクセル数を指定
+          var scrollToPosition = target.offset().top - offset;
+
+          // スムーズスクロール
+          $('html, body').animate({
+            scrollTop: scrollToPosition
+          }, 500); // スクロールの速度をミリ秒単位で指定
+          return false;
+        }
+      }
+    });
   });
 
   // header、footerでクリックすると、クリックしたものに対応するタブが初期状態でアクティブになる
@@ -413,5 +412,53 @@ drawer.addEventListener("scroll", function (event) {
   // ドロワーが開いている場合のみ、ドロワーメニュー内でのスクロールを有効にする
   if (!drawer.classList.contains("is-open")) {
     event.preventDefault();
+  }
+});
+$(function () {
+  // #から始まるアンカータグをクリックしたら処理を実行
+  $('a[href^="#"]').click(function () {
+    // スクロールの速度（ミリ秒）
+    var speed = 500;
+    // アンカーの値取得（リンク先<href>を取得して、hrefという変数に代入）
+    var href = $(this).attr("href");
+    // 移動先を取得（リンク先<href>のidがある要素を探してtargetに代入）
+    var target = $(href == "#" || href == "" ? "html" : href);
+    // 移動先を調整(idの要素の位置をoffset()で取得しpositionに代入<ヘッダー分は差し引く>）
+    var position = target.offset().top - $('#js-header').outerHeight();
+    // スムーススクロール
+    $("html, body").animate({
+      scrollTop: position
+    }, speed, "swing");
+    return false;
+  });
+});
+
+//ローディング画面を初回一回目のみ表示(同ブラウザ上で)の場合はこちら
+
+$(function () {
+  if (sessionStorage.getItem('visit')) {
+    $(".js-loader").css("display", "none");
+  } else {
+    sessionStorage.setItem('visit', 'true');
+    $(window).on('load', function () {
+      //ページを開いて1秒後にテキストを0.6秒かけて非表示
+      $('.js-loader-title').delay(1000).fadeOut(600);
+
+      //2つに分かれた画像がスライドアップ(右の画像が80px遅れ)最終的に1枚の画像になる
+      $('.js-loader-left').delay(1200).addClass("slideUp");
+      $('.js-loader-right').delay(1300).addClass("slideUp");
+
+      //画像が出て数秒後にタイトルが浮き出る(カラーが白に変わる)
+      $('.js-loader-title').hide();
+      $('.js-loader-title').delay(2000).css("color", "white").fadeIn(600);
+
+      //ページを開いて5秒後にローダー画面をゆっくり非表示
+      $('.js-loader').delay(5000).fadeOut('slow');
+    });
+
+    //ページ読み込みが終わってなくても5秒後にはローディング画面を非表示(ユーザー離脱防止)
+    setTimeout(function () {
+      $('.js-loader').fadeOut('slow');
+    }, 5000);
   }
 });
