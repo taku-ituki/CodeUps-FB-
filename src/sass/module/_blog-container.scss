@@ -28,6 +28,9 @@
   }
 }
 
+.blog-container.blog-container__side::before{
+  display: none;
+}
 
 .blog-container {
   @include mq(md) {

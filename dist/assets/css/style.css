@@ -486,6 +486,10 @@ a {
 	z-index: -1;
 }
 
+.blog-container.blog-container__side::before {
+	display: none;
+}
+
 .blog-container-wrap {
 	margin-top: 5rem;
 }
