@@ -131,6 +131,14 @@
 }
 
 // 人気記事
+// 上の余白
+.blog-container__side.blog-container{
+  margin-top:rem(80);
+  @include mq(md){
+    margin-top:rem(0);
+  }
+}
+
 .blog-container__article {
   margin-left: auto;
   margin-right: auto;
