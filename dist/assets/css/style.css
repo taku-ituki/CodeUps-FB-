@@ -1768,36 +1768,29 @@ footer {
 	display: grid;
 	gap: 0.5rem;
 	grid-auto-flow: dense;
+	grid-template-columns: 1fr;
 	margin: 40 auto 0;
-}
-
-.gallery__item {
-	-o-object-fit: cover;
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
-}
-
-.gallery__item:nth-child(6n+1) {
-	grid-row: span 2;
-}
-
-.gallery__item:nth-child(6n+2),
-.gallery__item:nth-child(6n+3),
-.gallery__item:nth-child(6n+4),
-.gallery__item:nth-child(6n+5) {
-	grid-row: span 1;
-}
-
-.gallery__item:nth-child(6n+6) {
-	grid-row: span 2;
 }
 
 .gallery__item img {
 	-o-object-fit: cover;
+	aspect-ratio: 345/219;
 	height: 100%;
 	object-fit: cover;
 	width: 100%;
+}
+
+.gallery__item:nth-child(6n+1) img,
+.gallery__item:nth-child(6n) img {
+	-o-object-fit: cover;
+	aspect-ratio: 345/524;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.gallery__item:hover {
+	cursor: pointer;
 }
 
 .galley__modal {
@@ -3227,15 +3220,53 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	justify-content: center;
 }
 
-.wp-pagenavi img {
+.wp-pagenavi__page {
+	align-items: center;
+	border: 0.0625rem solid #408f95;
+	border-radius: 0.0625rem;
+	color: #408f95;
+	display: flex;
+	font-family: "Lato";
+	justify-content: center;
+	line-height: 1;
+	margin-left: 0.5rem;
+	transition: 0.3s;
+}
+
+.wp-pagenavi__page.current,
+.wp-pagenavi__page.is-active {
+	align-items: center;
+	background-color: #408f95;
+	border: 0.0625rem solid #408f95;
+	border-radius: 0.0625rem;
+	color: #fff;
+	display: flex;
+	font-family: "Lato";
 	height: 2.375rem;
+	justify-content: center;
+	line-height: 1;
+	transition: 0.3s;
+	width: 2.375rem;
+}
+
+.wp-pagenavi__page:hover {
+	background-color: #408f95;
+	color: #fff;
+	transition: 0.3s;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+	align-items: center;
+	box-sizing: border-box;
+	display: flex;
+	height: 2.375rem;
+	justify-content: center;
 	width: 2.375rem;
 }
 
 .previouspostslink {
 	border: 0.0625rem solid #408f95;
-	display: inline-block;
-	padding: 1.125rem 1.125rem;
 	position: relative;
 	transition: 0.3s;
 }
@@ -3245,18 +3276,16 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	border-top: solid 0.0625rem #408f95;
 	content: "";
 	height: 0.625rem;
-	left: 0.9375rem;
+	left: 50%;
 	position: absolute;
-	top: 0.8125rem;
-	transform: rotate(-135deg);
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(-135deg);
 	width: 0.625rem;
 }
 
 .nextpostslink {
 	border: 0.0625rem solid #408f95;
-	display: inline-block;
 	margin-left: 1rem;
-	padding: 1.125rem 1.125rem;
 	position: relative;
 	transition: 0.3s;
 }
@@ -3266,10 +3295,10 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	border-top: solid 0.0625rem #408f95;
 	content: "";
 	height: 0.625rem;
-	left: 0.625rem;
+	left: 50%;
 	position: absolute;
-	top: 0.75rem;
-	transform: rotate(45deg);
+	top: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
 	width: 0.625rem;
 }
 
@@ -3293,40 +3322,20 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	transition: inherit;
 }
 
-.page {
-	align-items: center;
-	border: 0.0625rem solid #408f95;
-	border-radius: 0.0625rem;
-	color: #408f95;
-	display: inline-block;
-	font-family: "Lato";
-	justify-content: center;
-	line-height: 1;
-	margin-left: 0.5rem;
-	padding: 0.625rem 0.75rem;
-	transition: 0.3s;
-}
-
-.page:hover {
-	background-color: #408f95;
-	color: #fff;
-	transition: 0.3s;
-}
-
 .is-active {
 	align-items: center;
 	background-color: #408f95;
 	border: 0.0625rem solid #408f95;
 	border-radius: 0.0625rem;
-	color: #408f95;
 	color: #fff;
-	display: inline-block;
+	display: flex;
 	font-family: "Lato";
+	height: 2.375rem;
 	justify-content: center;
 	line-height: 1;
 	margin-left: 1rem;
-	padding: 0.625rem 0.75rem;
 	transition: 0.3s;
+	width: 2.375rem;
 }
 
 .wrap-404 {
@@ -3996,6 +4005,11 @@ html {
 	width: 100%;
 }
 
+.faq__inner.inner {
+	max-width: 46.25rem;
+	width: 100%;
+}
+
 .faq__accordion-box {
 	border: 0.0625rem solid #408f95;
 	margin-top: 1rem;
@@ -4084,27 +4098,16 @@ footer {
 	margin-top: 5rem;
 }
 
-.gallery__item:nth-child(6n+1) {
-	grid-column: span 5;
-}
-
-.gallery__item:nth-child(6n+2),
-.gallery__item:nth-child(6n+3),
-.gallery__item:nth-child(6n+4),
-.gallery__item:nth-child(6n+5) {
-	grid-column: span 6;
-}
-
-.gallery__item:nth-child(6n+6) {
-	grid-column: span 5;
-}
-
 .gallery__item {
-	cursor: pointer;
+	grid-column: span 6;
+	grid-row: span 3;
+	overflow: hidden;
 }
 
-.gallery__item img {
-	cursor: pointer;
+.gallery__item:nth-child(6n+1),
+.gallery__item:nth-child(6n) {
+	grid-column: span 5;
+	grid-row: span 6;
 }
 
 .galley__modal-content {
@@ -4719,15 +4722,16 @@ footer {
 	margin-top: 1.875rem;
 }
 
-.nextpostslink {
-	margin-left: 2.5rem;
-}
-
-.page {
+.wp-pagenavi__page {
 	margin-left: 0.9375rem;
 }
 
-.page.current {
+.wp-pagenavi__page.current,
+.wp-pagenavi__page.is-active {
+	margin-left: 2.5rem;
+}
+
+.nextpostslink {
 	margin-left: 2.5rem;
 }
 

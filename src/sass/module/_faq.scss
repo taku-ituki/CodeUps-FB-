@@ -24,6 +24,13 @@
   }
 }
 
+.faq__inner.inner{
+  @include mq(md){
+    max-width:rem(740);
+    width:100%;
+  }
+}
+
 /*アコーディオン全体*/
 .faq__accordion-area {
   list-style: none;
