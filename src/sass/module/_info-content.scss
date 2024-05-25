@@ -69,19 +69,33 @@
   }
 }
 
-// ホバーすると白くなる
-.info-content__tab:after {
-  background-color: #fff;
-  content: "";
-  height: 100%;
-  left: 0;
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  transition: 0.3s;
-  width: 100%;
+.info-content__tab:hover::before {
+  @include mq(md) {
+    content: "";
+    position: absolute;
+    width: rem(64);
+    height: rem(64);
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    background-image: url(./../images/common/info-whale-befor.png);
+    background-size: cover;
+  }
 }
+
+// ホバーすると白くなる
+// .info-content__tab:after {
+//   background-color: #fff;
+//   content: "";
+//   height: 100%;
+//   left: 0;
+//   opacity: 0;
+//   pointer-events: none;
+//   position: absolute;
+//   top: 0;
+//   transition: 0.3s;
+//   width: 100%;
+// }
 
 .info-content__tab:hover:after {
   opacity: 0.5;
