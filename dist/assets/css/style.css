@@ -203,7 +203,7 @@ a {
 
 /*========= レイアウトのためのCSS ===============*/
 
-.faq-item-layout {
+.faq__item {
 	margin-top: 2.5rem;
 }
 
@@ -1232,6 +1232,16 @@ a {
 	text-align: center;
 }
 
+.category__menu:hover {
+	background-color: #408f95;
+	transition: 0.3s;
+}
+
+.category__menu:hover a {
+	color: #fff;
+	cursor: pointer;
+}
+
 .category__menu a {
 	color: #408f95;
 	cursor: pointer;
@@ -2100,13 +2110,19 @@ footer {
 .info-content__tab {
 	background-color: #ddf0f1;
 	color: #408f95;
-	cursor: pointer;
 	display: inline-block;
 	font-family: "Noto Sans JP", "sans-serif";
 	font-size: 0.875rem;
 	padding-bottom: 0.625rem;
 	padding-top: 0.625rem;
 	position: relative;
+	transition: 0.3s;
+}
+
+.info-content__tab:hover {
+	background-color: #408f95;
+	color: #fff;
+	cursor: pointer;
 	transition: 0.3s;
 }
 
@@ -3393,7 +3409,7 @@ html {
 	margin-top: 8.75rem;
 }
 
-.faq-item-layout {
+.faq__item {
 	margin-top: 2.6875rem;
 }
 
@@ -4165,15 +4181,8 @@ footer {
 }
 
 .info-content__tab:hover::before {
-	background-image: url(./../images/common/info-whale-befor.png);
-	background-size: cover;
-	content: "";
-	height: 4rem;
-	left: 7%;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 4rem;
+	background-image: url(./../images/common/price-whale.png);
+	transition: 0.3s;
 }
 
 .info-content__tab.info-content__tab--fun {
