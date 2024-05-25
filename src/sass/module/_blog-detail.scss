@@ -101,90 +101,17 @@
   position: absolute;
   width: rem(18);
   height: rem(18);
-  top: 43%;
+  top:rem(10);
   left: -0.3%;
   transform: translateY(-50%);
   background-image: url(./../images/common/blog-star-fish.png);
   background-size: cover;
   @include mq(md) {
-    top: rem(10);
     left: -2%;
   }
 }
 
-.blog-container__pagenavi.blog-container__pagenavi--detail {
-  max-width: rem(158);
-  width: 100%;
-  margin-top: rem(35);
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  @include mq(md) {
-    max-width: rem(186);
-    width: 100%;
-    margin-top: rem(75);
-    padding-right: rem(28);
-  }
+.blog-container__pagenavi .nextpostslink {
+  margin-left:rem(82);
 }
 
-.blog-container__pagenavi-prev.blog-container__pagenavi-prev--detail {
-  position: relative;
-  display: inline-block;
-  padding: rem(18) rem(18);
-  border: rem(1) solid $green;
-  transition: 0.3s;
-}
-
-.blog-container__pagenavi-prev--detail::before {
-  content: "";
-  width: rem(10);
-  height: rem(10);
-  border-top: solid rem(1) $green;
-  border-right: solid rem(1) $green;
-  position: absolute;
-  left: rem(15);
-  top: rem(13);
-  transform: rotate(-135deg);
-}
-
-.blog-container__pagenavi-next.blog-container__pagenavi-next--detail {
-  position: relative;
-  display: inline-block;
-  padding: rem(18) rem(18);
-  border: rem(1) solid $green;
-  transition: 0.3s;
-}
-
-.blog-container__pagenavi-next.blog-container__pagenavi-next--detail::before {
-  content: "";
-  width: rem(10);
-  height: rem(10);
-  border-top: solid rem(1) $green;
-  border-right: solid rem(1) $green;
-  position: absolute;
-  left: rem(10);
-  top: rem(12);
-  transform: rotate(45deg);
-}
-
-// ホバー時、矢印の色変更
-.blog-container__pagenavi-prev.blog-container__pagenavi-prev--detail:hover {
-  background-color: $green;
-  transition: 0.3s;
-}
-
-.blog-container__pagenavi-prev.blog-container__pagenavi-prev--detail:hover::before {
-  transition: inherit;
-  border-color: $white;
-}
-
-.blog-container__pagenavi-next.blog-container__pagenavi-next--detail:hover {
-  background-color: $green;
-  transition: 0.3s;
-}
-
-.blog-container__pagenavi-next.blog-container__pagenavi-next--detail:hover::before {
-  transition: inherit;
-  border-color: $white;
-}

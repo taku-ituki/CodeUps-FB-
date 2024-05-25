@@ -22,6 +22,7 @@
   border: rem(1) solid $green;
   text-align: center;
   background-color: $white;
+  transition: 0.3s;
   @include mq(md) {
     max-width: rem(165);
     width: 100%;
