@@ -111,7 +111,8 @@
   }
 }
 
-.blog-container__pagenavi .nextpostslink {
+// 記事詳細ページのページナビの余白
+.blog-container__pagenavi.blog-container__pagenavi--detail .nextpostslink {
   margin-left:rem(82);
 }
 

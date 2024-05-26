@@ -1,139 +1,21 @@
 @use "global" as *;
-
-// .wp-pagenavi {
-//   display: flex;
-//   justify-content: center;
-// }
-
-// // ボタンのサイズ（限定的な使い方なら）
-// .wp-pagenavi a {
-//   width: rem(38);
-//   height: rem(38);
-// }
-
-// .wp-pagenavi span {
-//   width: rem(38);
-//   height: rem(38);
-// }
-
-// .previouspostslink {
-//   position: relative;
-//   display: inline-block;
-//   border: rem(1) solid $green;
-//   transition: 0.3s;
-// }
-
-// .previouspostslink::before {
-//   content: "";
-//   width: rem(10);
-//   height: rem(10);
-//   border-top: solid rem(1) $green;
-//   border-right: solid rem(1) $green;
-//   position: absolute;
-//   left: rem(15);
-//   top: rem(13);
-//   transform: rotate(-135deg);
-// }
-
-// .nextpostslink {
-//   position: relative;
-//   display: inline-block;
-//   padding: rem(18) rem(18);
-//   border: rem(1) solid $green;
-//   margin-left: rem(16);
-//   transition: 0.3s;
-//   @include mq(md) {
-//     margin-left: rem(40);
-//   }
-// }
-
-// .nextpostslink::before {
-//   content: "";
-//   width: rem(10);
-//   height: rem(10);
-//   border-top: solid rem(1) $green;
-//   border-right: solid rem(1) $green;
-//   position: absolute;
-//   left: rem(10);
-//   top: rem(12);
-//   transform: rotate(45deg);
-// }
-
-// // ホバー時、矢印の色変更
-// .nextpostslink:hover {
-//   background-color: $green;
-//   transition: 0.3s;
-// }
-// .nextpostslink:hover::before {
-//   transition: inherit;
-//   border-color: $white;
-// }
-
-// .previouspostslink:hover {
-//   background-color: $green;
-//   transition: 0.3s;
-// }
-
-// .previouspostslink:hover::before {
-//   transition: inherit;
-//   border-color: $white;
-// }
-
-// .page {
-//   font-family: $third-font-family;
-//   display: inline-block;
-//   justify-content: center;
-//   align-items: center;
-//   border: rem(1) solid $green;
-//   border-radius: rem(1);
-//   color: $green;
-//   line-height: 1;
-//   transition: 0.3s;
-//   margin-left: rem(8);
-//   @include mq(md) {
-//     margin-left: rem(15);
-//   }
-// }
-
-// .page.current{
-//   @include mq(md) {
-//     margin-left: rem(40);
-//   }
-// }
-
-// .page:hover {
-//   color: $white;
-//   background-color: $green;
-//   transition: 0.3s;
-// }
-
-// .is-active {
-//   font-family: $third-font-family;
-//   display: inline-block;
-//   justify-content: center;
-//   align-items: center;
-//   padding: rem(10) rem(12);
-//   border: rem(1) solid $green;
-//   border-radius: rem(1);
-//   color: $green;
-//   line-height: 1;
-//   transition: 0.3s;
-//   background-color: $green;
-//   color: $white;
-//   margin-left: rem(16);
-//   @include mq(md) {
-//     margin-left: rem(40);
-//   }
-// }
-
 .wp-pagenavi {
   display: flex;
   justify-content: center;
 }
 
-// ボタンのサイズ（限定的な使い方なら）
+// ページナンバー位置調整
+.blog-container__pagenavi.wp-pagenavi {
+  margin-top: rem(35);
+  @include mq(md) {
+    margin-top: rem(75);
+  }
+}
 
-.page {
+// ボタンのサイズ（限定的な使い方なら）
+.wp-pagenavi__page {
+  width: rem(38); // サイズを指定
+  height: rem(38); // サイズを指定
   font-family: $third-font-family;
   display: flex;
   justify-content: center;
@@ -149,18 +31,17 @@
   }
 }
 
-.page.current {
+
+.wp-pagenavi__page.current {
   cursor: pointer;
 }
 
-.page.current,
-.page.is-active {
+.wp-pagenavi__page.current,
+.wp-pagenavi__page.is-active {
   font-family: $third-font-family;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: rem(38); // サイズを指定
-  height: rem(38); // サイズを指定
   border: rem(1) solid $green;
   border-radius: rem(1);
   color: $white;
@@ -172,7 +53,7 @@
   }
 }
 
-.page:hover {
+.wp-pagenavi__page:hover {
   color: $white;
   background-color: $green;
   transition: 0.3s;
@@ -265,4 +146,25 @@
   @include mq(md) {
     margin-left: rem(40);
   }
+}
+
+// // // 各ページの「margin-top」調整 // // //
+
+// voiceページ余白
+.page-voice__pagenavi.wp-pagenavi{
+  @include mq(md){
+    margin-top:rem(72);
+  }
+}
+
+// キャンペーンページ余白
+.page-campaign__pagenavi.wp-pagenavi{
+  @include mq(md){
+    margin-top:rem(80);
+  }
+}
+
+//ブログページ・ブログ詳細ページ余白
+.blog-container__pagenavi.wp-pagenavi {
+ margin-top:rem(80);
 }

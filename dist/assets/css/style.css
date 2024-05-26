@@ -494,16 +494,6 @@ a {
 	margin-top: 5rem;
 }
 
-.blog-container__pagenavi {
-	display: flex;
-	justify-content: space-between;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 2.1875rem;
-	max-width: 9.875rem;
-	width: 100%;
-}
-
 .blog-container__inner.inner {
 	margin-left: auto;
 	margin-right: auto;
@@ -851,7 +841,7 @@ a {
 	width: 1.125rem;
 }
 
-.blog-container__pagenavi .nextpostslink {
+.blog-container__pagenavi.blog-container__pagenavi--detail .nextpostslink {
 	margin-left: 5.125rem;
 }
 
@@ -3158,25 +3148,31 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	justify-content: center;
 }
 
-.page {
+.blog-container__pagenavi.wp-pagenavi {
+	margin-top: 2.1875rem;
+}
+
+.wp-pagenavi__page {
 	align-items: center;
 	border: 0.0625rem solid #408f95;
 	border-radius: 0.0625rem;
 	color: #408f95;
 	display: flex;
 	font-family: "Lato";
+	height: 2.375rem;
 	justify-content: center;
 	line-height: 1;
 	margin-left: 0.5rem;
 	transition: 0.3s;
+	width: 2.375rem;
 }
 
-.page.current {
+.wp-pagenavi__page.current {
 	cursor: pointer;
 }
 
-.page.current,
-.page.is-active {
+.wp-pagenavi__page.current,
+.wp-pagenavi__page.is-active {
 	align-items: center;
 	background-color: #408f95;
 	border: 0.0625rem solid #408f95;
@@ -3184,14 +3180,12 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	color: #fff;
 	display: flex;
 	font-family: "Lato";
-	height: 2.375rem;
 	justify-content: center;
 	line-height: 1;
 	transition: 0.3s;
-	width: 2.375rem;
 }
 
-.page:hover {
+.wp-pagenavi__page:hover {
 	background-color: #408f95;
 	color: #fff;
 	transition: 0.3s;
@@ -3278,6 +3272,10 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	margin-left: 1rem;
 	transition: 0.3s;
 	width: 2.375rem;
+}
+
+.blog-container__pagenavi.wp-pagenavi {
+	margin-top: 5rem;
 }
 
 .wrap-404 {
@@ -3565,13 +3563,6 @@ html {
 
 .blog-container-wrap {
 	margin-top: 0rem;
-}
-
-.blog-container__pagenavi {
-	margin-top: 4.6875rem;
-	max-width: 11.625rem;
-	padding-right: 1.75rem;
-	width: 100%;
 }
 
 .blog-container__side {
@@ -4661,12 +4652,16 @@ footer {
 	margin-top: 1.875rem;
 }
 
-.page {
+.blog-container__pagenavi.wp-pagenavi {
+	margin-top: 4.6875rem;
+}
+
+.wp-pagenavi__page {
 	margin-left: 0.9375rem;
 }
 
-.page.current,
-.page.is-active {
+.wp-pagenavi__page.current,
+.wp-pagenavi__page.is-active {
 	margin-left: 2.5rem;
 }
 
@@ -4676,6 +4671,14 @@ footer {
 
 .is-active {
 	margin-left: 2.5rem;
+}
+
+.page-voice__pagenavi.wp-pagenavi {
+	margin-top: 4.5rem;
+}
+
+.page-campaign__pagenavi.wp-pagenavi {
+	margin-top: 5rem;
 }
 
 }

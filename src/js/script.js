@@ -266,20 +266,25 @@ jQuery(function ($) {
   
   
 
-  // header、footerでクリックすると、クリックしたものに対応するタブが初期状態でアクティブになる
   $(function () {
     $(".js-info-content-tab:first-child").removeClass("active");
+    
     // URLパラメータからtabの値を取得
     var urlParams = new URLSearchParams(window.location.search);
     var selectedTab = urlParams.get("tab");
-    // 対応するjs-info-content-tabに'active'クラスを追加
-    $(".js-info-content-tab:nth-child(" + selectedTab + ")").addClass("active");
-    // 初期状態で他のjs-info-content-cardを非表示にする
-    $(".js-info-content-card").hide();
-    // 選択されたタブに基づいてコンテンツを表示
-    $(".js-info-content-card")
-      .eq(selectedTab - 1)
-      .show();
+    
+    // selectedTabが有効な値か確認
+    if (selectedTab && !isNaN(selectedTab)) {
+      selectedTab = parseInt(selectedTab, 10);
+      
+      // 対応するjs-info-content-tabに'active'クラスを追加
+      $(".js-info-content-tab").eq(selectedTab - 1).addClass("active");
+      // 初期状態で他のjs-info-content-cardを非表示にする
+      $(".js-info-content-card").hide();
+      // 選択されたタブに基づいてコンテンツを表示
+      $(".js-info-content-card").eq(selectedTab - 1).show();
+    }
+  
     // js-info-content-tabがクリックされたときの処理
     $(".js-info-content-tab").click(function () {
       // クリックされたjs-info-content-tabのインデックスを取得
@@ -294,6 +299,7 @@ jQuery(function ($) {
       $(this).addClass("active");
     });
   });
+  
 
   document.querySelectorAll(".js-scroll a").forEach((item) => {
     item.addEventListener("click", (event) => {

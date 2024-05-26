@@ -53,24 +53,6 @@
   }
 }
 
-// ページナンバー位置調整
-.blog-container__pagenavi {
-  max-width: rem(158);
-  width: 100%;
-  margin-top: rem(35);
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: space-between;
-  @include mq(md) {
-    max-width: rem(186);
-    width: 100%;
-    margin-top: rem(75);
-    padding-right: rem(28);
-  }
-}
-
-
 
 // 記事詳細（detail）ページ
 // 共通部分
