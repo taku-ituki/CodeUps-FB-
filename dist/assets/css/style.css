@@ -1558,6 +1558,12 @@ a {
 	transform: rotate(-180deg);
 }
 
+/*========= レイアウトのためのCSS ===============*/
+
+.faq__item.faq-item {
+	margin-top: 2.5rem;
+}
+
 .faq {
 	position: relative;
 }
@@ -3152,7 +3158,7 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	margin-top: 2.1875rem;
 }
 
-.wp-pagenavi__page {
+.page {
 	align-items: center;
 	border: 0.0625rem solid #408f95;
 	border-radius: 0.0625rem;
@@ -3167,12 +3173,12 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	width: 2.375rem;
 }
 
-.wp-pagenavi__page.current {
+.page.current {
 	cursor: pointer;
 }
 
-.wp-pagenavi__page.current,
-.wp-pagenavi__page.is-active {
+.page.current,
+.page.is-active {
 	align-items: center;
 	background-color: #408f95;
 	border: 0.0625rem solid #408f95;
@@ -3185,7 +3191,7 @@ textarea { /* フォーカスした際の青い枠線を消す */
 	transition: 0.3s;
 }
 
-.wp-pagenavi__page:hover {
+.page:hover {
 	background-color: #408f95;
 	color: #fff;
 	transition: 0.3s;
@@ -3923,6 +3929,10 @@ html {
 	top: 48%;
 }
 
+.faq__item.faq-item {
+	margin-top: 2.6875rem;
+}
+
 .faq::before {
 	height: 8.625rem;
 	max-width: 18.75rem;
@@ -4656,12 +4666,12 @@ footer {
 	margin-top: 4.6875rem;
 }
 
-.wp-pagenavi__page {
+.page {
 	margin-left: 0.9375rem;
 }
 
-.wp-pagenavi__page.current,
-.wp-pagenavi__page.is-active {
+.page.current,
+.page.is-active {
 	margin-left: 2.5rem;
 }
 

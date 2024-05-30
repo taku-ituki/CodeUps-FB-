@@ -73,3 +73,11 @@
   .faq-item__accordion-title.close::after {
     transform: rotate(-180deg);
   }
+
+  /*========= レイアウトのためのCSS ===============*/
+.faq__item.faq-item {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(43);
+  }
+}

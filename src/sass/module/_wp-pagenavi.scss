@@ -13,7 +13,7 @@
 }
 
 // ボタンのサイズ（限定的な使い方なら）
-.wp-pagenavi__page {
+.page {
   width: rem(38); // サイズを指定
   height: rem(38); // サイズを指定
   font-family: $third-font-family;
@@ -31,13 +31,12 @@
   }
 }
 
-
-.wp-pagenavi__page.current {
+.page.current {
   cursor: pointer;
 }
 
-.wp-pagenavi__page.current,
-.wp-pagenavi__page.is-active {
+.page.current,
+.page.is-active {
   font-family: $third-font-family;
   display: flex;
   justify-content: center;
@@ -53,7 +52,7 @@
   }
 }
 
-.wp-pagenavi__page:hover {
+.page:hover {
   color: $white;
   background-color: $green;
   transition: 0.3s;
