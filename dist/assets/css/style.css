@@ -890,6 +890,10 @@ a {
 	gap: 0.5rem;
 }
 
+.breadcrumbs__inner > * {
+	display: inline-block; /* 他の必要なスタイルを追加 */
+}
+
 .breadcrumbs__top a {
 	font-family: "Noto Sans JP", "sans-serif";
 	font-size: 0.875rem;
