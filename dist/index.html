@@ -37,11 +37,11 @@
     <!-- header -->
     <header class="header header-layout js-header">
       <div class="header__inner">
-        <h1 class="header__logo">
+        <div class="header__logo">
           <a href="index.html">
             <img src="./assets/images/common/CodeUps.svg" alt="CodeUps" />
           </a>
-        </h1>
+        </div>
         <!-- PCナビゲーション -->
         <nav class="header__nav">
           <ul class="header__nav-items">
@@ -119,19 +119,17 @@
               </ul>
               <ul class="common-nav__flex-list">
                 <!-- ダイビング情報 -->
-                <li class="header__nav-item js-header-info-tab">
-                  <a href="information.html?tab=1">
-                    <div class="header__nav-text">information<span>ダイビング情報</span></div>
-                  </a>
+                <li class="common-nav__item common-nav__item--head" id="js-lisence-link">
+                  <a href="information.html?tab=1">ダイビング情報</a>
                 </li>
-                <li class="common-nav__item">
+                <li class="common-nav__item" id="#experience-diving-link">
                   <a href="information.html?tab=1">ライセンス講習</a>
                 </li>
                 <li class="common-nav__item">
-                  <a href="price.html#price-lisence-diving-link">体験ダイビング</a>
+                  <a href="information.html?tab=3">体験ダイビング</a>
                 </li>
-                <li class="common-nav__item">
-                  <a href="#">ファンダイビング</a>
+                <li class="common-nav__item" id="#fun-diving-link">
+                  <a href="information.html?tab=2">ファンダイビング</a>
                 </li>
                 <!--ブログ -->
                 <li class="common-nav__item common-nav__item--head">
@@ -157,7 +155,7 @@
                   <a href="#">体験ダイビング</a>
                 </li>
                 <li class="common-nav__item">
-                  <a href="information.html?tab=2">ファンダイビング</a>
+                  <a href="#">ファンダイビング</a>
                 </li>
               </ul>
               <ul class="common-nav__flex-list">
@@ -167,7 +165,7 @@
                 </li>
                 <!-- プライバシーポリシー -->
                 <li class="common-nav__item common-nav__item--head">
-                  <a href="privacy.html">プライバシー<br />ポリシー</a>
+                  <a href="#">プライバシー<br />ポリシー</a>
                 </li>
                 <!-- 利用規約 -->
                 <li class="common-nav__item common-nav__item--head">

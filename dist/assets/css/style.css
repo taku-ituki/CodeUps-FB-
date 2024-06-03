@@ -1353,7 +1353,7 @@ a {
 	background-size: cover;
 	content: "";
 	height: 1.125rem;
-	left: 0;
+	left: -15%;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -3791,6 +3791,10 @@ html {
 
 .common-nav__item br {
 	display: none;
+}
+
+.common-nav__item.common-nav__item--head::before {
+	left: 0;
 }
 
 .common-nav__flex-list {

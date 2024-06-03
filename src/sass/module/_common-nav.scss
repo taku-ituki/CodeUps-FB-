@@ -58,10 +58,13 @@
   width: rem(18);
   height: rem(18);
   top: 50%;
-  left: 0;
+  left:-15%;
   transform: translateY(-50%);
   background-image: url(./../images/common/starfish.png);
   background-size: cover;
+  @include mq(md){
+    left: 0;
+  }
 }
 
 .common-nav__flex-list {
