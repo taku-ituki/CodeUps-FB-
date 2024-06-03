@@ -1353,9 +1353,9 @@ a {
 	background-size: cover;
 	content: "";
 	height: 1.125rem;
-	left: -15%;
+	left: -20px;
 	position: absolute;
-	top: 50%;
+	top: 18px;
 	transform: translateY(-50%);
 	width: 1.125rem;
 }
@@ -1366,6 +1366,11 @@ a {
 
 .common-nav__flex-list:first-child {
 	margin-left: 0.625rem;
+}
+
+ul.common-nav__flex-list.common-nav__flex-list--footer {
+	margin-left: 1.25rem;
+	padding-left: 0;
 }
 
 .contact {
@@ -1980,6 +1985,7 @@ footer {
 
 .header__drawer-wrapper {
 	display: flex;
+	gap: 1.5625rem;
 	justify-content: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -3811,6 +3817,10 @@ html {
 
 .common-nav__flex-list:last-child {
 	padding-left: 1.65625rem;
+}
+
+ul.common-nav__flex-list.common-nav__flex-list--footer {
+	margin-left: 0.9375rem;
 }
 
 .contact__inner {
